@@ -1,2 +1,2 @@
 # Practice_Embedfire_Stm32f103
-【TODO】
+Practice for Embedfire STM32F103 chip development
