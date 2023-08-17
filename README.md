@@ -1,5 +1,5 @@
 # Practice_Embedfire_Stm32f103
-Practice for Embedfire STM32F103 chip development
+Practice for Embedfire STM32F103 chip development.
 
 GitHub Repository: https://github.com/Embedfire-stm32f103-zhinanzhe
 
