@@ -5,4 +5,4 @@ StdPeriph_Lib: https://doc.embedfire.com/mcu/stm32/f103zhinanzhe/std/zh/latest/i
 
 HAL_Lib: https://doc.embedfire.com/mcu/stm32/f103zhinanzhe/hal/zh/latest/index.html
 
-https://github.com/Embedfire-stm32f103-zhinanzhe
+GitHub Repository: https://github.com/Embedfire-stm32f103-zhinanzhe
