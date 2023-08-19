@@ -4,6 +4,14 @@ Practice for Embedfire STM32F103 chip development.
 GitHub Repository: https://github.com/Embedfire-stm32f103-zhinanzhe
 - Embedfire stm32f103 must read: https://github.com/Embedfire-stm32f103-zhinanzhe/ebf_stm32f103_zhinanzhe_must_read/tree/master
 
+Fundamentals
+- Required Files
+    - Books
+    - Hardware Documentation
+    - Software
+- Keil Project Template
+- Startup files
+
 StdPeriph_Lib:
 - Documentation：https://doc.embedfire.com/mcu/stm32/f103zhinanzhe/std/zh/latest/index.html
 - Example Code: https://github.com/Embedfire-stm32f103-zhinanzhe/ebf_stm32f103_zhinanzhe_std_code
