@@ -10,7 +10,6 @@ GitHub Repository: https://github.com/Embedfire-stm32f103-zhinanzhe
     - Hardware Documentation
     - Software
 - Keil Project Template
-- Startup files
 
 ## StdPeriph_Lib
 - Documentation：https://doc.embedfire.com/mcu/stm32/f103zhinanzhe/std/zh/latest/index.html
