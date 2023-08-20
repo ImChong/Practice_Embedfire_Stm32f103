@@ -46,7 +46,6 @@
 > - 相对较小容量：SRAM 存储器通常比 Flash 存储器小，因此主要用于存储短期数据。
 
 ### CMSIS-DAP
-> CMSIS-DAP是一个为Cortex-M微控制器提供统一调试和编程接口的标准，有助于简化嵌入式系统的调试和开发过程。
 > CMSIS-DAP（Cortex Microcontroller Software Interface Standard - Debug Access Port）是一种用于嵌入式系统调试的标准接口协议。它是由ARM（现在的ARM Limited）提出并定义的，旨在提供一种通用的调试和编程接口，以便开发者可以使用统一的方式对不同的Cortex-M微控制器进行调试和编程操作。
 > CMSIS-DAP通常用于创建支持JTAG和SWD（Serial Wire Debug）等调试接口的工具，如调试器、编程器和仿真器。通过CMSIS-DAP，开发者可以实现以下功能：
 > - 调试操作：允许开发者在目标微控制器上运行、暂停、单步执行、查看寄存器和内存等操作，以进行代码调试和故障排除。
