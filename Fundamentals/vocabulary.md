@@ -1,11 +1,11 @@
-- [ISP（In-System Programming）](#ispin-system-programming)
+- [ISP](#isp)
 - [NRST](#nrst)
 - [RST](#rst)
 - [RTS](#rts)
 - [DTR](#dtr)
-- [SWD（Serial Wire Debug）](#swdserial-wire-debug)
+- [SWD](#swd)
 
-### ISP（In-System Programming）
+### ISP
 > ISP（In-System Programming）是一种通过连接到目标设备的外部接口，在设备内部编程或修改程序代码和数据的技术。这种技术通常用于更新固件、修改配置、烧录Bootloader等操作，而无需将芯片从电路板上取下来，使得在生产和维护阶段都能更加便捷地进行。
 
 ### NRST
@@ -20,7 +20,7 @@
 ### DTR
 > "DTR" 通常是 "Data Terminal Ready" 的缩写，它是一种用于串行通信的信号，用于指示数据终端设备（通常是计算机或控制器）是否已准备好进行通信。"DTR" 信号与串行通信中的数据流控制和设备连接状态有关。
 
-### SWD（Serial Wire Debug）
+### SWD
 SWD（Serial Wire Debug）是一种用于嵌入式系统调试和编程的接口协议，其简单的硬件连接和高效的数据传输使其成为了嵌入式开发中常用的调试工具接口。
 
 
