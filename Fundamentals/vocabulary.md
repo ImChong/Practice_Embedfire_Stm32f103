@@ -18,6 +18,9 @@
 - [桥接器（Bridges）](#桥接器bridges)
 - [CRC](#crc)
 - [GPIOx\_ODR](#gpiox_odr)
+- [GPIOx\_IDR](#gpiox_idr)
+- [GPIOx\_CRL](#gpiox_crl)
+- [GPIOx\_CRH](#gpiox_crh)
 
 ### ISP
 > ISP（In-System Programming）是一种通过连接到目标设备的外部接口，在设备内部编程或修改程序代码和数据的技术。这种技术通常用于更新固件、修改配置、烧录Bootloader等操作，而无需将芯片从电路板上取下来，使得在生产和维护阶段都能更加便捷地进行。
@@ -133,3 +136,15 @@
 
 ### GPIOx_ODR
 > GPIOx_ODR是“Output Data Register”的缩写。这个寄存器用于设置或获取GPIO的输出值。
+
+### GPIOx_IDR
+> GPIOx_ODR是“Input Data Register”的缩写。
+> GPIOx_IDR允许你读取与GPIO端口相关的引脚的实时输入状态。这对于诸如按钮按下检测、外部传感器状态检测等应用是非常有用的。
+
+### GPIOx_CRL
+> CRL 是 "Configuration Register Low" 的缩写。
+> CRL负责配置低8个引脚（PIN0到PIN7）
+
+### GPIOx_CRH
+> CRH 是 "Configuration Register High" 的缩写。
+> CRH负责配置高8个引脚（PIN8到PIN15）
