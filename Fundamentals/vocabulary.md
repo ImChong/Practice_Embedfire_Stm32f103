@@ -21,6 +21,9 @@
 - [GPIOx\_IDR](#gpiox_idr)
 - [GPIOx\_CRL](#gpiox_crl)
 - [GPIOx\_CRH](#gpiox_crh)
+- [GPIOx\_BSRR](#gpiox_bsrr)
+- [GPIOx\_BRR](#gpiox_brr)
+- [GPIOx\_LCKR](#gpiox_lckr)
 
 ### ISP
 > ISP（In-System Programming）是一种通过连接到目标设备的外部接口，在设备内部编程或修改程序代码和数据的技术。这种技术通常用于更新固件、修改配置、烧录Bootloader等操作，而无需将芯片从电路板上取下来，使得在生产和维护阶段都能更加便捷地进行。
@@ -148,3 +151,15 @@
 ### GPIOx_CRH
 > CRH 是 "Configuration Register High" 的缩写。
 > CRH负责配置高8个引脚（PIN8到PIN15）
+
+### GPIOx_BSRR
+> 缩写解释：Bit Set/Reset Register。
+> 作用：此寄存器用于原子地设置或重置GPIO端口的引脚。对于STM32的大多数系列，寄存器的前16位用于设置相应引脚（写1将引脚设置为高电平），而后16位用于重置相应引脚（写1将引脚设置为低电平）。这种原子性的操作确保引脚的快速和安全设置/重置，而不涉及读-修改-写的过程。
+
+### GPIOx_BRR
+> 缩写解释：Bit Reset Register。
+> 作用：此寄存器用于原子地重置GPIO端口的引脚。它是GPIOx_BSRR的简化版本，仅用于引脚的重置。写1到BRR的相应位会将对应的GPIO引脚重置为低电平。注意：不是所有STM32系列都有这个寄存器，它主要出现在STM32F1的后续系列中。
+
+### GPIOx_LCKR
+> 缩写解释：Lock Register。
+> 作用：此寄存器用于锁定GPIO端口的配置。一旦锁定了特定的GPIO配置，它不能被修改，除非系统复位。这对于防止某些关键引脚的配置被意外更改是非常有用的。
