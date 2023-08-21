@@ -14,6 +14,7 @@
 - [AHB](#ahb)
 - [APB](#apb)
 - [RCC](#rcc)
+- [SDIO](#sdio)
 
 ### ISP
 > ISP（In-System Programming）是一种通过连接到目标设备的外部接口，在设备内部编程或修改程序代码和数据的技术。这种技术通常用于更新固件、修改配置、烧录Bootloader等操作，而无需将芯片从电路板上取下来，使得在生产和维护阶段都能更加便捷地进行。
@@ -92,3 +93,6 @@
 > - 时钟使能和失能：通过RCC模块，可以启用或禁用特定的外设时钟。这可以帮助节省功耗并优化系统性能。
 > - 复位控制：RCC模块允许开发者对不同外设进行软件复位操作，将外设重置到初始状态。
 > - 时钟状态监测：RCC模块提供了一些标志位，可以用于监测系统时钟源和外设时钟的状态。
+
+### SDIO
+> SDIO（Secure Digital Input Output）是一种接口，用于让SD卡（Secure Digital Card）提供非存储功能，如Wi-Fi、蓝牙、GPS等。SDIO卡是SD卡家族的一部分，除了SD存储卡外，还包括SDIO、SD Combo（结合SD存储和SDIO功能的卡）。
