@@ -28,3 +28,12 @@ typedef unsigned int uint32_t; /* 无符号 32 位变量 */
 typedef unsigned short int uint16_t; /* 无符号 16 位变量 */
 
 /* GPIO 寄存器列表 */
+typedef struct {
+    uint32_t CRL; /*GPIO 端口配置低寄存器 地址偏移: 0x00 */
+    uint32_t CRH; /*GPIO 端口配置高寄存器 地址偏移: 0x04 */
+    uint32_t IDR; /*GPIO 数据输入寄存器 地址偏移: 0x08 */
+    uint32_t ODR; /*GPIO 数据输出寄存器 地址偏移: 0x0C */
+    uint32_t BSRR; /*GPIO 位设置/清除寄存器 地址偏移: 0x10 */
+    uint32_t BRR; /*GPIO 端口位清除寄存器 地址偏移: 0x14 */
+    uint16_t LCKR; /*GPIO 端口配置锁定寄存器 地址偏移: 0x18 */
+} GPIO_TypeDef;
