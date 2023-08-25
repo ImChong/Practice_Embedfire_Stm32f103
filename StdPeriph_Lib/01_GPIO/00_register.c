@@ -40,8 +40,19 @@ typedef struct {
     uint32_t LCKR; /*GPIO 端口配置锁定寄存器 地址偏移: 0x18 */
 } GPIO_TypeDef;
 
+/* 使用 GPIO_TypeDef 把地址强制转换成指针 */
+#define GPIOA   ((GPIO_TypeDef *)GPIOA_BASE)
+#define GPIOB   ((GPIO_TypeDef *)GPIOB_BASE)
+#define GPIOC   ((GPIO_TypeDef *)GPIOC_BASE)
+#define GPIOD   ((GPIO_TypeDef *)GPIOD_BASE)
+#define GPIOE   ((GPIO_TypeDef *)GPIOE_BASE)
+#define GPIOF   ((GPIO_TypeDef *)GPIOF_BASE)
+#define GPIOG   ((GPIO_TypeDef *)GPIOG_BASE)
+
 /* NOTE: 主函数 */
 int main(int argc, const char* argv[]) {
+    /* NOTE: Test case 1 */
+    printf("======== Case 1 ======== \n");
     GPIO_TypeDef *GPIOx;    //定义一个 GPIO_TypeDef 型结构体指针 GPIOx
     GPIOx = GPIOB_BASE;     //把指针地址设置为宏 GPIOB_BASE 地址
     GPIOx->IDR = 0xFFFF;
@@ -49,5 +60,21 @@ int main(int argc, const char* argv[]) {
 
     uint32_t temp;
     temp = GPIOx->IDR;      //读取 GPIOB_IDR 寄存器的值到变量 temp 中
+
+    /* NOTE: Test case 2 */
+    printf("======== Case 2 ======== \n");
+    /* 使用定义好的宏直接访问 */
+    /* 访问 GPIOB 端口的寄存器 */
+    GPIOB->BSRR = 0xFFFF; //通过指针访问并修改 GPIOB_BSRR 寄存器
+    GPIOB->CRL = 0xFFFF; //修改 GPIOB_CRL 寄存器
+    GPIOB->ODR =0xFFFF; //修改 GPIOB_ODR 寄存器
+    temp = GPIOB->IDR; //读取 GPIOB_IDR 寄存器的值到变量 temp 中
+
+    /* 访问 GPIOA 端口的寄存器 */
+    GPIOA->BSRR = 0xFFFF;
+    GPIOA->CRL = 0xFFFF;
+    GPIOA->ODR =0xFFFF;
+    temp = GPIOA->IDR; //读取 GPIOA_IDR 寄存器的值到变量 temp 中
+
     return 0;
 }
