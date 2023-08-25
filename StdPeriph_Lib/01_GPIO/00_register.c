@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /* 外设基地址 */
 #define PERIPH_BASE ((unsigned int)0x40000000)
 
@@ -37,3 +39,15 @@ typedef struct {
     uint32_t BRR; /*GPIO 端口位清除寄存器 地址偏移: 0x14 */
     uint32_t LCKR; /*GPIO 端口配置锁定寄存器 地址偏移: 0x18 */
 } GPIO_TypeDef;
+
+/* NOTE: 主函数 */
+int main(int argc, const char* argv[]) {
+    GPIO_TypeDef *GPIOx;    //定义一个 GPIO_TypeDef 型结构体指针 GPIOx
+    GPIOx = GPIOB_BASE;     //把指针地址设置为宏 GPIOB_BASE 地址
+    GPIOx->IDR = 0xFFFF;
+    GPIOx->ODR = 0xFFFF;
+
+    uint32_t temp;
+    temp = GPIOx->IDR;      //读取 GPIOB_IDR 寄存器的值到变量 temp 中
+    return 0;
+}
