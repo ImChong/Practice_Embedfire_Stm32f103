@@ -35,5 +35,5 @@ typedef struct {
     uint32_t ODR; /*GPIO 数据输出寄存器 地址偏移: 0x0C */
     uint32_t BSRR; /*GPIO 位设置/清除寄存器 地址偏移: 0x10 */
     uint32_t BRR; /*GPIO 端口位清除寄存器 地址偏移: 0x14 */
-    uint16_t LCKR; /*GPIO 端口配置锁定寄存器 地址偏移: 0x18 */
+    uint32_t LCKR; /*GPIO 端口配置锁定寄存器 地址偏移: 0x18 */
 } GPIO_TypeDef;
