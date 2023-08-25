@@ -1,3 +1,5 @@
+#include "stm32f10x.h"
+
 static void SystemInit(void) {
 
 }
