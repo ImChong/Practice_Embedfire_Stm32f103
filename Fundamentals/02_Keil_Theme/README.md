@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=qKuwMHLazyY
+
 put the files:
 - global.prop
 - global.prop.def
