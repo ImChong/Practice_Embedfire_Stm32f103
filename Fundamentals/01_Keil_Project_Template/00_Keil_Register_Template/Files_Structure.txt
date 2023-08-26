@@ -1,0 +1,28 @@
+.
+│  Embedfire_F103.uvguix.29142
+│  Embedfire_F103.uvoptx
+│  Embedfire_F103.uvprojx
+│  Files_Structure.txt
+│  main.c
+│  startup_stm32f10x_hd.s
+│  stm32f10x.h
+│
+├─DebugConfig
+│      Template-REG_STM32F103VE_1.0.0.dbgconf
+│
+├─Listings
+│      startup_stm32f10x_hd.lst
+│      Template-REG.map
+│
+└─Objects
+        Embedfire_F103_Template-REG.dep
+        main.d
+        main.o
+        startup_stm32f10x_hd.d
+        startup_stm32f10x_hd.o
+        Template-REG.axf
+        Template-REG.build_log.htm
+        Template-REG.hex
+        Template-REG.htm
+        Template-REG.lnp
+        Template-REG.sct
