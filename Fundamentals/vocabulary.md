@@ -1,68 +1,69 @@
-- [ISP](#isp)
-- [NRST](#nrst)
-- [RST](#rst)
-- [RTS](#rts)
-- [DTR](#dtr)
-- [SWD](#swd)
-- [内部 FLASH](#内部-flash)
-- [系统存储器 System Memory](#系统存储器-system-memory)
-- [内部 SRAM](#内部-sram)
-- [CMSIS-DAP](#cmsis-dap)
-- [寄存器 Register](#寄存器-register)
-- [FSMC](#fsmc)
-- [DMA](#dma)
-- [AHB](#ahb)
-- [APB](#apb)
-- [RCC](#rcc)
-- [SDIO](#sdio)
-- [桥接器（Bridges）](#桥接器bridges)
-- [CRC](#crc)
-- [GPIOx\_ODR](#gpiox_odr)
-- [GPIOx\_IDR](#gpiox_idr)
-- [GPIOx\_CRL](#gpiox_crl)
-- [GPIOx\_CRH](#gpiox_crh)
-- [GPIOx\_BSRR](#gpiox_bsrr)
-- [GPIOx\_BRR](#gpiox_brr)
-- [GPIOx\_LCKR](#gpiox_lckr)
+- [1. ISP](#1-isp)
+- [2. NRST](#2-nrst)
+- [3. RST](#3-rst)
+- [4. RTS](#4-rts)
+- [5. DTR](#5-dtr)
+- [6. SWD](#6-swd)
+- [7. 内部 FLASH](#7-内部-flash)
+- [8. 系统存储器 System Memory](#8-系统存储器-system-memory)
+- [9. 内部 SRAM](#9-内部-sram)
+- [10. CMSIS-DAP](#10-cmsis-dap)
+- [11. 寄存器 Register](#11-寄存器-register)
+- [12. FSMC](#12-fsmc)
+- [13. DMA](#13-dma)
+- [14. AHB](#14-ahb)
+- [15. APB](#15-apb)
+- [16. RCC](#16-rcc)
+- [17. SDIO](#17-sdio)
+- [18. 桥接器（Bridges）](#18-桥接器bridges)
+- [19. CRC](#19-crc)
+- [20. GPIOx\_ODR](#20-gpiox_odr)
+- [21. GPIOx\_IDR](#21-gpiox_idr)
+- [22. GPIOx\_CRL](#22-gpiox_crl)
+- [23. GPIOx\_CRH](#23-gpiox_crh)
+- [24. GPIOx\_BSRR](#24-gpiox_bsrr)
+- [25. GPIOx\_BRR](#25-gpiox_brr)
+- [26. GPIOx\_LCKR](#26-gpiox_lckr)
+- [27. HSI](#27-hsi)
 
-### ISP
+### 1. ISP
 > ISP（In-System Programming）是一种通过连接到目标设备的外部接口，在设备内部编程或修改程序代码和数据的技术。这种技术通常用于更新固件、修改配置、烧录Bootloader等操作，而无需将芯片从电路板上取下来，使得在生产和维护阶段都能更加便捷地进行。
 
-### NRST
+### 2. NRST
 > NRST 通常代表 "nRST"，其中 "n" 代表 "not"，意思是反相。它在电子和嵌入式系统领域中常用来表示 "Negative Reset"，即负向复位信号。这个信号用于将一个设备或电路恢复到初始状态，通常是通过将设备的内部状态清零或将其重新启动来实现。
 
-### RST
+### 3. RST
 > "RST" 通常是 "Reset"（复位）的缩写。它表示一种操作或信号，用于将设备、系统或电路恢复到初始状态，以便进行初始化或排除故障。复位操作通常会清除设备的内部状态，将其返回到一个可控的状态，以便重新启动或重新配置。
 
-### RTS
+### 4. RTS
 > "RTS" 通常是 "Request to Send" 的缩写，它是一种用于串行通信的信号，用于控制数据的发送。在串行通信中，数据的发送和接收需要一定的协调，以确保数据能够正确地传输。
 
-### DTR
+### 5. DTR
 > "DTR" 通常是 "Data Terminal Ready" 的缩写，它是一种用于串行通信的信号，用于指示数据终端设备（通常是计算机或控制器）是否已准备好进行通信。"DTR" 信号与串行通信中的数据流控制和设备连接状态有关。
 
-### SWD
+### 6. SWD
 > SWD（Serial Wire Debug）是一种用于嵌入式系统调试和编程的接口协议，其简单的硬件连接和高效的数据传输使其成为了嵌入式开发中常用的调试工具接口。
 
-### 内部 FLASH
+### 7. 内部 FLASH
 > 内部闪存（Flash）是一种非易失性存储器，通常用于存储程序代码和常量数据。它具有以下特点：
 > - 非易失性：Flash 存储器在断电情况下可以保留存储的数据，适用于存储长期不变的程序代码。
 > - 可擦写和可编程：Flash 存储器可以通过特定的操作擦除并重新编程，允许更新固件或程序。
 > - 相对较大容量：Flash 存储器通常具有较大的容量，足以存储整个操作系统和应用程序代码。
 > - 擦写次数有限：每个 Flash 存储单元的擦写次数是有限的，需要谨慎设计以避免过度使用。
 
-### 系统存储器 System Memory
+### 8. 系统存储器 System Memory
 > 系统存储器通常指的是存储启动引导程序、系统配置数据、引导加载程序等重要信息的存储区域。这个区域可以是内部闪存的一部分，也可以是专门的存储芯片。它具有以下特点：
 > - 存储重要数据：系统存储器通常用于存储启动引导程序、配置信息等，以确保系统在启动时能够正常工作。
 > - 可靠性要求高：系统存储器中的数据需要高可靠性，因为它们与系统启动和操作相关。
 
-### 内部 SRAM
+### 9. 内部 SRAM
 > SRAM（Static Random Access Memory，静态随机存取存储器）是一种类型的计算机存储器，用于临时存储数据和变量。与动态随机存取存储器（DRAM）相比，SRAM具有更快的读写速度和较低的访问延迟，但通常也更昂贵且需要更多的电力。
 > 内部静态随机存储器（SRAM）是一种用于存储临时数据和变量的存储器，它具有以下特点：
 > - 高速读写：SRAM 存储器的读写速度很快，适用于临时存储数据和变量。
 > - 临时性：SRAM 存储器中的数据在断电后会丢失，适用于存储程序执行期间的中间结果和变量。
 > - 相对较小容量：SRAM 存储器通常比 Flash 存储器小，因此主要用于存储短期数据。
 
-### CMSIS-DAP
+### 10. CMSIS-DAP
 > CMSIS-DAP（Cortex Microcontroller Software Interface Standard - Debug Access Port）是一种用于嵌入式系统调试的标准接口协议。它是由ARM（现在的ARM Limited）提出并定义的，旨在提供一种通用的调试和编程接口，以便开发者可以使用统一的方式对不同的Cortex-M微控制器进行调试和编程操作。
 > CMSIS-DAP通常用于创建支持JTAG和SWD（Serial Wire Debug）等调试接口的工具，如调试器、编程器和仿真器。通过CMSIS-DAP，开发者可以实现以下功能：
 > - 调试操作：允许开发者在目标微控制器上运行、暂停、单步执行、查看寄存器和内存等操作，以进行代码调试和故障排除。
@@ -71,19 +72,19 @@
 > - 性能分析：一些CMSIS-DAP实现还支持性能分析功能，如跟踪和性能计数器。
 > - 通用性：CMSIS-DAP标准化了接口协议，使得兼容不同厂家和型号的Cortex-M微控制器变得更加容易。
 
-### 寄存器 Register
+### 11. 寄存器 Register
 > 在计算机体系结构和嵌入式系统中，寄存器是一种小型的、高速的临时存储器组件，用于存储和处理计算机程序和数据。寄存器通常直接集成在中央处理器（CPU）内部，用于执行指令和进行运算。
 
-### FSMC
+### 12. FSMC
 > FSMC 的英文全称是 Flexible static memory controller，叫灵活的静态的存储器控制器，是STM32F10xx 中一个很有特色的外设，通过FSMC，我们可以扩展内存，如外部的SRAM，NAND-FLASH 和NORFLASH。但有一点我们要注意的是，FSMC 只能扩展静态的内存，即名称里面的S：static，不能是动态的内存，比如SDRAM 就不能扩展。
 
-### DMA
+### 13. DMA
 > DMA（Direct Memory Access，直接内存访问）是一种计算机和嵌入式系统中用于高速数据传输的技术。它允许外部设备或内部模块直接访问系统内存，而无需CPU的直接干预。这种方式可以显著提高数据传输速度，减轻CPU的负担，同时提高系统性能。
 
-### AHB
+### 14. AHB
 > AHB（Advanced High-performance Bus，高级高性能总线）。AHB是一种高性能总线协议，通常用于连接高性能组件，如处理器核心、高速缓存和其他高带宽要求的组件。AHB总线使用分级的“主从”体系结构，支持高性能传输和多主设备。
 
-### APB
+### 15. APB
 > APB（Advanced Peripheral Bus）。APB是一种较低性能、较低速度的总线，主要用于连接外围设备。它适用于不需要高速数据传输的外设，如定时器、GPIO（通用输入/输出口）、串口等。APB总线可以分为APB1和APB2两个子总线。
 > ##### APB1（Advanced Peripheral Bus 1）
 > - 速度和性能：APB1总线的速度相对较低，通常用于连接一些低速外设。
@@ -94,7 +95,7 @@
 > - 外设连接：APB2总线连接了一些需要较高性能访问的外设，如高速串口、USB等。
 > - 分频器：APB2总线的时钟源可以使用分频器进行分频，以获取所需的时钟频率。
 
-### RCC
+### 16. RCC
 > RCC代表的是Reset and Clock Control，即复位与时钟控制模块。它是用于配置和控制微控制器内部时钟源和外设的重要模块。通过RCC模块，开发者可以管理微控制器的时钟设置，以满足不同应用的需求。
 > RCC模块的主要功能包括：
 > - 时钟源选择：RCC模块允许开发者选择不同的时钟源，如内部振荡器、外部晶振、PLL（Phase-Locked Loop）等。这些时钟源可以用于驱动不同的系统组件和外设。
@@ -103,7 +104,7 @@
 > - 复位控制：RCC模块允许开发者对不同外设进行软件复位操作，将外设重置到初始状态。
 > - 时钟状态监测：RCC模块提供了一些标志位，可以用于监测系统时钟源和外设时钟的状态。
 
-### SDIO
+### 17. SDIO
 > SDIO（Secure Digital Input Output）是一种接口，用于让SD卡（Secure Digital Card）提供非存储功能，如Wi-Fi、蓝牙、GPS等。SDIO卡是SD卡家族的一部分，除了SD存储卡外，还包括SDIO、SD Combo（结合SD存储和SDIO功能的卡）。
 > 以下是一些SDIO的关键点：
 > - 非存储应用：SDIO卡是设计用来为那些不需要存储功能的应用提供接口的。例如，你可能会在一些嵌入式设备中找到SDIO Wi-Fi模块或SDIO蓝牙模块。
@@ -114,7 +115,7 @@
 >
 > 总的来说，SDIO提供了一种便捷的方式，使得开发者和制造商可以为其设备增加新功能，而无需进行大的硬件改动。不过，选择SDIO模块时需要确保你的主机设备和操作系统支持所选模块的驱动。
 
-### 桥接器（Bridges）
+### 18. 桥接器（Bridges）
 > 桥接器（Bridges）在微控制器中常常用来连接不同类型或速度的总线。通过桥接器，一个总线上的设备可以与另一个总线上的设备通信，即使这两个总线的工作方式和速度不同。
 > 关于AHB和桥接器之间的关系：
 > - 连接不同的AHB总线：在复杂的微控制器设计中，可能存在多个AHB总线。这时，一个AHB到AHB的桥接器可以被用来连接它们。
@@ -125,7 +126,7 @@
 >
 > 总的来说，桥接器在微控制器设计中起到了重要的角色，允许不同的总线和设备互相通信，并确保整个系统的高效和稳定运行。
 
-### CRC
+### 19. CRC
 > CRC是“Cyclic Redundancy Check”的缩写，是一种常用于检测数据传输或存储的错误的方法。CRC通过对数据序列应用一个确定的算法生成一个简短的固定大小的数值，这个数值通常与数据序列一起传输或存储。接收方可以再次计算CRC值并将其与传输或存储的CRC值进行比较，以确定数据是否已被更改。
 > 以下是CRC的一些关键特点：
 > - 检测能力：CRC被设计为检测常见的通信错误，如单个位错误、连续位错误等。
@@ -137,29 +138,35 @@
 >
 > 总之，CRC是一个用于检测数据错误的有用工具，它被广泛应用于通信、存储和其他需要数据完整性的领域。
 
-### GPIOx_ODR
+### 20. GPIOx_ODR
 > GPIOx_ODR是“Output Data Register”的缩写。这个寄存器用于设置或获取GPIO的输出值。
 
-### GPIOx_IDR
+### 21. GPIOx_IDR
 > GPIOx_ODR是“Input Data Register”的缩写。
 > GPIOx_IDR允许你读取与GPIO端口相关的引脚的实时输入状态。这对于诸如按钮按下检测、外部传感器状态检测等应用是非常有用的。
 
-### GPIOx_CRL
+### 22. GPIOx_CRL
 > CRL 是 "Configuration Register Low" 的缩写。
 > CRL负责配置低8个引脚（PIN0到PIN7）
 
-### GPIOx_CRH
+### 23. GPIOx_CRH
 > CRH 是 "Configuration Register High" 的缩写。
 > CRH负责配置高8个引脚（PIN8到PIN15）
 
-### GPIOx_BSRR
+### 24. GPIOx_BSRR
 > 缩写解释：Bit Set/Reset Register。
 > 作用：此寄存器用于原子地设置或重置GPIO端口的引脚。对于STM32的大多数系列，寄存器的前16位用于设置相应引脚（写1将引脚设置为高电平），而后16位用于重置相应引脚（写1将引脚设置为低电平）。这种原子性的操作确保引脚的快速和安全设置/重置，而不涉及读-修改-写的过程。
 
-### GPIOx_BRR
+### 25. GPIOx_BRR
 > 缩写解释：Bit Reset Register。
 > 作用：此寄存器用于原子地重置GPIO端口的引脚。它是GPIOx_BSRR的简化版本，仅用于引脚的重置。写1到BRR的相应位会将对应的GPIO引脚重置为低电平。注意：不是所有STM32系列都有这个寄存器，它主要出现在STM32F1的后续系列中。
 
-### GPIOx_LCKR
+### 26. GPIOx_LCKR
 > 缩写解释：Lock Register。
 > 作用：此寄存器用于锁定GPIO端口的配置。一旦锁定了特定的GPIO配置，它不能被修改，除非系统复位。这对于防止某些关键引脚的配置被意外更改是非常有用的。
+
+### 27. HSI
+> 在STM32微控制器中，HSI 代表 "High-Speed Internal"（高速内部）振荡器。这是一个内部集成的、相对较高频率的振荡器，通常用作微控制器的时钟源之一。HSI 提供的时钟不如外部振荡器（HSE, High-Speed External）准确，但它有内部集成的优势，即不需要外部组件。
+> 一般来说，HSI 是一个不错的时钟源选项，特别是对于不需要极高精度时钟的应用，或者为了减少外部组件而更倾向于使用内部时钟源的情况。由于HSI 是内部集成的，所以它通常更快地启动，这在一些需要快速启动或低功耗的应用中可能是有益的。
+> 具体的频率和特性取决于具体的STM32微控制器型号。例如，在一些STM32F1系列的微控制器中，HSI 的频率通常是8MHz。
+> 在STM32的设置中，你通常会在RCC（Reset and Clock Control）模块中找到相关的HSI设置选项。通过编程，你可以选择是否使用HSI，以及是否需要将其通过PLL（Phase-Locked Loop）进行倍频等。在一些低功耗模式中，HSI 可以被关闭以节省电能。
