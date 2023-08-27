@@ -18,16 +18,16 @@
 │      Template-REG.map                 /* 描述程序的内存布局 */
 │
 └─Objects
-        Embedfire_F103_Template-REG.dep
-        main.crf
-        main.d
-        main.o
+        Embedfire_F103_Template-REG.dep /* 依赖关系文件,记录目标文件依赖的源文件信息 */
+        main.crf                        /* 交叉引用文件,记录函数和全局变量的引用信息 */
+        main.d                          /* 预处理信息文件,包含了预处理后的宏和条件编译信息 */
+        main.o                          /* 对象文件,包含目标代码 */
         startup_stm32f10x_hd.d
         startup_stm32f10x_hd.o
         Template-REG.axf                /* keil download: keil 下载文件 */
-        Template-REG.build_log.htm
+        Template-REG.build_log.htm      /* 编译日志文件,包含了编译过程的详细日志 */
         Template-REG.hex                /* serial download：串口下载文件 */
         Template-REG.htm
-        Template-REG.lnp
+        Template-REG.lnp                /* 链接映射文件,展示链接后代码在目标芯片的布局信息 */
         Template-REG.sct                /* Scatter-Load Description File */
 ```
