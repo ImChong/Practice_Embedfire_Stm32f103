@@ -5,11 +5,13 @@ GitHub Repository: https://github.com/Embedfire-stm32f103-zhinanzhe
 - Embedfire stm32f103 must read: https://github.com/Embedfire-stm32f103-zhinanzhe/ebf_stm32f103_zhinanzhe_must_read/tree/master
 
 ## Fundamentals
+- Vocabularies
 - Required Files
+    - Keil Theme
     - Books
-    - Hardware Documentation
+    - Hardware Documentations
     - Software
-- Keil Project Template
+- Important STM32 Registry
 
 ## StdPeriph_Lib
 - Documentation：https://doc.embedfire.com/mcu/stm32/f103zhinanzhe/std/zh/latest/index.html
