@@ -1,10 +1,16 @@
 #include "stm32f10x.h"  /* 实现寄存器定义 */
 
+#define SECTION_ENABLE 1
+#define SECTION_DISABLE 0
+
 void SystemInit(void) {
     /* 函数为空，为了让编译器不报错 */
 }
 
 int main(void) {
+
+#if SECTION_EN
+    /* NOTE: */
     /* RCC_APB2ENR 打开 GPIOB 端口的时钟 */
     /* IOPBEN：设置为 1 */
     *(unsigned int *)0x40021018 |= (1 << (1 * 3));  /* 设置为1，1位为一组，向左移动3位 */
@@ -16,6 +22,7 @@ int main(void) {
     /* GPIOx_ODR 控制 ODR 寄存器 */
     /* ODR0：设置为 0 */
     *(unsigned int *)0x40010C0C &= ~(1 << (1 * 0)); /* 设置为0，1位为一组，向左移动0位 */
+#endif
 
     return 0;
 }
