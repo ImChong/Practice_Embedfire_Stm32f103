@@ -165,7 +165,7 @@
 > GPIO 是 "General-Purpose Input/Output"（通用输入/输出）的缩写，这是一种通用的、双向的数字接口，可用于读取数字信号（输入）或发送数字信号（输出）。在微控制器、微处理器、或其他集成电路中，GPIO 引脚通常用于与其他数字电路或模块进行低速、通用的数据交流。
 
 ### 23. GPIOx_ODR（Output Data Register）
-> GPIOx_ODR是“Output Data Register”的缩写。这个寄存器用于设置或获取GPIO的输出值。
+> GPIOx_ODR是“Output Data Register”的缩写。这个寄存器用于设置或获取GPIO的输出值。用于直接设置引脚。
 
 ### 24. GPIOx_IDR（Input Data Register）
 > GPIOx_ODR是“Input Data Register”的缩写。
@@ -182,6 +182,7 @@
 ### 27. GPIOx_BSRR（Bit Set/Reset Register）
 > 缩写解释：Bit Set/Reset Register。
 > 作用：此寄存器用于原子地设置或重置GPIO端口的引脚。对于STM32的大多数系列，寄存器的前16位用于设置相应引脚（写1将引脚设置为高电平），而后16位用于重置相应引脚（写1将引脚设置为低电平）。这种原子性的操作确保引脚的快速和安全设置/重置，而不涉及读-修改-写的过程。
+> 操作此寄存器实际会影响 GPIOx_ODR 寄存器。
 
 ### 28. GPIOx_BRR（Bit Reset Register）
 > 缩写解释：Bit Reset Register。
