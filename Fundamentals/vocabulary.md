@@ -7,7 +7,7 @@
 - [7. DTR（Data Terminal Ready）](#7-dtrdata-terminal-ready)
 - [8. SWD（Serial Wire Debug）](#8-swdserial-wire-debug)
 - [9. 内部 FLASH](#9-内部-flash)
-- [10. 系统存储器 System Memory](#10-系统存储器-system-memory)
+- [10. 系统存储器（System Memory）](#10-系统存储器system-memory)
 - [11. 内部 SRAM（Static Random Access Memory）](#11-内部-sramstatic-random-access-memory)
 - [12. CMSIS-DAP（Cortex Microcontroller Software Interface Standard - Debug Access Port）](#12-cmsis-dapcortex-microcontroller-software-interface-standard---debug-access-port)
 - [13. 寄存器（Register）](#13-寄存器register)
@@ -72,7 +72,7 @@
 > - 相对较大容量：Flash 存储器通常具有较大的容量，足以存储整个操作系统和应用程序代码。
 > - 擦写次数有限：每个 Flash 存储单元的擦写次数是有限的，需要谨慎设计以避免过度使用。
 
-### 10. 系统存储器 System Memory
+### 10. 系统存储器（System Memory）
 > 系统存储器通常指的是存储启动引导程序、系统配置数据、引导加载程序等重要信息的存储区域。这个区域可以是内部闪存的一部分，也可以是专门的存储芯片。它具有以下特点：
 > - 存储重要数据：系统存储器通常用于存储启动引导程序、配置信息等，以确保系统在启动时能够正常工作。
 > - 可靠性要求高：系统存储器中的数据需要高可靠性，因为它们与系统启动和操作相关。
