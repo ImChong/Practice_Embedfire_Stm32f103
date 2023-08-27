@@ -7,7 +7,7 @@
 
 #define GPIOB_BASE          (APB2PERIPH_BASE + 0x0C00)            /* GPIOB 外设基地址 */
 #define RCC_BASE            (AHBPERIPH_BASE + 0x1000)             /* RCC 外设基地址 */
-#define RCC_APB2ENR         (unsigned int *)(RCC_BASE + 0x18)     /* RCC 的 AHB 时钟使能寄存器地址, 强制转换成指针 */
+#define RCC_APB2ENR         *(unsigned int *)(RCC_BASE + 0x18)     /* RCC 的 AHB 时钟使能寄存器地址, 强制转换成指针 */
 
 /* GPIOB 寄存器地址, 强制转换成指针 */
 #define GPIOB_CRL           *(unsigned int*)(GPIOB_BASE+0x00)
