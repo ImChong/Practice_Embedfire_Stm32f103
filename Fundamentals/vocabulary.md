@@ -1,7 +1,7 @@
 - [1. 数据手册（Data Sheet）](#1-数据手册data-sheet)
 - [2. 参考手册（Reference Manual）](#2-参考手册reference-manual)
 - [3. ISP（In-System Programming）](#3-ispin-system-programming)
-- [4. NRST](#4-nrst)
+- [4. NRST（Negative Reset）](#4-nrstnegative-reset)
 - [5. RST（Reset）](#5-rstreset)
 - [6. RTS（Request to Send）](#6-rtsrequest-to-send)
 - [7. DTR（Data Terminal Ready）](#7-dtrdata-terminal-ready)
@@ -10,7 +10,7 @@
 - [10. 系统存储器 System Memory](#10-系统存储器-system-memory)
 - [11. 内部 SRAM（Static Random Access Memory）](#11-内部-sramstatic-random-access-memory)
 - [12. CMSIS-DAP（Cortex Microcontroller Software Interface Standard - Debug Access Port）](#12-cmsis-dapcortex-microcontroller-software-interface-standard---debug-access-port)
-- [13. 寄存器 Register](#13-寄存器-register)
+- [13. 寄存器（Register）](#13-寄存器register)
 - [14. FSMC（Flexible static memory controller）](#14-fsmcflexible-static-memory-controller)
 - [15. DMA（Direct Memory Access）](#15-dmadirect-memory-access)
 - [16. AHB（Advanced High-performance Bus）](#16-ahbadvanced-high-performance-bus)
@@ -50,7 +50,7 @@
 ### 3. ISP（In-System Programming）
 > ISP（In-System Programming）是一种通过连接到目标设备的外部接口，在设备内部编程或修改程序代码和数据的技术。这种技术通常用于更新固件、修改配置、烧录Bootloader等操作，而无需将芯片从电路板上取下来，使得在生产和维护阶段都能更加便捷地进行。
 
-### 4. NRST
+### 4. NRST（Negative Reset）
 > NRST 通常代表 "nRST"，其中 "n" 代表 "not"，意思是反相。它在电子和嵌入式系统领域中常用来表示 "Negative Reset"，即负向复位信号。这个信号用于将一个设备或电路恢复到初始状态，通常是通过将设备的内部状态清零或将其重新启动来实现。
 
 ### 5. RST（Reset）
@@ -93,7 +93,7 @@
 > - 性能分析：一些CMSIS-DAP实现还支持性能分析功能，如跟踪和性能计数器。
 > - 通用性：CMSIS-DAP标准化了接口协议，使得兼容不同厂家和型号的Cortex-M微控制器变得更加容易。
 
-### 13. 寄存器 Register
+### 13. 寄存器（Register）
 > 在计算机体系结构和嵌入式系统中，寄存器是一种小型的、高速的临时存储器组件，用于存储和处理计算机程序和数据。寄存器通常直接集成在中央处理器（CPU）内部，用于执行指令和进行运算。
 
 ### 14. FSMC（Flexible static memory controller）
