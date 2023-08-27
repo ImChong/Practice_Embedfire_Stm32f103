@@ -40,6 +40,13 @@
   - [3.5. .dbgconf 文件](#35-dbgconf-文件)
   - [3.6. .lst 文件（Listing 文件）](#36-lst-文件listing-文件)
   - [3.7. .map 文件（Map 文件）](#37-map-文件map-文件)
+  - [.dep 文件（Dependency File）](#dep-文件dependency-file)
+  - [.crf 文件（Cross-Reference File）](#crf-文件cross-reference-file)
+  - [.d 文件（Dependency File）](#d-文件dependency-file)
+  - [.o 文件（Object File）](#o-文件object-file)
+  - [.build\_log.htm 文件（Build Log HTML File）](#build_loghtm-文件build-log-html-file)
+  - [.htm 文件（HTML Report File）](#htm-文件html-report-file)
+  - [.lnp 文件（Linker Settings）](#lnp-文件linker-settings)
 
 ## 1. 嵌入式基础知识相关
 
@@ -267,3 +274,25 @@
 
 ### 3.7. .map 文件（Map 文件）
 > 这是一个由链接器生成的文件，用于描述程序的内存布局。它列出了所有符号（函数、变量等）的地址分配情况，以及如何映射到目标硬件的内存中。.map 文件在调试、分析和优化应用程序时非常有用，特别是在资源受限的嵌入式系统中
+
+### .dep 文件（Dependency File）
+> 这个文件列出了源代码文件（如 .c、.cpp 等）的依赖关系，通常用于增量编译。当修改了某个头文件时，编译器可以通过查看 .dep 文件来决定哪些源文件需要重新编译。
+
+### .crf 文件（Cross-Reference File）
+> 这个文件包含了源代码与其生成的目标代码之间的交叉引用信息。这通常用于更高级的代码分析或文档生成。
+
+### .d 文件（Dependency File）
+> 与 .dep 文件类似，这个文件也包含了源文件的依赖信息。它通常用于 GNU Make 或其他构建系统，在进行增量编译时确定哪些文件需要重新编译。
+
+### .o 文件（Object File）
+> 这是编译后生成的目标文件。这些 .o 文件会被链接器合并成一个可执行文件或库。
+
+### .build_log.htm 文件（Build Log HTML File）
+> 这是一个 HTML 格式的构建日志文件，记录了编译过程中的各种信息，如编译日期、时间、使用的编译器版本、警告、错误等。
+
+### .htm 文件（HTML Report File）
+> 通常这是一个编译报告，提供了关于构建过程的各种统计信息，比如代码大小、数据段大小等。
+
+### .lnp 文件（Linker Settings）
+> 这个文件存储了链接器的设置信息，如内存布局、入口点等。它通常用于配置更复杂的链接行为。
+
