@@ -10,7 +10,7 @@ void SystemInit(void) {
 int main(void) {
 
 #if SECTION_ADDRESS_EN
-    /* NOTE: */
+    /* NOTE: 用地址直接操作 GPIO PB0 */
     /* RCC_APB2ENR 打开 GPIOB 端口的时钟 */
     /* IOPBEN：设置为 1 */
     *(unsigned int *)0x40021018 |= (1 << (1 * 3));  /* 设置为1，1位为一组，向左移动3位 */
@@ -23,7 +23,7 @@ int main(void) {
     /* ODR0：设置为 0 */
     *(unsigned int *)0x40010C0C &= ~(1 << (1 * 0)); /* 设置为0，1位为一组，向左移动0位 */
 #elif SECTION_REGISTRY_EN
-    /* NOTE */
+    /* NOTE: 用寄存器操作 GPIO PB0 */
 #endif
 
     return 0;
