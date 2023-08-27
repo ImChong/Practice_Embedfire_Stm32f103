@@ -17,14 +17,15 @@
 - [17. SDIO](#17-sdio)
 - [18. 桥接器（Bridges）](#18-桥接器bridges)
 - [19. CRC](#19-crc)
-- [20. GPIOx\_ODR](#20-gpiox_odr)
-- [21. GPIOx\_IDR](#21-gpiox_idr)
-- [22. GPIOx\_CRL](#22-gpiox_crl)
-- [23. GPIOx\_CRH](#23-gpiox_crh)
-- [24. GPIOx\_BSRR](#24-gpiox_bsrr)
-- [25. GPIOx\_BRR](#25-gpiox_brr)
-- [26. GPIOx\_LCKR](#26-gpiox_lckr)
-- [27. HSI](#27-hsi)
+- [20. GPIO](#20-gpio)
+- [21. GPIOx\_ODR](#21-gpiox_odr)
+- [22. GPIOx\_IDR](#22-gpiox_idr)
+- [23. GPIOx\_CRL](#23-gpiox_crl)
+- [24. GPIOx\_CRH](#24-gpiox_crh)
+- [25. GPIOx\_BSRR](#25-gpiox_bsrr)
+- [26. GPIOx\_BRR](#26-gpiox_brr)
+- [27. GPIOx\_LCKR](#27-gpiox_lckr)
+- [28. HSI](#28-hsi)
 
 ### 1. ISP
 > ISP（In-System Programming）是一种通过连接到目标设备的外部接口，在设备内部编程或修改程序代码和数据的技术。这种技术通常用于更新固件、修改配置、烧录Bootloader等操作，而无需将芯片从电路板上取下来，使得在生产和维护阶段都能更加便捷地进行。
@@ -138,34 +139,38 @@
 >
 > 总之，CRC是一个用于检测数据错误的有用工具，它被广泛应用于通信、存储和其他需要数据完整性的领域。
 
-### 20. GPIOx_ODR
+
+### 20. GPIO
+> GPIO 是 "General-Purpose Input/Output"（通用输入/输出）的缩写，这是一种通用的、双向的数字接口，可用于读取数字信号（输入）或发送数字信号（输出）。在微控制器、微处理器、或其他集成电路中，GPIO 引脚通常用于与其他数字电路或模块进行低速、通用的数据交流。
+
+### 21. GPIOx_ODR
 > GPIOx_ODR是“Output Data Register”的缩写。这个寄存器用于设置或获取GPIO的输出值。
 
-### 21. GPIOx_IDR
+### 22. GPIOx_IDR
 > GPIOx_ODR是“Input Data Register”的缩写。
 > GPIOx_IDR允许你读取与GPIO端口相关的引脚的实时输入状态。这对于诸如按钮按下检测、外部传感器状态检测等应用是非常有用的。
 
-### 22. GPIOx_CRL
+### 23. GPIOx_CRL
 > CRL 是 "Configuration Register Low" 的缩写。
 > CRL负责配置低8个引脚（PIN0到PIN7）
 
-### 23. GPIOx_CRH
+### 24. GPIOx_CRH
 > CRH 是 "Configuration Register High" 的缩写。
 > CRH负责配置高8个引脚（PIN8到PIN15）
 
-### 24. GPIOx_BSRR
+### 25. GPIOx_BSRR
 > 缩写解释：Bit Set/Reset Register。
 > 作用：此寄存器用于原子地设置或重置GPIO端口的引脚。对于STM32的大多数系列，寄存器的前16位用于设置相应引脚（写1将引脚设置为高电平），而后16位用于重置相应引脚（写1将引脚设置为低电平）。这种原子性的操作确保引脚的快速和安全设置/重置，而不涉及读-修改-写的过程。
 
-### 25. GPIOx_BRR
+### 26. GPIOx_BRR
 > 缩写解释：Bit Reset Register。
 > 作用：此寄存器用于原子地重置GPIO端口的引脚。它是GPIOx_BSRR的简化版本，仅用于引脚的重置。写1到BRR的相应位会将对应的GPIO引脚重置为低电平。注意：不是所有STM32系列都有这个寄存器，它主要出现在STM32F1的后续系列中。
 
-### 26. GPIOx_LCKR
+### 27. GPIOx_LCKR
 > 缩写解释：Lock Register。
 > 作用：此寄存器用于锁定GPIO端口的配置。一旦锁定了特定的GPIO配置，它不能被修改，除非系统复位。这对于防止某些关键引脚的配置被意外更改是非常有用的。
 
-### 27. HSI
+### 28. HSI
 > 在STM32微控制器中，HSI 代表 "High-Speed Internal"（高速内部）振荡器。这是一个内部集成的、相对较高频率的振荡器，通常用作微控制器的时钟源之一。HSI 提供的时钟不如外部振荡器（HSE, High-Speed External）准确，但它有内部集成的优势，即不需要外部组件。
 > 一般来说，HSI 是一个不错的时钟源选项，特别是对于不需要极高精度时钟的应用，或者为了减少外部组件而更倾向于使用内部时钟源的情况。由于HSI 是内部集成的，所以它通常更快地启动，这在一些需要快速启动或低功耗的应用中可能是有益的。
 > 具体的频率和特性取决于具体的STM32微控制器型号。例如，在一些STM32F1系列的微控制器中，HSI 的频率通常是8MHz。
