@@ -21,9 +21,9 @@
         main.o
         startup_stm32f10x_hd.d
         startup_stm32f10x_hd.o
-        Template-REG.axf
+        Template-REG.axf                /* keil download */
         Template-REG.build_log.htm
-        Template-REG.hex
+        Template-REG.hex                /* serial download */
         Template-REG.htm
         Template-REG.lnp
-        Template-REG.sct
+        Template-REG.sct                /* Scatter-Load Description File */
