@@ -16,6 +16,7 @@ int main(void) {
     /* GPIOx_ODR 控制 ODR 寄存器 */
     /* ODR0：设置为 0 */
     *(unsigned int *)0x40010C0C &= ~(1 << (1 * 0)); /* 设置为0，1位为一组，向左移动0位 */
+
     return 0;
 }
 
