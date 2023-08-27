@@ -19,15 +19,15 @@
 │
 └─Objects
         Embedfire_F103_Template-REG.dep /* 依赖关系文件,记录目标文件依赖的源文件信息 */
-        main.crf                        /* 交叉引用文件,记录函数和全局变量的引用信息 */
-        main.d                          /* 预处理信息文件,包含了预处理后的宏和条件编译信息 */
-        main.o                          /* 对象文件,包含目标代码 */
+        main.crf                        /* 包含了源代码与其生成的目标代码之间的交叉引用信息。这通常用于更高级的代码分析或文档生成 */
+        main.d                          /* 包含了源文件的依赖信息。它通常用于 GNU Make 或其他构建系统，在进行增量编译时确定哪些文件需要重新编译 */
+        main.o                          /* 编译后生成的目标文件。这些 .o 文件会被链接器合并成一个可执行文件或库 */
         startup_stm32f10x_hd.d
         startup_stm32f10x_hd.o
         Template-REG.axf                /* keil download: keil 下载文件 */
         Template-REG.build_log.htm      /* 编译日志文件,包含了编译过程的详细日志 */
         Template-REG.hex                /* serial download：串口下载文件 */
-        Template-REG.htm
-        Template-REG.lnp                /* 链接映射文件,展示链接后代码在目标芯片的布局信息 */
+        Template-REG.htm                /* 编译报告，提供了关于构建过程的各种统计信息，比如代码大小、数据段大小等 */
+        Template-REG.lnp                /* 存储了链接器的设置信息，如内存布局、入口点等。它通常用于配置更复杂的链接行为 */
         Template-REG.sct                /* Scatter-Load Description File */
 ```
