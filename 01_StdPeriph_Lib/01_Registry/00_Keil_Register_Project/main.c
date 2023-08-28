@@ -1,4 +1,4 @@
-#include "stm32f10x.h"          /* 实现寄存器定义 */
+// #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
 
 #define SECTION_ADDRESS_EN 0    /* 用地址直接操作 GPIO PB0 */
