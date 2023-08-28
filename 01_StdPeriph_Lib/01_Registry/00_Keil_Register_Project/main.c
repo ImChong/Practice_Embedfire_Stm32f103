@@ -68,6 +68,7 @@ int main(void) {
 #elif SECTION_FUNCTION_EN
     /* NOTE: 用函数操作 GPIO PB0 */
 
+
 #endif
 
     return 0;
