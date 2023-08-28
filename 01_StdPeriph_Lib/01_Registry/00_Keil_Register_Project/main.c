@@ -80,7 +80,7 @@ int main(void) {
 
     /* GPIOx_ODR 控制 ODR 寄存器 */
     /* ODR0：设置为 0 */
-    // GPIO_SetBits(GPIOB, GPIO_Pin_0);
+    GPIO_SetBits(GPIOB, GPIO_Pin_0);
 
 #endif
 
