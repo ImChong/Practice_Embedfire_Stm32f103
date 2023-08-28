@@ -25,4 +25,4 @@ GitHub Repository: https://github.com/Embedfire-stm32f103-zhinanzhe
 - Example Code: https://github.com/Embedfire-stm32f103-zhinanzhe/ebf_stm32f103_zhinanzhe_hal_code
 - Videos: https://www.bilibili.com/video/BV18X4y1M763/?vd_source=75275452d1d334b4d80721d4823e4631
 - Mindmap: TODO
-
+- Progress: TODO
