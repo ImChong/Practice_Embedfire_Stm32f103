@@ -31,29 +31,29 @@ typedef unsigned short  uint16_t;   /* 无符号 16 位变量 */
 /*  RCC 寄存器结构体定义 */
 typedef struct
 {
-    uint32_t CR;
-    uint32_t CFGR;
-    uint32_t CIR;
-    uint32_t APB2RSTR;
-    uint32_t APB1RSTR;
-    uint32_t AHBENR;
-    uint32_t APB2ENR;
-    uint32_t APB1ENR;
-    uint32_t BDCR;
-    uint32_t CSR;
+    __IO uint32_t CR;
+    __IO uint32_t CFGR;
+    __IO uint32_t CIR;
+    __IO uint32_t APB2RSTR;
+    __IO uint32_t APB1RSTR;
+    __IO uint32_t AHBENR;
+    __IO uint32_t APB2ENR;
+    __IO uint32_t APB1ENR;
+    __IO uint32_t BDCR;
+    __IO uint32_t CSR;
 } RCC_TypeDef;
 
 #define RCC     ((RCC_TypeDef *)RCC_BASE)
 
 /*  GPIO 寄存器结构体定义 */
 typedef struct {
-    uint32_t CRL; /*GPIO 端口配置低寄存器 地址偏移: 0x00 */
-    uint32_t CRH; /*GPIO 端口配置高寄存器 地址偏移: 0x04 */
-    uint32_t IDR; /*GPIO 数据输入寄存器 地址偏移: 0x08 */
-    uint32_t ODR; /*GPIO 数据输出寄存器 地址偏移: 0x0C */
-    uint32_t BSRR; /*GPIO 位设置/清除寄存器 地址偏移: 0x10 */
-    uint32_t BRR; /*GPIO 端口位清除寄存器 地址偏移: 0x14 */
-    uint32_t LCKR; /*GPIO 端口配置锁定寄存器 地址偏移: 0x18 */
+    __IO uint32_t CRL; /*GPIO 端口配置低寄存器 地址偏移: 0x00 */
+    __IO uint32_t CRH; /*GPIO 端口配置高寄存器 地址偏移: 0x04 */
+    __IO uint32_t IDR; /*GPIO 数据输入寄存器 地址偏移: 0x08 */
+    __IO uint32_t ODR; /*GPIO 数据输出寄存器 地址偏移: 0x0C */
+    __IO uint32_t BSRR; /*GPIO 位设置/清除寄存器 地址偏移: 0x10 */
+    __IO uint32_t BRR; /*GPIO 端口位清除寄存器 地址偏移: 0x14 */
+    __IO uint32_t LCKR; /*GPIO 端口配置锁定寄存器 地址偏移: 0x18 */
 } GPIO_TypeDef;
 
 #define GPIOB   ((GPIO_TypeDef *)GPIOB_BASE)
