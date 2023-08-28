@@ -1,3 +1,6 @@
+#ifndef __STM32F10X_H
+#define __STM32F10X_H
+
 /* 用来存放 STM32 寄存器映射的代码 */
 #define PERIPH_BASE         ((unsigned int)0x40000000)            /* 片上外设基地址 */
 
@@ -49,3 +52,5 @@ typedef struct {
 } GPIO_TypeDef;
 
 #define GPIOB   ((GPIO_TypeDef *)GPIOB_BASE)
+
+#endif /* __STM32F10X_H */
