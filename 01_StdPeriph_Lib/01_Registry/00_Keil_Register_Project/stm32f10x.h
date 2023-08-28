@@ -21,9 +21,14 @@
 // #define GPIOB_BRR           *(unsigned int*)(GPIOB_BASE+0x14)
 // #define GPIOB_LCKR          *(unsigned int*)(GPIOB_BASE+0x18)
 
+// 寄存器的值常常是芯片外设自动更改的，即使 CPU 没有执行程序，也有可能发生变化
+// 编译器有可能会对没有执行程序的变量进行优化
+// volatile 表示易变的变量，防止编译器优化
+#define __IO volatile
 typedef unsigned int    uint32_t;   /* 无符号 32 位变量 */
 typedef unsigned short  uint16_t;   /* 无符号 16 位变量 */
 
+/*  RCC 寄存器结构体定义 */
 typedef struct
 {
     uint32_t CR;
@@ -40,7 +45,7 @@ typedef struct
 
 #define RCC     ((RCC_TypeDef *)RCC_BASE)
 
-/* GPIO 寄存器列表 */
+/*  GPIO 寄存器结构体定义 */
 typedef struct {
     uint32_t CRL; /*GPIO 端口配置低寄存器 地址偏移: 0x00 */
     uint32_t CRH; /*GPIO 端口配置高寄存器 地址偏移: 0x04 */
