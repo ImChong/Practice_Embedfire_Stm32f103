@@ -31,3 +31,5 @@ typedef struct {
     uint32_t BRR; /*GPIO 端口位清除寄存器 地址偏移: 0x14 */
     uint32_t LCKR; /*GPIO 端口配置锁定寄存器 地址偏移: 0x18 */
 } GPIO_TypeDef;
+
+#define GPIOB   ((GPIO_TypeDef *)GPIOB_BASE)

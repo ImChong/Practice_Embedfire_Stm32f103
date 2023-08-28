@@ -1,7 +1,8 @@
 #include "stm32f10x.h"  /* 实现寄存器定义 */
 
 #define SECTION_ADDRESS_EN 0    /* 用地址直接操作 GPIO PB0 */
-#define SECTION_MACRO_EN 1      /* 用寄存器宏操作 GPIO PB0 */
+#define SECTION_MACRO_EN 0      /* 用寄存器宏操作 GPIO PB0 */
+#define SECTION_STRUCT_EN 1     /* 用结构体操作 GPIO PB0 */
 
 void SystemInit(void) {
     /* 函数为空，为了让编译器不报错 */
