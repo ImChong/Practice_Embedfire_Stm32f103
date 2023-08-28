@@ -1,4 +1,4 @@
-#ifndef __STM32F10X_H
+#ifndef __STM32F10X_H   /* 防止重复包含头文件 */
 #define __STM32F10X_H
 
 /* 用来存放 STM32 寄存器映射的代码 */
