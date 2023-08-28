@@ -21,6 +21,22 @@
 typedef unsigned int    uint32_t;   /* 无符号 32 位变量 */
 typedef unsigned short  uint16_t;   /* 无符号 16 位变量 */
 
+typedef struct
+{
+    uint32_t CR;
+    uint32_t CFGR;
+    uint32_t CIR;
+    uint32_t APB2RSTR;
+    uint32_t APB1RSTR;
+    uint32_t AHBENR;
+    uint32_t APB2ENR;
+    uint32_t APB1ENR;
+    uint32_t BDCR;
+    uint32_t CSR;
+} RCC_TypeDef;
+
+#define RCC     ((RCC_TypeDef *)RCC_BASE)
+
 /* GPIO 寄存器列表 */
 typedef struct {
     uint32_t CRL; /*GPIO 端口配置低寄存器 地址偏移: 0x00 */
