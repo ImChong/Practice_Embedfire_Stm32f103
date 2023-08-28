@@ -3,6 +3,6 @@
 
 #include "stm32f10x.h"
 
-
+void GPIO_SetBits(GPIO_TypeDef *GPIOx);
 
 #endif  /* __STM32F10X_GPIO_H */
