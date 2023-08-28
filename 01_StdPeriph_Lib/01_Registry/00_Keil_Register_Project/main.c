@@ -1,8 +1,8 @@
 /*
  * @Author: Chong Liu
  * @Date: 2023-08-29 00:54:56
- * @Last Modified by:   Chong Liu
- * @Last Modified time: 2023-08-29 00:54:56
+ * @Last Modified by: Chong Liu
+ * @Last Modified time: 2023-08-29 00:57:13
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -87,6 +87,7 @@ int main(void) {
     /* GPIOx_ODR 控制 ODR 寄存器 */
     /* ODR0：设置为 0 */
     GPIO_SetBits(GPIOB, GPIO_Pin_0);
+    GPIO_ResetBits(GPIOB, GPIO_Pin_0);
 
 #endif
 
