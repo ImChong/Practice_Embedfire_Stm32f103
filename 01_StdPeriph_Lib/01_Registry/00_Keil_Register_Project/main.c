@@ -1,8 +1,12 @@
 /*
+ * @File: main.c
+ * @Created Date: Monday, August 28th 2023, 9:50:16 pm
  * @Author: Chong Liu
- * @Date: 2023-08-29 00:54:56
- * @Last Modified by: Chong Liu
- * @Last Modified time: 2023-08-29 00:57:13
+ * @brief Description of what this file does
+ * =================================================================================
+ * Copyright (c) 2023 Chong Liu
+ * =================================================================================
+ * Last Modified: Chong Liu - Tuesday, August 29th 2023, 1:42:59 am
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */

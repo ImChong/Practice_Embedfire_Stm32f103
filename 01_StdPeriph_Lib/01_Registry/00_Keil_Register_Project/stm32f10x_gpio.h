@@ -1,8 +1,12 @@
 /*
+ * @File: stm32f10x_gpio.h
+ * @Created Date: Monday, August 28th 2023, 11:38:06 pm
  * @Author: Chong Liu
- * @Date: 2023-08-29 00:54:43
- * @Last Modified by:   Chong Liu
- * @Last Modified time: 2023-08-29 00:54:43
+ * @brief Description of what this file does
+ * =================================================================================
+ * Copyright (c) 2023 Chong Liu
+ * =================================================================================
+ * Last Modified: Chong Liu - Tuesday, August 29th 2023, 1:43:16 am
  */
 #ifndef __STM32F10X_GPIO_H  /* 防止重复包含头文件 */
 #define __STM32F10X_GPIO_H
