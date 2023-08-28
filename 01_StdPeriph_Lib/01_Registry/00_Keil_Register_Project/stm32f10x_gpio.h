@@ -23,5 +23,6 @@
 #define GPIO_Pin_All    ((uint16_t)0xFFFF)      /*!< 选择全部引脚 */
 
 void GPIO_SetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
+void GPIO_ResetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
 
 #endif  /* __STM32F10X_GPIO_H */
