@@ -45,6 +45,13 @@ int main(void) {
     GPIOB_ODR &= ~(1 << (1 * 0));           /* 设置为0，1位为一组，向左移动0位 */   /* 取决与硬件原理图：输出 0 点亮 LED 灯*/
     GPIOB_ODR |= (1 << (1 * 0));            /* 设置为1，1位为一组，向左移动0位 */
 
+#elif SECTION_STRUCT_EN
+    /* NOTE: 用结构体操作 GPIO PB0 */
+
+
+
+
+
 #endif
 
     return 0;
