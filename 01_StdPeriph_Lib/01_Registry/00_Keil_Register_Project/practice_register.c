@@ -26,8 +26,8 @@
 #define GPIOB_BRR   (unsigned int *)(GPIOB_BASE+0x14)
 #define GPIOB_LCKR  (unsigned int *)(GPIOB_BASE+0x18)
 
-typedef unsigned int uint32_t; /* 无符号 32 位变量 */
-typedef unsigned short int uint16_t; /* 无符号 16 位变量 */
+typedef unsigned int uint32_t;          /* 无符号 32 位变量 */
+typedef unsigned short int uint16_t;    /* 无符号 16 位变量 */
 
 /* GPIO 寄存器列表 */
 typedef struct {
