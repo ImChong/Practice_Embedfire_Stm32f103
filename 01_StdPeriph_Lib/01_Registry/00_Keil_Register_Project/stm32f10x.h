@@ -1,3 +1,9 @@
+/*
+ * @Author: Chong Liu
+ * @Date: 2023-08-29 00:55:11
+ * @Last Modified by:   Chong Liu
+ * @Last Modified time: 2023-08-29 00:55:11
+ */
 #ifndef __STM32F10X_H   /* 防止重复包含头文件 */
 #define __STM32F10X_H
 

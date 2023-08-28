@@ -1,3 +1,9 @@
+/*
+ * @Author: Chong Liu
+ * @Date: 2023-08-29 00:54:56
+ * @Last Modified by:   Chong Liu
+ * @Last Modified time: 2023-08-29 00:54:56
+ */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
 
