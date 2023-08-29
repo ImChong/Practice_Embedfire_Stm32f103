@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 12:49:31 am
+ * Last Modified: Chong Liu - 2023-08-30 12:50:50 am
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -20,8 +20,15 @@ void SystemInit(void) {
     /* 函数为空，为了让编译器不报错 */
 }
 
+/* main()
+ *  Functionality: description...
+ *  Arguments: void
+ *  Return: int
+ *  References: document/website...
+ ***********************************************************************************
+ *  IMPORTANT NOTICE FOR READER
+ */
 int main(void) {
-
 #if SECTION_ADDRESS_EN
     /* NOTE: 用地址直接操作 GPIO PB0 */
     /* RCC_APB2ENR 打开 GPIOB 端口的时钟 */
