@@ -2,11 +2,11 @@
  * @File: stm32f10x.h
  * @Created Date: 2023-08-27 3:48:50 pm
  * @Author: Chong Liu
- * @Brief: Description of what this file does
+ * @Brief: stm32f103寄存器定义
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 12:53:19 am
+ * Last Modified: Chong Liu - 2023-08-30 1:13:13 am
  */
 #ifndef __STM32F10X_H   /* 防止重复包含头文件 */
 #define __STM32F10X_H
