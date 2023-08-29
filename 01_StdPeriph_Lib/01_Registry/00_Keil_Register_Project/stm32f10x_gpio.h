@@ -1,12 +1,12 @@
 /*
  * @File: stm32f10x_gpio.h
- * @Created Date: Monday, August 28th 2023, 11:38:06 pm
+ * @Created Date: 2023-08-28 11:38:06 pm
  * @Author: Chong Liu
  * @brief Description of what this file does
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - Wednesday, August 30th 2023, 12:31:17 am
+ * Last Modified: Chong Liu - 2023-08-30 12:49:03 am
  */
 #ifndef __STM32F10X_GPIO_H  /* 防止重复包含头文件 */
 #define __STM32F10X_GPIO_H
@@ -31,6 +31,10 @@
 #define GPIO_Pin_14     ((uint16_t)0x4000)      /*!< 选择 Pin14         (01000000 00000000)b */
 #define GPIO_Pin_15     ((uint16_t)0x8000)      /*!< 选择 Pin15         (10000000 00000000)b */
 #define GPIO_Pin_All    ((uint16_t)0xFFFF)      /*!< 选择全部引脚        (11111111 11111111)b */
+
+typedef struct {
+
+} GPIO_InitTypeDef;
 
 void GPIO_SetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
 void GPIO_ResetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);

@@ -1,12 +1,12 @@
 /*
  * @File: stm32f10x.h
- * @Created Date: Sunday, August 27th 2023, 3:48:50 pm
+ * @Created Date: 2023-08-27 3:48:50 pm
  * @Author: Chong Liu
  * @brief Description of what this file does
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - Tuesday, August 29th 2023, 1:43:07 am
+ * Last Modified: Chong Liu - 2023-08-30 12:48:44 am
  */
 #ifndef __STM32F10X_H   /* 防止重复包含头文件 */
 #define __STM32F10X_H
