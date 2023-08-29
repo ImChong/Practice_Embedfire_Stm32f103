@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 12:53:06 am
+ * Last Modified: Chong Liu - 2023-08-30 12:55:14 am
  */
 #ifndef __STM32F10X_GPIO_H  /* 防止重复包含头文件 */
 #define __STM32F10X_GPIO_H
@@ -33,7 +33,9 @@
 #define GPIO_Pin_All    ((uint16_t)0xFFFF)      /*!< 选择全部引脚        (11111111 11111111)b */
 
 typedef struct {
-
+    uint16_t GPIO_Pin;      /*!< 选择要配置的 GPIO 引脚 */
+    uint16_t GPIO_Speed;    /*!< 选择 GPIO 引脚的速率 */
+    uint16_t GPIO_Mode;     /*!< 选择 GPIO 引脚的工作模式 */
 } GPIO_InitTypeDef;
 
 void GPIO_SetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
