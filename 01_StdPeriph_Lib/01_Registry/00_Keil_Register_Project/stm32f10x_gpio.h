@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 12:55:14 am
+ * Last Modified: Chong Liu - 2023-08-30 1:12:01 am
  */
 #ifndef __STM32F10X_GPIO_H  /* 防止重复包含头文件 */
 #define __STM32F10X_GPIO_H
@@ -31,6 +31,28 @@
 #define GPIO_Pin_14     ((uint16_t)0x4000)      /*!< 选择 Pin14         (01000000 00000000)b */
 #define GPIO_Pin_15     ((uint16_t)0x8000)      /*!< 选择 Pin15         (10000000 00000000)b */
 #define GPIO_Pin_All    ((uint16_t)0xFFFF)      /*!< 选择全部引脚        (11111111 11111111)b */
+
+
+/* GPIO 输出速率枚举定义 */
+typedef enum {
+    GPIO_Speed_10MHz = 1,   // 10MHZ (01)b
+    GPIO_Speed_2MHz,        // 2MHZ (10)b
+    GPIO_Speed_50MHz        // 50MHZ (11)b
+} GPIOSpeed_TypeDef;
+
+/*  GPIO 工作模式枚举定义 */
+typedef enum {
+    GPIO_Mode_AIN = 0x0,            // 模拟输入     (0000 0000)b
+    GPIO_Mode_IN_FLOATING = 0x04,   // 浮空输入     (0000 0100)b
+    GPIO_Mode_IPD = 0x28,           // 下拉输入     (0010 1000)b
+    GPIO_Mode_IPU = 0x48,           // 上拉输入     (0100 1000)b
+
+    GPIO_Mode_Out_OD = 0x14,        // 开漏输出     (0001 0100)b
+    GPIO_Mode_Out_PP = 0x10,        // 推挽输出     (0001 0000)b
+    GPIO_Mode_AF_OD = 0x1C,         // 复用开漏输出  (0001 1100)b
+    GPIO_Mode_AF_PP = 0x18          // 复用推挽输出  (0001 1000)b
+} GPIOMode_TypeDef;
+
 
 typedef struct {
     uint16_t GPIO_Pin;      /*!< 选择要配置的 GPIO 引脚 */
