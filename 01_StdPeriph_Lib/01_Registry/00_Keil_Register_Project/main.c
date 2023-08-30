@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 10:29:27 pm
+ * Last Modified: Chong Liu - 2023-08-30 10:31:21 pm
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -47,7 +47,7 @@ void Delay(__IO uint32_t nCount) {
  *  Return: int
  *  References: [野火]STM32库开发实战指南, ——基于野火指南者开发板
  ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+ *  IMPORTANT NOTICE FOR READER：通过修改 14~18 行的宏定义可实现运行不同部分的代码
  */
 int main(void) {
 #if SECTION_ADDRESS_EN
