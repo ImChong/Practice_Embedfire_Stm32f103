@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 4:20:48 pm
+ * Last Modified: Chong Liu - 2023-08-30 4:25:39 pm
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -103,7 +103,15 @@ int main(void) {
 
 #elif SECTION_GPIO_STRUCTURE_SECTION_EN
     /* NOTE: 用结构体初始化 GPIO PB0 */
+    /* GPIO 端口初始化j结构体 */
     GPIO_InitTypeDef GPIO_InitStructure;
+
+    /* 选择要控制的GPIO 引脚*/
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+    /* 设置引脚的输出类型为推挽输出*/
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    /* 设置输出速率为 50MHZ */
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 
 #endif
 
