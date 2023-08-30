@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 9:40:58 pm
+ * Last Modified: Chong Liu - 2023-08-30 9:43:13 pm
  */
 #include "stm32f10x_gpio.h"
 
@@ -76,6 +76,7 @@ void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct) {
                 pos = pinPos << 2;
                 //把控制这个引脚的 4 个寄存器位清零，其它寄存器位不变
                 pinMask = ((uint32_t)0x0F) << pos;
+                tmpReg &= ~pinMask;
             }
         }
     }
