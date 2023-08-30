@@ -6,9 +6,9 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - Wednesday, August 30th 2023, 11:11:02 am
+ * Last Modified: Chong Liu - Wednesday, August 30th 2023, 11:12:11 am
  */
-// #include "stm32f10x.h"          /* 实现寄存器定义 */
+#include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
 
 #define SECTION_ADDRESS_EN 0    /* 用地址直接操作 GPIO PB0 */
