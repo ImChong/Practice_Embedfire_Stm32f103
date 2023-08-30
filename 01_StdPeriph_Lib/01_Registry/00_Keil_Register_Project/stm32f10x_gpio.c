@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 9:43:13 pm
+ * Last Modified: Chong Liu - 2023-08-30 10:01:15 pm
  */
 #include "stm32f10x_gpio.h"
 
@@ -77,7 +77,62 @@ void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct) {
                 //把控制这个引脚的 4 个寄存器位清零，其它寄存器位不变
                 pinMask = ((uint32_t)0x0F) << pos;
                 tmpReg &= ~pinMask;
+
+                // 向寄存器写入将要配置的引脚的模式
+                tmpReg |= (currentMode << pos);
+
+                // 判断是否为下拉输入模式
+                if (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_IPD) {
+                    // 下拉输入模式, 引脚默认置 0, 对 BRR 寄存器写 1 对引脚置 0
+                    GPIOx->BRR = (((uint32_t)0x01) << pinPos);
+                // 判断是否为上拉输入模式
+                } else if (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_IPU) {
+                    // 上拉输入模式, 引脚默认值为 1, 对 BSRR 寄存器写 1 对引脚置 1
+                    GPIOx->BSRR = (((uint32_t)0x01) << pinPos);
+                }
             }
         }
+        // 把前面处理后的暂存值写入到 CRL 寄存器之中
+        GPIOx->CRL = tmpReg;
+    }
+
+    /*--------GPIO CRH 寄存器配置 CRH 寄存器控制着高 8 位 IO- -----*/
+    // 配置端口高 8 位，即 Pin8~Pin15
+    if (GPIO_InitStruct->GPIO_Pin > 0x00FF) {
+        // 先备份 CRH 寄存器的值
+        tmpReg = GPIOx->CRH;
+
+        // 循环，从 Pin8 开始配对，找出具体的 Pin
+        for (pinPos = 0x00; pinPos < 0x08; pinPos++) {
+            pos = (((uint32_t)0x01) << (pinPos + 0x08));
+
+            // pos 与输入参数 GPIO_PIN 作位与运算
+            currentPin = ((GPIO_InitStruct->GPIO_Pin) & pos);
+
+            // 若 currentPin=pos, 则找到使用的引脚
+            if (currentPin == pos) {
+                // pinPos 的值左移两位 (乘以 4), 因为寄存器中 4 个位配置一个引脚
+                pos = pinPos << 2;
+
+                // 把控制这个引脚的 4 个寄存器位清零，其它寄存器位不变
+                pinMask = ((uint32_t)0x0F) << pos;
+                tmpReg &= ~pinMask;
+
+                // 向寄存器写入将要配置的引脚的模式
+                tmpReg |= (currentMode << pos);
+
+                // 判断是否为下拉输入模式
+                if (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_IPD) {
+                    // 下拉输入模式, 引脚默认置 0, 对 BRR 寄存器写 1 可对引脚置 0
+                    GPIOx->BRR = (((uint32_t)0x01) << (pinPos + 0x08));
+                // 判断是否为上拉输入模式
+                } else if (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_IPU) {
+                    // 上拉输入模式, 引脚默认值为 1, 对 BSRR 寄存器写 1 可对引脚置
+                    GPIOx->BSRR = (((uint32_t)0x01) << (pinPos + 0x08));
+                }
+            }
+        }
+        // 把前面处理后的暂存值写入到 CRH 寄存器之中
+        GPIOx->CRH = tmpReg;
     }
 }
