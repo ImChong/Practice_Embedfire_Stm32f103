@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 10:24:41 pm
+ * Last Modified: Chong Liu - 2023-08-30 10:26:07 pm
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -67,6 +67,8 @@ int main(void) {
     /* ODR0：设置为 0 */
     *(unsigned int *)0x40010C0C &= ~(1 << (1 * 0));         /* 设置为0，1位为一组，向左移动0位 */
 
+    return 0;
+
 #elif SECTION_MACRO_EN
     /* NOTE: 用寄存器宏操作 GPIO PB0 */
     /* RCC_APB2ENR 打开 GPIOB 端口的时钟 */
@@ -84,6 +86,8 @@ int main(void) {
     /* ODR0：设置为 0 */
     GPIOB_ODR &= ~(1 << (1 * 0));           /* 设置为0，1位为一组，向左移动0位 */   /* 取决与硬件原理图：输出 0 点亮 LED 灯*/
     GPIOB_ODR |= (1 << (1 * 0));            /* 设置为1，1位为一组，向左移动0位 */
+
+    return 0;
 
 #elif SECTION_STRUCT_EN
     /* NOTE: 用结构体操作 GPIO PB0 */
@@ -103,6 +107,8 @@ int main(void) {
     GPIOB->ODR &= ~(1 << (1 * 0));           /* 设置为0，1位为一组，向左移动0位 */   /* 取决与硬件原理图：输出 0 点亮 LED 灯*/
     GPIOB->ODR |= (1 << (1 * 0));            /* 设置为1，1位为一组，向左移动0位 */
 
+    return 0;
+
 #elif SECTION_FUNCTION_EN
     /* NOTE: 用函数操作 GPIO PB0 */
     /* RCC_APB2ENR 打开 GPIOB 端口的时钟 */
@@ -120,6 +126,8 @@ int main(void) {
     /* ODR0：设置为 0 */
     GPIO_SetBits(GPIOB, GPIO_Pin_0);
     GPIO_ResetBits(GPIOB, GPIO_Pin_0);
+
+    return 0;
 
 #elif SECTION_GPIO_STRUCTURE_SECTION_EN
     /* NOTE: 用结构体初始化 GPIO PB0 */
@@ -155,7 +163,6 @@ int main(void) {
         /* 延时一段时间 */
         Delay(0xFFFF);
     }
-#endif
 
-    return 0;
+#endif
 }
