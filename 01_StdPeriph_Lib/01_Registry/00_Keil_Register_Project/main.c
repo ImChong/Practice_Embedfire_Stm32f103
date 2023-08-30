@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 11:01:21 pm
+ * Last Modified: Chong Liu - 2023-08-30 11:10:44 pm
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -16,6 +16,10 @@
 #define SECTION_STRUCT_EN 0                     /* 用结构体操作 GPIO PB0 */
 #define SECTION_FUNCTION_EN 0                   /* 用函数操作 GPIO PB0 */
 #define SECTION_GPIO_STRUCTURE_SECTION_EN 1     /* 用结构体初始化 GPIO PB0 */
+
+#define LED_G_CLK_ENABLE    (RCC->APB2ENR |= (1 << (1 * 3)))
+#define LED_G_GPIO          GPIOB
+#define LED_G_PIN           GPIO_Pin_0
 
 /* SystemInit()
  *  Functionality: 系统初始化函数
@@ -159,30 +163,6 @@ int main(void) {
 
         /* 使引脚输出高电平，关闭 LED1*/
         GPIO_SetBits(GPIOB, GPIO_Pin_0);
-
-        /* 延时一段时间 */
-        Delay(0xFFFFF);
-
-        /* 使引脚输出低电平, 点亮 LED */
-        GPIO_ResetBits(GPIOB, GPIO_Pin_1);
-
-        /* 延时一段时间 */
-        Delay(0xFFFFF);
-
-        /* 使引脚输出高电平，关闭 LED1*/
-        GPIO_SetBits(GPIOB, GPIO_Pin_1);
-
-        /* 延时一段时间 */
-        Delay(0xFFFFF);
-
-        /* 使引脚输出低电平, 点亮 LED */
-        GPIO_ResetBits(GPIOB, GPIO_Pin_5);
-
-        /* 延时一段时间 */
-        Delay(0xFFFFF);
-
-        /* 使引脚输出高电平，关闭 LED1*/
-        GPIO_SetBits(GPIOB, GPIO_Pin_5);
 
         /* 延时一段时间 */
         Delay(0xFFFFF);
