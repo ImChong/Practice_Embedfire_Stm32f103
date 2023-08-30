@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 6:44:37 pm
+ * Last Modified: Chong Liu - 2023-08-30 9:40:58 pm
  */
 #include "stm32f10x_gpio.h"
 
@@ -60,6 +60,23 @@ void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct) {
     /*-----GPIO CRL 寄存器配置CRL 寄存器控制着低8 位IO- ----*/
     // 配置端口低8 位，即Pin0~Pin7
     if (((uint32_t)GPIO_InitStruct->GPIO_Pin & ((uint32_t)0x00FF)) != 0x00) {
+        // 先备份 CRL 寄存器的值
+        tmpReg = GPIOx->CRL;
+        // 循环，从 Pin0 开始配对，找出具体的 Pin
+        for (pinPos = 0x00; pinPos < 0x08; pinPos++) {
+            // pos 的值为 1 左移 pinPos 位
+            pos = ((uint32_t)0x01) << pinPos;
 
+            // 令 pos 与输入参数 GPIO_PIN 作位与运算
+            currentPin = (GPIO_InitStruct->GPIO_Pin) & pos;
+
+            //若 currentPin=pos, 则找到使用的引脚
+            if (currentPin == pos) {
+                //pinPos 的值左移两位 (乘以 4), 因为寄存器中 4 个位配置一个引脚
+                pos = pinPos << 2;
+                //把控制这个引脚的 4 个寄存器位清零，其它寄存器位不变
+                pinMask = ((uint32_t)0x0F) << pos;
+            }
+        }
     }
 }
