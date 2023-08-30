@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 11:10:44 pm
+ * Last Modified: Chong Liu - 2023-08-30 11:15:45 pm
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -15,7 +15,8 @@
 #define SECTION_MACRO_EN 0                      /* 用寄存器宏操作 GPIO PB0 */
 #define SECTION_STRUCT_EN 0                     /* 用结构体操作 GPIO PB0 */
 #define SECTION_FUNCTION_EN 0                   /* 用函数操作 GPIO PB0 */
-#define SECTION_GPIO_STRUCTURE_SECTION_EN 1     /* 用结构体初始化 GPIO PB0 */
+#define SECTION_GPIO_INIT_STRUCTURE_EN 0        /* 用结构体初始化 GPIO PB0 */
+#define SECTION_LED_MACRO_EN 1                  /* 用 LED 宏提高可读性 */
 
 #define LED_G_CLK_ENABLE    (RCC->APB2ENR |= (1 << (1 * 3)))
 #define LED_G_GPIO          GPIOB
@@ -133,7 +134,7 @@ int main(void) {
 
     return 0;
 
-#elif SECTION_GPIO_STRUCTURE_SECTION_EN
+#elif SECTION_GPIO_INIT_STRUCTURE_EN
     /* NOTE: 用结构体初始化 GPIO PB0 */
     /* GPIO 端口初始化j结构体 */
     GPIO_InitTypeDef GPIO_InitStructure;
@@ -167,6 +168,41 @@ int main(void) {
         /* 延时一段时间 */
         Delay(0xFFFFF);
     }
+
+#elif SECTION_LED_MACRO_EN
+    /* NOTE: 用 LED 宏提高可读性 */
+    /* GPIO 端口初始化j结构体 */
+    GPIO_InitTypeDef GPIO_InitStructure;
+
+    /* RCC_APB2ENR 打开 GPIOB 端口的时钟 */
+    LED_G_CLK_ENABLE;          /* 初始化 GPIOB 时钟 */
+
+    /* 选择要控制的GPIO 引脚*/
+    GPIO_InitStructure.GPIO_Pin = LED_G_PIN;
+    /* 设置引脚的输出类型为推挽输出*/
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    /* 设置输出速率为 50MHZ */
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    /* 调用库函数，初始化 GPIO 引脚 */
+    GPIO_Init(LED_G_GPIO, &GPIO_InitStructure);
+
+    /* 使引脚输出低电平, 点亮 LED1 */
+    GPIO_ResetBits(LED_G_GPIO, LED_G_PIN);
+
+    while (1) {
+        /* 使引脚输出低电平, 点亮 LED */
+        GPIO_ResetBits(LED_G_GPIO, LED_G_PIN);
+
+        /* 延时一段时间 */
+        Delay(0xFFFFF);
+
+        /* 使引脚输出高电平，关闭 LED1*/
+        GPIO_SetBits(LED_G_GPIO, LED_G_PIN);
+
+        /* 延时一段时间 */
+        Delay(0xFFFFF);
+    }
+
 
 #endif
 }
