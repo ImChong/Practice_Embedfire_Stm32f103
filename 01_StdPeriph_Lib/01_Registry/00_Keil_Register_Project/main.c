@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 4:25:39 pm
+ * Last Modified: Chong Liu - 2023-08-30 10:18:46 pm
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -106,12 +106,22 @@ int main(void) {
     /* GPIO 端口初始化j结构体 */
     GPIO_InitTypeDef GPIO_InitStructure;
 
+    /* RCC_APB2ENR 打开 GPIOB 端口的时钟 */
+    /* IOPBEN：设置为 1 */
+    RCC->APB2ENR |= (1 << (1 * 3));          /* 设置为1，1位为一组，向左移动3位 */
+
     /* 选择要控制的GPIO 引脚*/
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
     /* 设置引脚的输出类型为推挽输出*/
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     /* 设置输出速率为 50MHZ */
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    // 调用库函数，初始化 GPIO 引脚
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+
+    // 使引脚输出低电平, 点亮 LED1
+    GPIO_ResetBits(GPIOB,GPIO_Pin_0);
+    GPIO_SetBits(GPIOB, GPIO_Pin_0);
 
 #endif
 
