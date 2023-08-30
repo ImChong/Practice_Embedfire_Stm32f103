@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 11:17:21 pm
+ * Last Modified: Chong Liu - 2023-08-30 11:23:29 pm
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -20,7 +20,9 @@
 
 #define LED_G_CLK_ENABLE    (RCC->APB2ENR |= (1 << (1 * 3)))
 #define LED_G_GPIO          GPIOB
+#define LED_R_PIN           GPIO_Pin_5
 #define LED_G_PIN           GPIO_Pin_0
+#define LED_B_PIN           GPIO_Pin_1
 
 /* SystemInit()
  *  Functionality: 系统初始化函数
@@ -178,16 +180,13 @@ int main(void) {
     LED_G_CLK_ENABLE;          /* 初始化 GPIOB 时钟 */
 
     /* 选择要控制的GPIO 引脚*/
-    GPIO_InitStructure.GPIO_Pin = LED_G_PIN;
+    GPIO_InitStructure.GPIO_Pin = LED_R_PIN | LED_G_PIN | LED_B_PIN;
     /* 设置引脚的输出类型为推挽输出*/
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     /* 设置输出速率为 50MHZ */
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     /* 调用库函数，初始化 GPIO 引脚 */
     GPIO_Init(LED_G_GPIO, &GPIO_InitStructure);
-
-    /* 使引脚输出低电平, 点亮 LED1 */
-    GPIO_ResetBits(LED_G_GPIO, LED_G_PIN);
 
     while (1) {
         /* 使引脚输出低电平, 点亮 LED */
@@ -198,6 +197,30 @@ int main(void) {
 
         /* 使引脚输出高电平，关闭 LED1*/
         GPIO_SetBits(LED_G_GPIO, LED_G_PIN);
+
+        /* 延时一段时间 */
+        Delay(0xFFFFF);
+
+        /* 使引脚输出低电平, 点亮 LED */
+        GPIO_ResetBits(LED_G_GPIO, LED_B_PIN);
+
+        /* 延时一段时间 */
+        Delay(0xFFFFF);
+
+        /* 使引脚输出高电平，关闭 LED1*/
+        GPIO_SetBits(LED_G_GPIO, LED_B_PIN);
+
+        /* 延时一段时间 */
+        Delay(0xFFFFF);
+
+        /* 使引脚输出低电平, 点亮 LED */
+        GPIO_ResetBits(LED_G_GPIO, LED_R_PIN);
+
+        /* 延时一段时间 */
+        Delay(0xFFFFF);
+
+        /* 使引脚输出高电平，关闭 LED1*/
+        GPIO_SetBits(LED_G_GPIO, LED_R_PIN);
 
         /* 延时一段时间 */
         Delay(0xFFFFF);
