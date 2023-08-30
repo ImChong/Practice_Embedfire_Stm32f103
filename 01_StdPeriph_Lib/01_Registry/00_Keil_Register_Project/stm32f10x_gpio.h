@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 4:21:21 pm
+ * Last Modified: Chong Liu - 2023-08-30 4:28:55 pm
  */
 #ifndef __STM32F10X_GPIO_H  /* 防止重复包含头文件 */
 #define __STM32F10X_GPIO_H
@@ -62,5 +62,6 @@ typedef struct {
 
 void GPIO_SetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
 void GPIO_ResetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
+void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct);
 
 #endif  /* __STM32F10X_GPIO_H */

@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 1:14:01 am
+ * Last Modified: Chong Liu - 2023-08-30 4:31:04 pm
  */
 #include "stm32f10x_gpio.h"
 
@@ -32,4 +32,16 @@ void GPIO_SetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
  */
 void GPIO_ResetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
     GPIOx->BRR |= GPIO_Pin;
+}
+
+/* GPIO_Init()
+ *  Functionality: GPIO初始化，初始化引脚模式
+ *  Arguments: GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct
+ *  Return: void
+ *  References: document/website...
+ ***********************************************************************************
+ *  IMPORTANT NOTICE FOR READER
+ */
+void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct) {
+
 }
