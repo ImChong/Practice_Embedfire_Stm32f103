@@ -2,11 +2,11 @@
  * @File: main.c
  * @Created Date: 2023-08-28 9:50:16 pm
  * @Author: Chong Liu
- * @Brief: 主程序入口
+ * @Brief: 主程序
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 1:12:26 am
+ * Last Modified: Chong Liu - Wednesday, August 30th 2023, 11:11:02 am
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -21,7 +21,7 @@ void SystemInit(void) {
 }
 
 /* main()
- *  Functionality: description...
+ *  Functionality: 主程序入口
  *  Arguments: void
  *  Return: int
  *  References: document/website...
