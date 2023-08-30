@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 4:31:04 pm
+ * Last Modified: Chong Liu - 2023-08-30 4:32:27 pm
  */
 #include "stm32f10x_gpio.h"
 
@@ -43,5 +43,6 @@ void GPIO_ResetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
  *  IMPORTANT NOTICE FOR READER
  */
 void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct) {
-
+    uint32_t currentmode =0x00, currentpin = 0x00, pinpos = 0x00, pos = 0x00;
+    uint32_t tmpreg = 0x00, pinmask = 0x00;
 }
