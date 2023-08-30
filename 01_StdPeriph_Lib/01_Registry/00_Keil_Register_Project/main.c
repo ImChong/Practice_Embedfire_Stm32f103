@@ -6,15 +6,16 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 11:15:55 am
+ * Last Modified: Chong Liu - 2023-08-30 4:20:48 pm
  */
-#include "stm32f10x.h"          /* 实现寄存器定义 */
+// #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
 
-#define SECTION_ADDRESS_EN 0    /* 用地址直接操作 GPIO PB0 */
-#define SECTION_MACRO_EN 0      /* 用寄存器宏操作 GPIO PB0 */
-#define SECTION_STRUCT_EN 0     /* 用结构体操作 GPIO PB0 */
-#define SECTION_FUNCTION_EN 1   /* 用函数操作 GPIO PB0 */
+#define SECTION_ADDRESS_EN 0                    /* 用地址直接操作 GPIO PB0 */
+#define SECTION_MACRO_EN 0                      /* 用寄存器宏操作 GPIO PB0 */
+#define SECTION_STRUCT_EN 0                     /* 用结构体操作 GPIO PB0 */
+#define SECTION_FUNCTION_EN 0                   /* 用函数操作 GPIO PB0 */
+#define SECTION_GPIO_STRUCTURE_SECTION_EN 1     /* 用结构体初始化 GPIO PB0 */
 
 void SystemInit(void) {
     /* 函数为空，为了让编译器不报错 */
@@ -99,6 +100,10 @@ int main(void) {
     /* ODR0：设置为 0 */
     GPIO_SetBits(GPIOB, GPIO_Pin_0);
     GPIO_ResetBits(GPIOB, GPIO_Pin_0);
+
+#elif SECTION_GPIO_STRUCTURE_SECTION_EN
+    /* NOTE: 用结构体初始化 GPIO PB0 */
+    GPIO_InitTypeDef GPIO_InitStructure;
 
 #endif
 

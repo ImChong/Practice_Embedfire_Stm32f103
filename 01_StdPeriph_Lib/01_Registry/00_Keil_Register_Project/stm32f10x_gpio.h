@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 4:17:19 pm
+ * Last Modified: Chong Liu - 2023-08-30 4:21:21 pm
  */
 #ifndef __STM32F10X_GPIO_H  /* 防止重复包含头文件 */
 #define __STM32F10X_GPIO_H
@@ -55,8 +55,8 @@ typedef enum {
 
 /* GPIO 初始化结构体 */
 typedef struct {
-    uint16_t GPIO_Pin;      /*!< 选择要配置的 GPIO 引脚 */
-    GPIOSpeed_TypeDef GPIO_Speed;    /*!< 选择 GPIO 引脚的速率 */
+    uint16_t GPIO_Pin;              /*!< 选择要配置的 GPIO 引脚 */
+    GPIOSpeed_TypeDef GPIO_Speed;   /*!< 选择 GPIO 引脚的速率 */
     GPIOMode_TypeDef GPIO_Mode;     /*!< 选择 GPIO 引脚的工作模式 */
 } GPIO_InitTypeDef;
 
