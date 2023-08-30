@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 11:23:29 pm
+ * Last Modified: Chong Liu - 2023-08-30 11:27:06 pm
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -188,6 +188,9 @@ int main(void) {
     /* 调用库函数，初始化 GPIO 引脚 */
     GPIO_Init(LED_G_GPIO, &GPIO_InitStructure);
 
+    /* 使引脚输出高电平，关闭 LED */
+    GPIO_SetBits(LED_G_GPIO, LED_R_PIN | LED_G_PIN | LED_B_PIN);
+
     while (1) {
         /* 使引脚输出低电平, 点亮 LED */
         GPIO_ResetBits(LED_G_GPIO, LED_G_PIN);
@@ -195,7 +198,7 @@ int main(void) {
         /* 延时一段时间 */
         Delay(0xFFFFF);
 
-        /* 使引脚输出高电平，关闭 LED1*/
+        /* 使引脚输出高电平，关闭 LED */
         GPIO_SetBits(LED_G_GPIO, LED_G_PIN);
 
         /* 延时一段时间 */
@@ -207,7 +210,7 @@ int main(void) {
         /* 延时一段时间 */
         Delay(0xFFFFF);
 
-        /* 使引脚输出高电平，关闭 LED1*/
+        /* 使引脚输出高电平，关闭 LED */
         GPIO_SetBits(LED_G_GPIO, LED_B_PIN);
 
         /* 延时一段时间 */
@@ -219,7 +222,7 @@ int main(void) {
         /* 延时一段时间 */
         Delay(0xFFFFF);
 
-        /* 使引脚输出高电平，关闭 LED1*/
+        /* 使引脚输出高电平，关闭 LED */
         GPIO_SetBits(LED_G_GPIO, LED_R_PIN);
 
         /* 延时一段时间 */
