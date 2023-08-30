@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 10:27:27 pm
+ * Last Modified: Chong Liu - 2023-08-30 10:29:27 pm
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -21,7 +21,7 @@
  *  Functionality: 系统初始化函数
  *  Arguments: void
  *  Return: void
- *  References: document/website...
+ *  References: [野火]STM32库开发实战指南, ——基于野火指南者开发板
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  */
@@ -33,7 +33,7 @@ void SystemInit(void) {
  *  Functionality: 延迟函数
  *  Arguments: __IO uint32_t nCount
  *  Return: void
- *  References: document/website...
+ *  References: [野火]STM32库开发实战指南, ——基于野火指南者开发板
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  */
@@ -45,7 +45,7 @@ void Delay(__IO uint32_t nCount) {
  *  Functionality: 主程序入口
  *  Arguments: void
  *  Return: int
- *  References: document/website...
+ *  References: [野火]STM32库开发实战指南, ——基于野火指南者开发板
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  */

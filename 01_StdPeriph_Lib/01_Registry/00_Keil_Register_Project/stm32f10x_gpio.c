@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 10:03:10 pm
+ * Last Modified: Chong Liu - 2023-08-30 10:29:14 pm
  */
 #include "stm32f10x_gpio.h"
 
@@ -14,7 +14,7 @@
  *  Functionality: 为GPIO引脚设置高电平
  *  Arguments: GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin
  *  Return: void
- *  References: document/website...
+ *  References: [野火]STM32库开发实战指南, ——基于野火指南者开发板
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  */
@@ -26,7 +26,7 @@ void GPIO_SetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
  *  Functionality: 为GPIO引脚设置低电平
  *  Arguments: GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin
  *  Return: void
- *  References: document/website...
+ *  References: [野火]STM32库开发实战指南, ——基于野火指南者开发板
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  */
@@ -38,7 +38,7 @@ void GPIO_ResetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
  *  Functionality: GPIO初始化，初始化引脚模式
  *  Arguments: GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct
  *  Return: void
- *  References: document/website...
+ *  References: [野火]STM32库开发实战指南, ——基于野火指南者开发板
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  */
