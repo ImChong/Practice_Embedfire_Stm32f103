@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 4:36:48 pm
+ * Last Modified: Chong Liu - 2023-08-30 6:44:37 pm
  */
 #include "stm32f10x_gpio.h"
 
@@ -43,18 +43,18 @@ void GPIO_ResetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
  *  IMPORTANT NOTICE FOR READER
  */
 void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct) {
-    uint32_t currentmode =0x00, currentpin = 0x00, pinpos = 0x00, pos = 0x00;
-    uint32_t tmpreg = 0x00, pinmask = 0x00;
+    uint32_t currentMode =0x00, currentPin = 0x00, pinPos = 0x00, pos = 0x00;
+    uint32_t tmpReg = 0x00, pinMask = 0x00;
 
     /*---------------- GPIO 模式配置-------------------*/
-    // 把输入参数GPIO_Mode 的低四位暂存在currentmode
-    currentmode = ((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x0F);
+    // 把输入参数GPIO_Mode 的低四位暂存在currentMode
+    currentMode = ((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x0F);
 
     // bit4 是1 表示输出，bit4 是0 则是输入
     // 判断bit4 是1 还是0，即首选判断是输入还是输出模式
     if ((((uint32_t)GPIO_InitStruct->GPIO_Mode) & ((uint32_t)0x10)) != 0x00) {
         // 输出模式则要设置输出速度
-        currentmode |= (uint32_t)GPIO_InitStruct->GPIO_Speed;
+        currentMode |= (uint32_t)GPIO_InitStruct->GPIO_Speed;
     }
 
     /*-----GPIO CRL 寄存器配置CRL 寄存器控制着低8 位IO- ----*/
