@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 10:18:46 pm
+ * Last Modified: Chong Liu - 2023-08-30 10:24:41 pm
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -17,8 +17,28 @@
 #define SECTION_FUNCTION_EN 0                   /* 用函数操作 GPIO PB0 */
 #define SECTION_GPIO_STRUCTURE_SECTION_EN 1     /* 用结构体初始化 GPIO PB0 */
 
+/* SystemInit()
+ *  Functionality: 系统初始化函数
+ *  Arguments: void
+ *  Return: void
+ *  References: document/website...
+ ***********************************************************************************
+ *  IMPORTANT NOTICE FOR READER
+ */
 void SystemInit(void) {
     /* 函数为空，为了让编译器不报错 */
+}
+
+/* Delay()
+ *  Functionality: 延迟函数
+ *  Arguments: __IO uint32_t nCount
+ *  Return: void
+ *  References: document/website...
+ ***********************************************************************************
+ *  IMPORTANT NOTICE FOR READER
+ */
+void Delay(__IO uint32_t nCount) {
+    for (; nCount != 0; nCount--);
 }
 
 /* main()
@@ -116,13 +136,25 @@ int main(void) {
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     /* 设置输出速率为 50MHZ */
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    // 调用库函数，初始化 GPIO 引脚
+    /* 调用库函数，初始化 GPIO 引脚 */
     GPIO_Init(GPIOB, &GPIO_InitStructure);
 
-    // 使引脚输出低电平, 点亮 LED1
-    GPIO_ResetBits(GPIOB,GPIO_Pin_0);
-    GPIO_SetBits(GPIOB, GPIO_Pin_0);
+    /* 使引脚输出低电平, 点亮 LED1 */
+    GPIO_ResetBits(GPIOB, GPIO_Pin_0);
 
+    while (1) {
+        /* 使引脚输出低电平, 点亮 LED */
+        GPIO_ResetBits(GPIOB, GPIO_Pin_0);
+
+        /* 延时一段时间 */
+        Delay(0xFFFF);
+
+        /* 使引脚输出高电平，关闭 LED1*/
+        GPIO_SetBits(GPIOB,GPIO_Pin_0);
+
+        /* 延时一段时间 */
+        Delay(0xFFFF);
+    }
 #endif
 
     return 0;
