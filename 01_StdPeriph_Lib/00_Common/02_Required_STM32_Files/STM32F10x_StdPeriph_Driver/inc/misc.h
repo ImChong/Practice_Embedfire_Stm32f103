@@ -1,13 +1,3 @@
-/*
- * @File: misc.h
- * @Created Date: 2023-08-31 12:28:27 pm
- * @Author: Chong Liu
- * @Brief: Description of what this file does
- * =================================================================================
- * Copyright (c) 2023 Chong Liu
- * =================================================================================
- * Last Modified: Chong Liu - 2023-08-31 12:28:27 pm
- */
 /**
   ******************************************************************************
   * @file    misc.h
@@ -53,14 +43,14 @@
   * @{
   */
 
-/**
-  * @brief  NVIC Init Structure definition
+/** 
+  * @brief  NVIC Init Structure definition  
   */
 
 typedef struct
 {
   uint8_t NVIC_IRQChannel;                    /*!< Specifies the IRQ channel to be enabled or disabled.
-                                                   This parameter can be a value of @ref IRQn_Type
+                                                   This parameter can be a value of @ref IRQn_Type 
                                                    (For the complete STM32 Devices IRQ Channels list, please
                                                     refer to stm32f10x.h file) */
 
@@ -73,20 +63,20 @@ typedef struct
                                                    between 0 and 15 as described in the table @ref NVIC_Priority_Table */
 
   FunctionalState NVIC_IRQChannelCmd;         /*!< Specifies whether the IRQ channel defined in NVIC_IRQChannel
-                                                   will be enabled or disabled.
-                                                   This parameter can be set either to ENABLE or DISABLE */
+                                                   will be enabled or disabled. 
+                                                   This parameter can be set either to ENABLE or DISABLE */   
 } NVIC_InitTypeDef;
-
+ 
 /**
   * @}
   */
 
-/** @defgroup NVIC_Priority_Table
+/** @defgroup NVIC_Priority_Table 
   * @{
   */
 
 /**
-@code
+@code  
  The table below gives the allowed values of the pre-emption priority and subpriority according
  to the Priority Grouping configuration performed by NVIC_PriorityGroupConfig function
   ============================================================================================================================
@@ -97,15 +87,15 @@ typedef struct
   ----------------------------------------------------------------------------------------------------------------------------
    NVIC_PriorityGroup_1  |                0-1                |            0-7              |   1 bits for pre-emption priority
                          |                                   |                             |   3 bits for subpriority
-  ----------------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------------------------------    
    NVIC_PriorityGroup_2  |                0-3                |            0-3              |   2 bits for pre-emption priority
                          |                                   |                             |   2 bits for subpriority
-  ----------------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------------------------------    
    NVIC_PriorityGroup_3  |                0-7                |            0-1              |   3 bits for pre-emption priority
                          |                                   |                             |   1 bits for subpriority
-  ----------------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------------------------------    
    NVIC_PriorityGroup_4  |                0-15               |            0                |   4 bits for pre-emption priority
-                         |                                   |                             |   0 bits for subpriority
+                         |                                   |                             |   0 bits for subpriority                       
   ============================================================================================================================
 @endcode
 */
@@ -118,7 +108,7 @@ typedef struct
   * @{
   */
 
-/** @defgroup Vector_Table_Base
+/** @defgroup Vector_Table_Base 
   * @{
   */
 
@@ -130,7 +120,7 @@ typedef struct
   * @}
   */
 
-/** @defgroup System_Low_Power
+/** @defgroup System_Low_Power 
   * @{
   */
 
@@ -144,7 +134,7 @@ typedef struct
   * @}
   */
 
-/** @defgroup Preemption_Priority_Group
+/** @defgroup Preemption_Priority_Group 
   * @{
   */
 
@@ -175,7 +165,7 @@ typedef struct
   * @}
   */
 
-/** @defgroup SysTick_clock_source
+/** @defgroup SysTick_clock_source 
   * @{
   */
 
