@@ -1,3 +1,13 @@
+/*
+ * @File: practice_register.c
+ * @Created Date: 2023-08-25 11:48:43 pm
+ * @Author: Chong Liu
+ * @Brief: Description of what this file does
+ * =================================================================================
+ * Copyright (c) 2023 Chong Liu
+ * =================================================================================
+ * Last Modified: Chong Liu - 2023-08-31 1:15:42 pm
+ */
 #include <stdio.h>
 
 /* 外设基地址 */
