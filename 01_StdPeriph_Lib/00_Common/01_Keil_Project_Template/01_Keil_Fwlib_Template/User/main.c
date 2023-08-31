@@ -6,5 +6,19 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-31 5:17:04 pm
+ * Last Modified: Chong Liu - 2023-08-31 5:18:26 pm
  */
+#include "stm32f10x.h"
+
+/* main()
+ *  Functionality: description...
+ *  Arguments: void
+ *  Return: int
+ *  References: document/website...
+ ***********************************************************************************
+ *  IMPORTANT NOTICE FOR READER
+ */
+int main(void)
+{
+	// 来到这里的时候，系统的时钟已经被配置成72M。
+}
