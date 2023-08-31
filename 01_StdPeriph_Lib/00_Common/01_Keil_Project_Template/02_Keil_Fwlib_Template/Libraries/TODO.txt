@@ -1,3 +1,0 @@
-- CMSIS
-	- startup
-- STM32F10x_StdPeriph_Driver
