@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-31 2:02:48 pm
+ * Last Modified: Chong Liu - 2023-09-01 12:03:15 am
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -173,7 +173,7 @@ int main(void) {
 
 #elif SECTION_LED_MACRO_EN
     /* NOTE: 用 LED 宏提高可读性 */
-    /* GPIO 端口初始化j结构体 */
+    /* GPIO 端口初始化结构体 */
     GPIO_InitTypeDef GPIO_InitStructure;
 
     /* RCC_APB2ENR 打开 GPIOB 端口的时钟 */
