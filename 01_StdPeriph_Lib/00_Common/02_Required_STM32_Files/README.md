@@ -54,6 +54,8 @@ stm32f10x_it.h
 
 中断服务函数你可以随意放在其他的地方，并不是一定要放在stm32f10x_it.c
 
+
+# 7. 主函数 main.c
 ```c
 #include "stm32f10x.h"   // 相当于51单片机中的  #include <reg51.h>
 
