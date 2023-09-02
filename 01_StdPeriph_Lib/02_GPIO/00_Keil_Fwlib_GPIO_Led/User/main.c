@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 2:23:03 pm
+ * Last Modified: Chong Liu - 2023-09-02 2:32:02 pm
  */
 #include "stm32f10x.h"
 #include "bsp_led.h"
@@ -22,5 +22,5 @@
 int main(void)
 {
 	// 来到这里的时候，系统的时钟已经被配置成72M。
-	LED_GPIO_Config();
+	LED_GPIO_Config();		/* LED GPIO初始化 */
 }
