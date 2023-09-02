@@ -6,16 +6,16 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 12:37:16 am
+ * Last Modified: Chong Liu - 2023-09-02 2:23:03 pm
  */
 #include "stm32f10x.h"
 #include "bsp_led.h"
 
 /* main()
- *  Functionality: description...
+ *  Functionality: 主函数
  *  Arguments: void
  *  Return: int
- *  References: document/website...
+ *  References: document/website...s
  ***********************************************************************************
  *  IMPORTANT NOTICE FOR READER
  */
