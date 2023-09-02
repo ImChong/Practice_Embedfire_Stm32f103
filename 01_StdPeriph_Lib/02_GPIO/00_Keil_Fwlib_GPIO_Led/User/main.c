@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 4:45:28 pm
+ * Last Modified: Chong Liu - 2023-09-02 5:08:48 pm
  */
 #include "bsp_led.h"	/* 此头文件将添加 stm32f10x.h */
 
@@ -35,35 +35,25 @@ int main(void)
 	// 来到这里的时候，系统的时钟已经被配置成72M。
 	LED_GPIO_Config();		/* LED GPIO初始化：默认拉低，此时所有初始化的 LED 灯都会被点亮 */
 
-	/* 使引脚输出高电平，关闭 LED */
-    GPIO_SetBits(LED_GPIO, LED_R_PIN | LED_G_PIN | LED_B_PIN);
+    GPIO_SetBits(LED_GPIO, LED_R_PIN | LED_G_PIN | LED_B_PIN);		/* 使引脚输出高电平，关闭 LED */
+	Delay(0xFFFFFF);												/* 延时一段时间 */
 
 	while (1) {
-        /* 使引脚输出低电平, 点亮 LED Green */
-        GPIO_ResetBits(LED_GPIO, LED_G_PIN);
-        /* 延时一段时间 */
-        Delay(0xFFFFF);
-        /* 使引脚输出高电平，关闭 LED Green */
-        GPIO_SetBits(LED_GPIO, LED_G_PIN);
-        /* 延时一段时间 */
-        Delay(0xFFFFF);
+        LED_TOGGLE(LED_G_PIN, ON)	/* 使引脚输出低电平, 点亮 LED Green */
+        Delay(0x1FFFFF);			/* 延时一段时间 */
+        LED_TOGGLE(LED_G_PIN, OFF)	/* 使引脚输出高电平，关闭 LED Green */
+        Delay(0x1FFFFF);			/* 延时一段时间 */
 
-        /* 使引脚输出低电平, 点亮 LED Blue */
-        GPIO_ResetBits(LED_GPIO, LED_B_PIN);
-        /* 延时一段时间 */
-        Delay(0xFFFFF);
-        /* 使引脚输出高电平，关闭 LED Blue */
-        GPIO_SetBits(LED_GPIO, LED_B_PIN);
-        /* 延时一段时间 */
-        Delay(0xFFFFF);
 
-        /* 使引脚输出低电平, 点亮 LED Red */
-        GPIO_ResetBits(LED_GPIO, LED_R_PIN);
-        /* 延时一段时间 */
-        Delay(0xFFFFF);
-        /* 使引脚输出高电平，关闭 LED Red */
-        GPIO_SetBits(LED_GPIO, LED_R_PIN);
-        /* 延时一段时间 */
-        Delay(0xFFFFF);
+		LED_TOGGLE(LED_B_PIN, ON)	/* 使引脚输出低电平, 点亮 LED Blue */
+        Delay(0x1FFFFF);			/* 延时一段时间 */
+        LED_TOGGLE(LED_B_PIN, OFF)	/* 使引脚输出高电平，关闭 LED Blue */
+        Delay(0x1FFFFF);			/* 延时一段时间 */
+
+
+		LED_TOGGLE(LED_R_PIN, ON)	/* 使引脚输出低电平, 点亮 LED Red */
+        Delay(0x1FFFFF);			/* 延时一段时间 */
+        LED_TOGGLE(LED_R_PIN, OFF)	/* 使引脚输出高电平，关闭 LED Red */
+        Delay(0x1FFFFF);			/* 延时一段时间 */
     }
 }
