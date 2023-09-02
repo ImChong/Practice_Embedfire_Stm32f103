@@ -6,9 +6,9 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 2:18:15 pm
+ * Last Modified: Chong Liu - 2023-09-02 3:05:58 pm
  */
-#include "bsp_led.h"
+#include "bsp_led.h"    /* 此头文件将添加 stm32f10x.h */
 
 /* LED_GPIO_Config()
  *  Functionality: LED GPIO初始化

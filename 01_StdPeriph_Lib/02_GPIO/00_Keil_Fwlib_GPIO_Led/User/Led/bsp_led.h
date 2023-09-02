@@ -6,12 +6,12 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 2:26:23 pm
+ * Last Modified: Chong Liu - 2023-09-02 3:05:51 pm
  */
 #ifndef __BSD_LED_H
 #define __BSD_LED_H
 
-#include "stm32f10x.h"
+#include "stm32f10x.h"      /* 此头文件将添加 stm32f10x_conf.h - 管理所有外设的头文件 */
 
 #define LED_GPIO_CLK        RCC_APB2Periph_GPIOB        /* 设置LED的GPIO的时钟 */
 #define LED_GPIO            GPIOB                       /* 设置LED的GPIO */
