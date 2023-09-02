@@ -1,0 +1,303 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "highlightwords.box": {
+
+        "light": true,
+        "dark": false
+    },
+    "highlightwords.defaultMode": 1,
+    "highlightwords.showSidebar": true,
+    "highlightwords.colors": [
+
+        {
+            "light": "#b3d9ff",
+            "dark": "cyan"
+        },
+        {
+            "light": "#e6ffb3",
+            "dark": "pink"
+        },
+        {
+            "light": "#b3b3ff",
+            "dark": "lightgreen"
+        },
+        {
+            "light": "#ffd9b3",
+            "dark": "magenta"
+        },
+        {
+            "light": "#ffb3ff",
+            "dark": "cornflowerblue"
+        },
+        {
+            "light": "#b3ffb3",
+            "dark": "orange"
+        },
+        {
+            "light": "#ffff80",
+            "dark": "green"
+        },
+        {
+            "light": "#d1e0e0",
+            "dark": "red"
+        }
+    ],
+    "todo-tree.highlights.defaultHighlight": {
+        "icon": "alert",
+        "type": "text-and-comment",
+        "foreground": "#000000",
+        "background": "#ffffff",
+        "opacity": 50,
+        "iconColour": "gray",
+        "gutterIcon": true,
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "icon": "check",
+            "foreground": "black",
+            "background": "yellow",
+            "iconColour": "yellow",
+        },
+        "NOTE": {
+            "icon": "note",
+            "foreground": "white",
+            "background": "gray",
+            "iconColour": "gray",
+        },
+        "COMMENT": {
+            "icon": "note",
+            "foreground": "white",
+            "background": "gray",
+            "iconColour": "gray",
+        },
+        "FIXME": {
+            "foreground": "black",
+            "background": "orange",
+            "iconColour": "orange",
+        },
+        "BUG": {
+            "icon": "bug",
+            "foreground": "black",
+            "background": "red",
+            "iconColour": "red",
+        },
+        "[ ]": {
+            "icon": "check",
+            "foreground": "black",
+            "background": "white",
+            "iconColour": "white",
+        },
+        "[x]": {
+            "icon": "check",
+            "foreground": "white",
+            "background": "green",
+            "iconColour": "green",
+        },
+        "DONE": {
+            "icon": "check",
+            "foreground": "white",
+            "background": "green",
+            "iconColour": "green",
+        },
+        "#if": {
+            "icon": "diff-renamed",
+            "type": "line",
+            "foreground": "white",
+            "background": "blue",
+            "iconColour": "blue",
+            // "gutterIcon": false,
+        },
+        "#endif": {
+            "icon": "diff-renamed",
+            "type": "line",
+            "foreground": "white",
+            "background": "blue",
+            "iconColour": "blue",
+            // "gutterIcon": false,
+        },
+        "#elif": {
+            "icon": "diff-renamed",
+            "type": "line",
+            "foreground": "white",
+            "background": "#1085c9",
+            "iconColour": "#1085c9",
+            // "gutterIcon": false,
+        },
+        "#else": {
+            "icon": "diff-renamed",
+            "type": "line",
+            "foreground": "white",
+            "background": "#1085c9",
+            "iconColour": "#1085c9",
+            // "gutterIcon": false,
+        },
+        "Functionality": {
+            "icon": "note",
+            "type": "line",
+            "foreground": "white",
+            "background": "green",
+            "iconColour": "green",
+        }
+    },
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "NOTE",
+        "COMMENT",
+        "[ ]",
+        "[x]",
+        "DONE",
+        "#if",
+        "#endif",
+        "#elif",
+        "#else",
+        "Functionality"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|\\*|^|^\\s*(-|\\d+.))\\s*($TAGS).*(\\n\\s*//\\s{2,}.*)*",
+    "cmake.configureOnOpen": false,
+    "workbench.editor.wrapTabs": true,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "afterDelay",
+    "editor.rulers": [
+        120
+    ],
+    "explorer.confirmDelete": false,
+    "cSpell.userWords": [
+        "AHBENR",
+        "AHBPERIPH",
+        "BDCR",
+        "Bootloader",
+        "BSRR",
+        "centroidal",
+        "CFGR",
+        "cheshirekow",
+        "Chong",
+        "CMSIS",
+        "Colour",
+        "cornflowerblue",
+        "cpptools",
+        "Crabviz",
+        "Ctil",
+        "dateformat",
+        "dbgconf",
+        "Eigen",
+        "elif",
+        "Embedfire",
+        "ENDP",
+        "EXTI",
+        "Farbod",
+        "Farshidian",
+        "filecreated",
+        "fileheader",
+        "fsmc",
+        "Fwlib",
+        "GOOGLETEST",
+        "GPIO",
+        "GPIOA",
+        "GPIOB",
+        "GPIOC",
+        "GPIOD",
+        "GPIOE",
+        "GPIOF",
+        "GPIOG",
+        "GPIOH",
+        "Gtest",
+        "highlightwords",
+        "ICCARM",
+        "ifndef",
+        "inorder",
+        "IOPBEN",
+        "JTAG",
+        "Kbytes",
+        "Keil",
+        "labuladong",
+        "LCKR",
+        "leetcode",
+        "lightgreen",
+        "loginfo",
+        "Microcontroller",
+        "microcontrollers",
+        "MICROLIB",
+        "Mindmap",
+        "MSYS",
+        "NAND",
+        "NOINIT",
+        "Nomentum",
+        "NORFLASH",
+        "NRST",
+        "NVIC",
+        "Periph",
+        "programmercarl",
+        "psioniq",
+        "Pylance",
+        "READWRITE",
+        "rospkg",
+        "rospy",
+        "RSTR",
+        "SDIO",
+        "SDRAM",
+        "seperator",
+        "SRAM",
+        "stackheap",
+        "STDPERIPH",
+        "STMICROELECTRONICS",
+        "STRNE",
+        "subarray",
+        "UART",
+        "UIUC",
+        "urdf",
+        "usart",
+        "USRAT",
+        "uvguix",
+        "uvoptx",
+        "uvprojx",
+        "waitflags",
+        "waitstatus",
+        "Wakeup",
+        "WWDG",
+        "yeartoyear"
+    ],
+    "git.confirmSync": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.fontSize": 11,
+    "[cmake]": {
+        "editor.defaultFormatter": "cheshirekow.cmake-format"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "editor.formatOnSave": false,
+    "workbench.startupEditor": "none",
+    "prettier.bracketSameLine": true,
+    "prettier.useTabs": true,
+    "workbench.colorTheme": "Visual Studio Dark - C++",
+    "code-runner.clearPreviousOutput": true,
+    "window.zoomLevel": -1,
+    "psi-header.config": {
+        "author": "Chong Liu"
+    },
+    "psi-header.changes-tracking": {
+        "isActive": true,
+        "modAuthor": "Modified By:",
+        "modDate": "Last Modified:",
+        "autoHeader": "autoSave",
+        // "enforceHeader": false,
+    },
+    "psi-header.templates": [
+        {
+            "language": "*",
+            "template": [
+                "@File: <<filename>>",
+                "@Created Date: <<filecreated('YYYY-MM-DD h:mm:ss a')>>",
+                "@Author: <<author>>",
+                "@Brief: Description of what this file does",
+                "=================================================================================",
+                "Copyright (c) <<yeartoyear(fc, now)>> <<author>>",
+                "=================================================================================",
+                "Last Modified: <<author>> - <<dateformat('YYYY-MM-DD h:mm:ss a')>>",
+            ]
+        }
+    ]
+}
