@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 3:05:58 pm
+ * Last Modified: Chong Liu - 2023-09-02 5:49:57 pm
  */
 #include "bsp_led.h"    /* 此头文件将添加 stm32f10x.h */
 
@@ -20,7 +20,6 @@
  */
 void LED_GPIO_Config(void) {
     GPIO_InitTypeDef GPIO_InitStructure;                                /* GPIO 端口初始化结构体 */
-
     RCC_APB2PeriphClockCmd(LED_GPIO_CLK, ENABLE);
 
     GPIO_InitStructure.GPIO_Pin = LED_R_PIN | LED_G_PIN | LED_B_PIN;    /* 选择要控制的GPIO 引脚*/
