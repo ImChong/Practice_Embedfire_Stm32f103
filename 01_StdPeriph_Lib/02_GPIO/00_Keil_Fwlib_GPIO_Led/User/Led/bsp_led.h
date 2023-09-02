@@ -6,10 +6,10 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 5:03:32 pm
+ * Last Modified: Chong Liu - 2023-09-02 5:51:50 pm
  */
-#ifndef __BSD_LED_H
-#define __BSD_LED_H
+#ifndef __BSP_LED_H
+#define __BSP_LED_H
 
 #include "stm32f10x.h"      /* 此头文件将添加 stm32f10x_conf.h - 管理所有外设的头文件 */
 
@@ -29,4 +29,4 @@
 
 void LED_GPIO_Config(void);
 
-#endif  /* __BSD_LED_H */
+#endif  /* __BSP_LED_H */
