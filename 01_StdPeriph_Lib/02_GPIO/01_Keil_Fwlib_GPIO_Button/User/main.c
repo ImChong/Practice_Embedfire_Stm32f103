@@ -1,35 +1,29 @@
 /*
- * @File: main.c
- * @Created Date: 2023-08-31 5:17:04 pm
- * @Author: Chong Liu
- * @Brief: https://www.bilibili.com/video/BV1Xs411g7Aj/?p=19&spm_id_from=pageDriver&vd_source=75275452d1d334b4d80721d4823e4631
+ * @FilePath     : \01_Keil_Fwlib_GPIO_Button\User\main.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-02 17:29:59
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-04 00:00:35
  * =================================================================================
- * Copyright (c) 2023 Chong Liu
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-03 10:44:55 pm
+ * @Description  :
  */
 #include "bsp_led.h"	/* 此头文件将添加 stm32f10x.h */
 #include "bsp_key.h"	/* 此头文件将添加 stm32f10x.h */
 
-/* Delay()
- *  Functionality: 延迟函数
- *  Arguments: __IO uint32_t nCount
- *  Return: void
- *  References: [野火]STM32库开发实战指南, ——基于野火指南者开发板
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+/**
+ * @description:
+ * @param {__IO uint32_t} nCount
+ * @return {*}
  */
 void Delay(__IO uint32_t nCount) {
     for (; nCount != 0; nCount--);
 }
 
-/* main()
- *  Functionality: 主函数
- *  Arguments: void
- *  Return: int
- *  References: document/website...s
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+/**
+ * @description:
+ * @return {*}
  */
 int main(void)
 {
@@ -57,4 +51,6 @@ int main(void)
         LED_TOGGLE(LED_R_PIN, OFF)	/* 使引脚输出高电平，关闭 LED Red */
         Delay(0x1FFFFF);			/* 延时一段时间 */
     }
+
+    return 0;
 }

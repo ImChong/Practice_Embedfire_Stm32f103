@@ -1,22 +1,22 @@
 /*
- * @File: bsp_key.c
- * @Created Date: 2023-09-02 5:39:04 pm
- * @Author: Chong Liu
- * @Brief: Description of what this file does
+ * @FilePath     : \01_Keil_Fwlib_GPIO_Button\User\Button\bsp_key.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-02 17:39:04
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-04 00:02:16
  * =================================================================================
- * Copyright (c) 2023 Chong Liu
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-03 10:43:44 pm
+ * @Description  :
  */
 #include "bsp_key.h"    /* 此头文件将添加 stm32f10x.h */
 
-/* KEY_GPIO_Config()
- *  Functionality: description...
- *  Arguments: uint32_t GPIO_Clock, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin
- *  Return: void
- *  References: document/website...
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+/**
+ * @description:
+ * @param {uint32_t} GPIO_Clock
+ * @param {GPIO_TypeDef} *GPIOx
+ * @param {uint16_t} GPIO_Pin
+ * @return {*}
  */
 void KEY_GPIO_Config(uint32_t GPIO_Clock, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
     GPIO_InitTypeDef GPIO_InitStructure;                                /* GPIO 端口初始化结构体 */
@@ -28,13 +28,11 @@ void KEY_GPIO_Config(uint32_t GPIO_Clock, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin
     GPIO_Init(GPIOx, &GPIO_InitStructure);
 }
 
-/* KEY_Scan()
- *  Functionality: description...
- *  Arguments: GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin
- *  Return: void
- *  References: document/website...
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+/**
+ * @description:
+ * @param {GPIO_TypeDef} *GPIOx
+ * @param {uint16_t} GPIO_Pin
+ * @return {*}
  */
 void KEY_Scan(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
 

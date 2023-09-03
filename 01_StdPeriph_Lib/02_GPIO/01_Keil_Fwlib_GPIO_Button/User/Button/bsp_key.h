@@ -1,12 +1,13 @@
 /*
- * @File: bsp_key.h
- * @Created Date: 2023-09-02 5:39:10 pm
- * @Author: Chong Liu
- * @Brief: Description of what this file does
+ * @FilePath     : \01_Keil_Fwlib_GPIO_Button\User\Button\bsp_key.h
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-02 17:39:10
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-04 00:02:49
  * =================================================================================
- * Copyright (c) 2023 Chong Liu
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-03 10:42:49 pm
+ * @Description  :
  */
 #ifndef __BSP_KEY_H
 #define __BSP_KEY_H

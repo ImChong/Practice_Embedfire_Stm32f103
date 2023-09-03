@@ -1,12 +1,13 @@
 /*
- * @File: bsp_led.h
- * @Created Date: 2023-08-31 11:39:06 pm
- * @Author: Chong Liu
- * @Brief: Description of what this file does
+ * @FilePath     : \01_Keil_Fwlib_GPIO_Button\User\Led\bsp_led.h
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-02 17:29:59
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-04 00:02:41
  * =================================================================================
- * Copyright (c) 2023 Chong Liu
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-03 10:01:02 pm
+ * @Description  :
  */
 #ifndef __BSP_LED_H
 #define __BSP_LED_H

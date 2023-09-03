@@ -1,22 +1,19 @@
 /*
- * @File: bsp_led.c
- * @Created Date: 2023-08-31 11:38:57 pm
- * @Author: Chong Liu
- * @Brief: bsp - board support package 板级支持包
+ * @FilePath     : \01_Keil_Fwlib_GPIO_Button\User\Led\bsp_led.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-02 17:29:59
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-04 00:02:35
  * =================================================================================
- * Copyright (c) 2023 Chong Liu
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 5:49:47 pm
+ * @Description  : 
  */
 #include "bsp_led.h"    /* 此头文件将添加 stm32f10x.h */
 
-/* LED_GPIO_Config()
- *  Functionality: LED GPIO初始化
- *  Arguments: void
- *  Return: void
- *  References: LED GPIO 初始化
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+/**
+ * @description:
+ * @return {*}
  */
 void LED_GPIO_Config(void) {
     GPIO_InitTypeDef GPIO_InitStructure;                                /* GPIO 端口初始化结构体 */
