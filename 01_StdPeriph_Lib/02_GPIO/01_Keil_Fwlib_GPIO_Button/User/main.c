@@ -2,11 +2,11 @@
  * @File: main.c
  * @Created Date: 2023-08-31 5:17:04 pm
  * @Author: Chong Liu
- * @Brief: Description of what this file does
+ * @Brief: https://www.bilibili.com/video/BV1Xs411g7Aj/?p=19&spm_id_from=pageDriver&vd_source=75275452d1d334b4d80721d4823e4631
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 5:52:31 pm
+ * Last Modified: Chong Liu - 2023-09-03 10:44:55 pm
  */
 #include "bsp_led.h"	/* 此头文件将添加 stm32f10x.h */
 #include "bsp_key.h"	/* 此头文件将添加 stm32f10x.h */
