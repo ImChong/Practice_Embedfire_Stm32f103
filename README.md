@@ -17,7 +17,7 @@ GitHub Repository: https://github.com/Embedfire-stm32f103-zhinanzhe
 - Example Code: https://github.com/Embedfire-stm32f103-zhinanzhe/ebf_stm32f103_zhinanzhe_std_code
 - Videos：https://space.bilibili.com/356820657/search/video?keyword=150
 - Mindmap: TODO
-- Progress: https://www.bilibili.com/video/BV1Xs411g7Aj?p=19&spm_id_from=pageDriver&vd_source=75275452d1d334b4d80721d4823e4631
+- Progress: https://www.bilibili.com/video/BV1Xs411g7Aj/?p=19&spm_id_from=pageDriver&vd_source=75275452d1d334b4d80721d4823e4631
 
 ## HAL_Lib
 - Documentation: https://doc.embedfire.com/mcu/stm32/f103zhinanzhe/hal/zh/latest/index.html
