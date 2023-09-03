@@ -23,6 +23,6 @@
 #define KEY2_PIN            GPIO_Pin_13                 /* KEY引脚寄存器地址 */
 
 void KEY_GPIO_Config(uint32_t GPIO_Clock, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
-void KEY_Scan();
+void KEY_Scan(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
 
 #endif  /* __BSP_KEY_H */

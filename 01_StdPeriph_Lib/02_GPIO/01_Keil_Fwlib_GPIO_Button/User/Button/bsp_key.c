@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:39:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 00:05:46
+ * @LastEditTime : 2023-09-04 00:11:47
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,5 +35,5 @@ void KEY_GPIO_Config(uint32_t GPIO_Clock, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin
  * @return {*}
  */
 void KEY_Scan(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
-
+    return;
 }
