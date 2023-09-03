@@ -6,7 +6,7 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-03 10:01:17 pm
+ * Last Modified: Chong Liu - 2023-09-03 10:42:49 pm
  */
 #ifndef __BSP_KEY_H
 #define __BSP_KEY_H
@@ -21,5 +21,7 @@
 #define KEY2_GPIO           GPIOC                       /* 设置KEY的GPIO寄存器地址 */
 #define KEY2_PIN            GPIO_Pin_13                 /* KEY引脚寄存器地址 */
 
+void KEY_GPIO_Config(uint32_t GPIO_Clock, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
+void KEY_Scan();
 
 #endif  /* __BSP_KEY_H */
