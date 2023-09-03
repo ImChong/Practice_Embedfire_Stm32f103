@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:39:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 00:13:29
+ * @LastEditTime : 2023-09-04 00:20:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : BSP - Board Support Package：按键相关函数头文件
  */
 #ifndef __BSP_KEY_H
 #define __BSP_KEY_H

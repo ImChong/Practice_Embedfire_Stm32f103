@@ -7,12 +7,12 @@
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : BSP - Board Support Package：按键相关函数源文件
  */
 #include "bsp_key.h"    /* 此头文件将添加 stm32f10x.h */
 
 /**
- * @description:
+ * @description: 按键GPIO初始化函数
  * @param {uint32_t} GPIO_Clock
  * @param {GPIO_TypeDef} *GPIOx
  * @param {uint16_t} GPIO_Pin
@@ -35,5 +35,6 @@ void KEY_GPIO_Config(uint32_t GPIO_Clock, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin
  * @return {*}
  */
 void KEY_Scan(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
+    /* TODO */
     return;
 }
