@@ -6,18 +6,18 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 5:51:32 pm
+ * Last Modified: Chong Liu - 2023-09-03 10:01:02 pm
  */
 #ifndef __BSP_LED_H
 #define __BSP_LED_H
 
 #include "stm32f10x.h"      /* 此头文件将添加 stm32f10x_conf.h - 管理所有外设的头文件 */
 
-#define LED_GPIO_CLK        RCC_APB2Periph_GPIOB        /* 设置LED的GPIO的时钟 */
-#define LED_GPIO            GPIOB                       /* 设置LED的GPIO */
-#define LED_R_PIN           GPIO_Pin_5                  /* 红灯引脚 */
-#define LED_G_PIN           GPIO_Pin_0                  /* 绿灯引脚 */
-#define LED_B_PIN           GPIO_Pin_1                  /* 蓝灯引脚 */
+#define LED_GPIO_CLK        RCC_APB2Periph_GPIOB        /* 设置LED的GPIO的时钟使能寄存器地址 */
+#define LED_GPIO            GPIOB                       /* 设置LED的GPIO寄存器地址 */
+#define LED_R_PIN           GPIO_Pin_5                  /* 红灯引脚寄存器地址 */
+#define LED_G_PIN           GPIO_Pin_0                  /* 绿灯引脚寄存器地址 */
+#define LED_B_PIN           GPIO_Pin_1                  /* 蓝灯引脚寄存器地址 */
 
 #define ON  1
 #define OFF 0
