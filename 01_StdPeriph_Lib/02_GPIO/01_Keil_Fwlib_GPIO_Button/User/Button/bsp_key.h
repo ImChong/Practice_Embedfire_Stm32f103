@@ -6,13 +6,20 @@
  * =================================================================================
  * Copyright (c) 2023 Chong Liu
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-02 5:55:02 pm
+ * Last Modified: Chong Liu - 2023-09-03 6:55:44 pm
  */
 #ifndef __BSP_KEY_H
 #define __BSP_KEY_H
 
 #include "stm32f10x.h"      /* 此头文件将添加 stm32f10x_conf.h - 管理所有外设的头文件 */
 
+#define KEY1_GPIO_CLK       RCC_APB2Periph_GPIOA        /* 设置KEY的GPIO的时钟 */
+#define KEY1_GPIO           GPIOA                       /* 设置KEY的GPIO */
+#define KEY1_PIN            GPIO_Pin_0                  /* KEY引脚 */
+
+#define KEY2_GPIO_CLK       RCC_APB2Periph_GPIOC        /* 设置KEY的GPIO的时钟 */
+#define KEY2_GPIO           GPIOC                       /* 设置KEY的GPIO */
+#define KEY2_PIN            GPIO_Pin_13                 /* KEY引脚 */
 
 
 #endif  /* __BSP_KEY_H */
