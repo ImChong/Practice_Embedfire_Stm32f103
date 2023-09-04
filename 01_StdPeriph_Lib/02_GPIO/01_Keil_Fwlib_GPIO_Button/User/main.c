@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 22:42:45
+ * @LastEditTime : 2023-09-04 22:46:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,8 +14,8 @@
 #include "bsp_led.h"	/* 此头文件将添加 stm32f10x.h */
 #include "bsp_key.h"	/* 此头文件将添加 stm32f10x.h */
 
-#define BIT_BAND_OPERATION_OUTPUT_EN 1     /* 是否开启位带操作相关代码 */
-#define BIT_BAND_OPERATION_INTPUT_EN 0     /* 是否开启位带操作相关代码 */
+#define BIT_BAND_OPERATION_OUTPUT_EN 0     /* 是否开启位带操作相关代码 */
+#define BIT_BAND_OPERATION_INTPUT_EN 1     /* 是否开启位带操作相关代码 */
 
 #define GPIOB_ODR_ADDR          (GPIOB_BASE + 0x0C)
 #define PB_OUT(bitNum)          *(unsigned int *)((GPIOB_ODR_ADDR & 0xF0000000)+0x02000000+((GPIOB_ODR_ADDR & 0x00FFFFFF)<<5)+(bitNum<<2))
@@ -57,14 +57,14 @@ int main(void)
         PB_OUT(LED_G_PIN_BIT_NUM) = LED_OFF;	        /* 使引脚输出高电平，关闭 LED Green：0引脚 */
         Delay(0x1FFFFF);                                /* 延时一段时间 */
 
-        PB_OUT(LED_B_PIN_BIT_NUM) = LED_ON;	            /* 使引脚输出低电平, 点亮 LED Green：0引脚 */
+        PB_OUT(LED_B_PIN_BIT_NUM) = LED_ON;	            /* 使引脚输出低电平, 点亮 LED Blue：1引脚 */
         Delay(0x1FFFFF);			                    /* 延时一段时间 */
-        PB_OUT(LED_B_PIN_BIT_NUM) = LED_OFF;	        /* 使引脚输出高电平，关闭 LED Green：0引脚 */
+        PB_OUT(LED_B_PIN_BIT_NUM) = LED_OFF;	        /* 使引脚输出高电平，关闭 LED Blue：1引脚 */
         Delay(0x1FFFFF);                                /* 延时一段时间 */
 
-        PB_OUT(LED_R_PIN_BIT_NUM) = LED_ON;	            /* 使引脚输出低电平, 点亮 LED Green：0引脚 */
+        PB_OUT(LED_R_PIN_BIT_NUM) = LED_ON;	            /* 使引脚输出低电平, 点亮 LED Red：5引脚 */
         Delay(0x1FFFFF);			                    /* 延时一段时间 */
-        PB_OUT(LED_R_PIN_BIT_NUM) = LED_OFF;	        /* 使引脚输出高电平，关闭 LED Green：0引脚 */
+        PB_OUT(LED_R_PIN_BIT_NUM) = LED_OFF;	        /* 使引脚输出高电平，关闭 LED Red：5引脚 */
         Delay(0x1FFFFF);                                /* 延时一段时间 */
 #elif BIT_BAND_OPERATION_INTPUT_EN
         /* 按键1 按下 */
