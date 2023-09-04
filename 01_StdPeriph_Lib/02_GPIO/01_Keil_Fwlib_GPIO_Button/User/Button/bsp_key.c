@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:39:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 09:37:21
+ * @LastEditTime : 2023-09-04 09:37:49
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,7 +35,7 @@ void KEY_GPIO_Config(uint32_t RCC_GPIO_Clock, GPIO_TypeDef *GPIOx, uint16_t GPIO
  * =================================================================================
  * @param {GPIO_TypeDef} *GPIOx
  * @param {uint16_t} GPIO_Pin
- * @return {uint8_t}
+ * @return {uint8_t} KEY_ON
  */
 uint8_t KEY_Scan(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
     /* TODO */
@@ -43,5 +43,4 @@ uint8_t KEY_Scan(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
         while(GPIO_ReadInputDataBit(GPIOx, GPIO_Pin) == KEY_ON);
         return KEY_ON;
     }
-    return;
 }
