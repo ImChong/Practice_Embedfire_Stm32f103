@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 11:28:44
+ * @LastEditTime : 2023-09-04 11:30:55
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -29,9 +29,7 @@
                                         else \
                                             GPIO_SetBits(LED_GPIO, ledPin);
 
-/* LED状态切换 */
-
-/* ^ 异或：与1异或会改变，与0异或不会改变 */
+/* LED状态切换：^ 异或 */
 #define LED_TOGGLE(ledPin)              (LED_GPIO->ODR ^= ledPin);
 
 void LED_GPIO_Config(void);
