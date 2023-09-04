@@ -1,7 +1,7 @@
 # 1. 嵌入式开发词汇表
 
-[嵌入式基础知识相关](TerminologyRelated.md)
+[01_嵌入式基础知识相关](01_TerminologyRelated.md)
 
-[寄存器相关](RegistryRelated.md)
+[02_寄存器相关](02_RegistryRelated.md)
 
-[文件类型相关](FileTypeRelated.md)
+[03_文件类型相关](03_FileTypeRelated.md)
