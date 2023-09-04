@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:39:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 07:30:37
+ * @LastEditTime : 2023-09-04 09:31:04
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -21,6 +21,9 @@
 #define KEY2_GPIO_CLK       RCC_APB2Periph_GPIOC        /* 设置KEY的GPIO的时钟使能寄存器地址 */
 #define KEY2_GPIO           GPIOC                       /* 设置KEY的GPIO寄存器地址 */
 #define KEY2_PIN            GPIO_Pin_13                 /* KEY引脚寄存器地址 */
+
+#define KEY_ON  1
+#define KEY_OFF 0
 
 void KEY_GPIO_Config(uint32_t RCC_GPIO_Clock, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
 void KEY_Scan(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
