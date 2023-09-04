@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 21:51:58
+ * @LastEditTime : 2023-09-04 21:56:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -15,6 +15,9 @@
 #include "bsp_key.h"	/* 此头文件将添加 stm32f10x.h */
 
 #define BIT_BAND_OPERATION_EN 1     /* 是否开启位带操作相关代码 */
+
+/* 把“位带地址 + 位序号”转换成别名地址的宏 */
+#define BITBAND(addr, bitNum) ((addr & 0xF0000000)+0x02000000+((addr & 0x00FFFFFF)<<5)+(bitNum<<2))
 
 /**
  * @description:
