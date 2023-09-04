@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 10:51:26
+ * @LastEditTime : 2023-09-04 11:28:11
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -40,7 +40,7 @@ int main(void)
     while (1) {
         if (KEY_Scan(KEY1_GPIO, KEY1_PIN) == KEY_ON){
             LED_SWITCH(LED_G_PIN, ON)	/* 使引脚输出低电平, 点亮 LED Green */
-            LED_TOGGLE(LED_G_PIN)       /* LED状态切换 */
+            // LED_TOGGLE(LED_G_PIN)       /* LED状态切换 */
         }
         LED_SWITCH(LED_G_PIN, OFF)	/* 使引脚输出高电平，关闭 LED Green */
     }
