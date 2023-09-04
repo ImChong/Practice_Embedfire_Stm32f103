@@ -14,6 +14,7 @@
   - [1.11. 内部 SRAM（Static Random Access Memory）](#111-内部-sramstatic-random-access-memory)
   - [1.12. CMSIS-DAP（Cortex Microcontroller Software Interface Standard - Debug Access Port）](#112-cmsis-dapcortex-microcontroller-software-interface-standard---debug-access-port)
   - [1.13. 最低有效位（LSB）](#113-最低有效位lsb)
+    - [LSB的重要性](#lsb的重要性)
 
 ## 1.1. 数据手册（Data Sheet）
 > 基础规格：数据手册主要提供微控制器的基础规格，例如工作电压、频率范围、尺寸、引脚配置等。
@@ -80,4 +81,18 @@
 > - 通用性：CMSIS-DAP标准化了接口协议，使得兼容不同厂家和型号的Cortex-M微控制器变得更加容易。
 
 ## 1.13. 最低有效位（LSB）
-> 这是指二进制数中表示最小值的位，例如 0x1234 中的 4 就是 LSB12。在嵌入式系统中，LSB 可以用来实现一些隐写算法，例如 LSB 算法，它是将秘密信息嵌入到载体信号的最低有效位中1。
+在嵌入式系统（以及计算机科学和电子工程中）中，LSB 是 "Least Significant Bit"（最低有效位）的缩写。在一个二进制数中，最低有效位是右边的那一位，也就是2的0次方位。与之对应的是 MSB（"Most Significant Bit"，最高有效位），这是二进制数中左边的那一位。
+
+例如，在8位二进制数 `1101 0101` 中，最右边的位（即 '1'）是 LSB，而最左边的位（即第一个 '1'）是 MSB。
+
+### LSB的重要性
+
+- **数据存储和传输**：在某些系统或协议中，需要明确数据是以 "Little-endian" 还是 "Big-endian" 的格式来存储或传输。这里的 "endian" 指的就是 LSB 和 MSB 的存放顺序。
+
+- **位操作**：在进行位操作（如位掩码、位字段设置等）时，了解 LSB 的位置是非常重要的。
+
+- **模数转换和数据压缩**：在一些特定的应用场景中，可能只关心数据的某几个最低有效位。
+
+- **硬件接口和通信协议**：在一些硬件通信协议（如 SPI、I2C 等）中，数据传输的 LSB/MSB 顺序可能会被明确规定。
+
+了解 LSB 和 MSB 的概念是进行低级编程（包括嵌入式系统编程）和硬件设计的基础。这些概念对于正确地解释数据和实现数据通信有至关重要的作用。
