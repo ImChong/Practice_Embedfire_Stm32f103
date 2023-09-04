@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 23:03:24
+ * @LastEditTime : 2023-09-04 23:04:28
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -65,7 +65,6 @@ int main(void)
     /* 循环主体 */
     while (1) {
 #if BIT_BAND_OPERATION_OUTPUT_EN
-        /* BUG: 所有灯按顺序亮灭的时候会出现颜色重叠的情况 */
         PB_OUT(LED_G_PIN_BIT_NUM) = PIN_LOW;	        /* 使引脚输出低电平, 点亮 LED Green：0引脚 */
         Delay(0x1FFFFF);			                    /* 延时一段时间 */
         PB_OUT(LED_G_PIN_BIT_NUM) = PIN_HIGH;	        /* 使引脚输出高电平，关闭 LED Green：0引脚 */
