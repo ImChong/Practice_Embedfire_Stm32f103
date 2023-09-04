@@ -1,12 +1,13 @@
 /*
- * @File: practice_register.c
- * @Created Date: 2023-08-25 11:48:43 pm
- * @Author: Chong Liu
- * @Brief: Description of what this file does
+ * @FilePath     : \01_Registry\01_Misc_Practice\practice_register.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-01 20:07:07
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-04 18:59:42
  * =================================================================================
- * Copyright (c) 2023 Chong Liu
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-31 1:15:42 pm
+ * @Description  : 寄存器与主函数练习
  */
 #include <stdio.h>
 
@@ -59,7 +60,13 @@ typedef struct {
 #define GPIOF   ((GPIO_TypeDef *)GPIOF_BASE)
 #define GPIOG   ((GPIO_TypeDef *)GPIOG_BASE)
 
-/* NOTE: 主函数 */
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @param {int} argc
+ * @param {char*} argv
+ * @return {*}
+ */
 int main(int argc, const char* argv[]) {
     /* NOTE: Test case 1 */
     printf("======== Case 1 ======== \n");
@@ -77,13 +84,13 @@ int main(int argc, const char* argv[]) {
     /* 访问 GPIOB 端口的寄存器 */
     GPIOB->BSRR = 0xFFFF; //通过指针访问并修改 GPIOB_BSRR 寄存器
     GPIOB->CRL = 0xFFFF; //修改 GPIOB_CRL 寄存器
-    GPIOB->ODR =0xFFFF; //修改 GPIOB_ODR 寄存器
+    GPIOB->ODR = 0xFFFF; //修改 GPIOB_ODR 寄存器
     temp = GPIOB->IDR; //读取 GPIOB_IDR 寄存器的值到变量 temp 中
 
     /* 访问 GPIOA 端口的寄存器 */
     GPIOA->BSRR = 0xFFFF;
     GPIOA->CRL = 0xFFFF;
-    GPIOA->ODR =0xFFFF;
+    GPIOA->ODR = 0xFFFF;
     temp = GPIOA->IDR; //读取 GPIOA_IDR 寄存器的值到变量 temp 中
 
     return 0;
