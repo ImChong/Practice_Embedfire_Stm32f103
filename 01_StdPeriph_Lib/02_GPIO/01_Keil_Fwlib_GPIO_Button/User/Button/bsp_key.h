@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:39:10
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 09:31:04
+ * @LastEditTime : 2023-09-04 09:35:16
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -26,6 +26,6 @@
 #define KEY_OFF 0
 
 void KEY_GPIO_Config(uint32_t RCC_GPIO_Clock, GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
-void KEY_Scan(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
+uint8_t KEY_Scan(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
 
 #endif  /* __BSP_KEY_H */
