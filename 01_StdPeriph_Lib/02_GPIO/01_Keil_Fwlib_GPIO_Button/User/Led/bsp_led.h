@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 11:30:55
+ * @LastEditTime : 2023-09-04 22:15:31
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,14 +14,17 @@
 
 #include "stm32f10x.h"      /* 此头文件将添加 stm32f10x_conf.h - 管理所有外设的头文件 */
 
-#define LED_GPIO_CLK        RCC_APB2Periph_GPIOB        /* 设置LED的GPIO的时钟使能寄存器地址 */
-#define LED_GPIO            GPIOB                       /* 设置LED的GPIO寄存器地址 */
-#define LED_R_PIN           GPIO_Pin_5                  /* 红灯引脚寄存器地址 */
-#define LED_G_PIN           GPIO_Pin_0                  /* 绿灯引脚寄存器地址 */
-#define LED_B_PIN           GPIO_Pin_1                  /* 蓝灯引脚寄存器地址 */
+#define LED_GPIO_CLK            RCC_APB2Periph_GPIOB        /* 设置LED的GPIO的时钟使能寄存器地址 */
+#define LED_GPIO                GPIOB                       /* 设置LED的GPIO寄存器地址 */
+#define LED_R_PIN_MSK           GPIO_Pin_5                  /* 红灯引脚寄存器地址 */
+#define LED_G_PIN_MSK           GPIO_Pin_0                  /* 绿灯引脚寄存器地址 */
+#define LED_B_PIN_MSK           GPIO_Pin_1                  /* 蓝灯引脚寄存器地址 */
+#define LED_R_PIN_BIT_NUM       5                           /* 红灯引脚编号 */
+#define LED_G_PIN_BIT_NUM       0                           /* 绿灯引脚编号 */
+#define LED_B_PIN_BIT_NUM       1                           /* 蓝灯引脚编号 */
 
-#define ON  1
-#define OFF 0
+#define LED_ON  1
+#define LED_OFF 0
 
 /* LED的开关 */
 #define LED_SWITCH(ledPin, option)      if(option) \
