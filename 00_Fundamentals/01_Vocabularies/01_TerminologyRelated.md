@@ -14,7 +14,7 @@
   - [1.11. 内部 SRAM（Static Random Access Memory）](#111-内部-sramstatic-random-access-memory)
   - [1.12. CMSIS-DAP（Cortex Microcontroller Software Interface Standard - Debug Access Port）](#112-cmsis-dapcortex-microcontroller-software-interface-standard---debug-access-port)
   - [1.13. 最低有效位（LSB）](#113-最低有效位lsb)
-    - [LSB的重要性](#lsb的重要性)
+    - [1.13.1. LSB的重要性](#1131-lsb的重要性)
 
 ## 1.1. 数据手册（Data Sheet）
 > 基础规格：数据手册主要提供微控制器的基础规格，例如工作电压、频率范围、尺寸、引脚配置等。
@@ -85,7 +85,7 @@
 
 例如，在8位二进制数 `1101 0101` 中，最右边的位（即 '1'）是 LSB，而最左边的位（即第一个 '1'）是 MSB。
 
-### LSB的重要性
+### 1.13.1. LSB的重要性
 
 - **数据存储和传输**：在某些系统或协议中，需要明确数据是以 "Little-endian" 还是 "Big-endian" 的格式来存储或传输。这里的 "endian" 指的就是 LSB 和 MSB 的存放顺序。
 
