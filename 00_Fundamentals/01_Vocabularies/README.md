@@ -14,6 +14,7 @@
     - [1.1.10. 系统存储器（System Memory）](#1110-系统存储器system-memory)
     - [1.1.11. 内部 SRAM（Static Random Access Memory）](#1111-内部-sramstatic-random-access-memory)
     - [1.1.12. CMSIS-DAP（Cortex Microcontroller Software Interface Standard - Debug Access Port）](#1112-cmsis-dapcortex-microcontroller-software-interface-standard---debug-access-port)
+    - [1.1.13. 最低有效位（LSB）](#1113-最低有效位lsb)
   - [1.2. 寄存器相关](#12-寄存器相关)
     - [1.2.1. 寄存器（Register）](#121-寄存器register)
     - [1.2.2. FSMC（Flexible static memory controller）](#122-fsmcflexible-static-memory-controller)
@@ -116,6 +117,9 @@
 > - 芯片复位：支持对目标微控制器进行软件复位或硬件复位操作。
 > - 性能分析：一些CMSIS-DAP实现还支持性能分析功能，如跟踪和性能计数器。
 > - 通用性：CMSIS-DAP标准化了接口协议，使得兼容不同厂家和型号的Cortex-M微控制器变得更加容易。
+
+### 1.1.13. 最低有效位（LSB）
+> 这是指二进制数中表示最小值的位，例如 0x1234 中的 4 就是 LSB12。在嵌入式系统中，LSB 可以用来实现一些隐写算法，例如 LSB 算法，它是将秘密信息嵌入到载体信号的最低有效位中1。
 
 ## 1.2. 寄存器相关
 
