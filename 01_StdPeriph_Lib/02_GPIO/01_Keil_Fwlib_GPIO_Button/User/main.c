@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 22:18:09
+ * @LastEditTime : 2023-09-04 22:19:45
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -19,7 +19,8 @@
 
 #define GPIOB_ODR_ADDR          (GPIOB_BASE + 0x0C)
 #define PB_OUT(bitNum)          *(unsigned int *)((GPIOB_ODR_ADDR & 0xF0000000)+0x02000000+((GPIOB_ODR_ADDR & 0x00FFFFFF)<<5)+(bitNum<<2))
-#define PA_IN(bitNum)           *(unsigned int *)((GPIOB_ODR_ADDR & 0xF0000000)+0x02000000+((GPIOB_ODR_ADDR & 0x00FFFFFF)<<5)+(bitNum<<2))
+#define GPIOA_IDR_ADDR          (GPIOA_BASE + 0x08)
+#define PA_IN(bitNum)           *(unsigned int *)((GPIOA_IDR_ADDR & 0xF0000000)+0x02000000+((GPIOA_IDR_ADDR & 0x00FFFFFF)<<5)+(bitNum<<2))
 #define BITBAND(addr, bitNum)   ((addr & 0xF0000000)+0x02000000+((addr & 0x00FFFFFF)<<5)+(bitNum<<2))     /* 把“位带地址 + 位序号”转换成别名地址的宏 */
 
 /**
@@ -41,9 +42,9 @@ int main(void)
 {
     /* 来到这里的时候，系统的时钟已经被配置成72M */
     LED_GPIO_Config();		/* LED GPIO初始化：默认输出拉低，此时所有初始化的 LED 灯都会被点亮 */
-    KEY_GPIO_Config(KEY1_GPIO_CLK, KEY1_GPIO, KEY1_PIN);            /* 按键1 初始化 */
-    KEY_GPIO_Config(KEY2_GPIO_CLK, KEY2_GPIO, KEY2_PIN);            /* 按键2 初始化 */
-    GPIO_SetBits(LED_GPIO, LED_R_PIN_MSK | LED_G_PIN_MSK | LED_B_PIN_MSK);      /* 使引脚输出高电平，关闭 LED */
+    KEY_GPIO_Config(KEY1_GPIO_CLK, KEY1_GPIO, KEY1_PIN);                        /* 按键1 初始化 */
+    KEY_GPIO_Config(KEY2_GPIO_CLK, KEY2_GPIO, KEY2_PIN);                        /* 按键2 初始化 */
+    GPIO_SetBits(LED_GPIO, LED_R_PIN_MSK | LED_G_PIN_MSK | LED_B_PIN_MSK);      /* 引脚均输出高电平，关闭 LED */
 
     /* 循环主体 */
     while (1) {
