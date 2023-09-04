@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 22:33:55
+ * @LastEditTime : 2023-09-04 22:38:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -27,7 +27,7 @@
 #define BITBAND(addr, bitNum)   ((addr & 0xF0000000)+0x02000000+((addr & 0x00FFFFFF)<<5)+(bitNum<<2))
 
 /**
- * @description:
+ * @description: 延迟函数
  * =================================================================================
  * @param {__IO uint32_t} nCount
  * @return {*}
