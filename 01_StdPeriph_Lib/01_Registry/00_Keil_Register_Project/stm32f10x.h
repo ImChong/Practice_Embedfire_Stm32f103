@@ -1,12 +1,13 @@
 /*
- * @File: stm32f10x.h
- * @Created Date: 2023-08-27 3:48:50 pm
- * @Author: Chong Liu
- * @Brief: stm32f103寄存器定义
+ * @FilePath     : \01_Registry\00_Keil_Register_Project\stm32f10x.h
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-01 20:07:07
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-04 19:07:27
  * =================================================================================
- * Copyright (c) 2023 Chong Liu
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 1:13:13 am
+ * @Description  : stm32f103寄存器定义
  */
 #ifndef __STM32F10X_H   /* 防止重复包含头文件 */
 #define __STM32F10X_H
