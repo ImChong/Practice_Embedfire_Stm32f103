@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 22:54:34
+ * @LastEditTime : 2023-09-04 23:03:24
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,15 +14,19 @@
 #include "bsp_led.h"	/* 此头文件将添加 stm32f10x.h */
 #include "bsp_key.h"	/* 此头文件将添加 stm32f10x.h */
 
-#define BIT_BAND_OPERATION_OUTPUT_EN 0     /* 是否开启位带操作相关代码 */
-#define BIT_BAND_OPERATION_INTPUT_EN 1     /* 是否开启位带操作相关代码 */
+#define BIT_BAND_OPERATION_OUTPUT_EN 1     /* 是否开启位带操作相关代码 */
+#define BIT_BAND_OPERATION_INTPUT_EN 0     /* 是否开启位带操作相关代码 */
 
+/* GPIOB 输出 */
 #define GPIOB_ODR_ADDR          (GPIOB_BASE + 0x0C)
 #define PB_OUT(bitNum)          *(unsigned int *)((GPIOB_ODR_ADDR & 0xF0000000)+0x02000000+((GPIOB_ODR_ADDR & 0x00FFFFFF)<<5)+(bitNum<<2))
+/* GPIOA 输入 */
 #define GPIOA_IDR_ADDR          (GPIOA_BASE + 0x08)
 #define PA_IN(bitNum)           *(unsigned int *)((GPIOA_IDR_ADDR & 0xF0000000)+0x02000000+((GPIOA_IDR_ADDR & 0x00FFFFFF)<<5)+(bitNum<<2))
+/* GPIOC 输入 */
 #define GPIOC_IDR_ADDR          (GPIOC_BASE + 0x08)
 #define PC_IN(bitNum)           *(unsigned int *)((GPIOC_IDR_ADDR & 0xF0000000)+0x02000000+((GPIOC_IDR_ADDR & 0x00FFFFFF)<<5)+(bitNum<<2))
+
 /* 把 “位带地址 + 位序号” 转换成别名地址的宏 */
 #define BITBAND(addr, bitNum)   ((addr & 0xF0000000)+0x02000000+((addr & 0x00FFFFFF)<<5)+(bitNum<<2))
 /* 把一个地址转换成一个指针 */
@@ -61,19 +65,20 @@ int main(void)
     /* 循环主体 */
     while (1) {
 #if BIT_BAND_OPERATION_OUTPUT_EN
-        PB_OUT(LED_G_PIN_BIT_NUM) = LED_ON;	            /* 使引脚输出低电平, 点亮 LED Green：0引脚 */
+        /* BUG: 所有灯按顺序亮灭的时候会出现颜色重叠的情况 */
+        PB_OUT(LED_G_PIN_BIT_NUM) = PIN_LOW;	        /* 使引脚输出低电平, 点亮 LED Green：0引脚 */
         Delay(0x1FFFFF);			                    /* 延时一段时间 */
-        PB_OUT(LED_G_PIN_BIT_NUM) = LED_OFF;	        /* 使引脚输出高电平，关闭 LED Green：0引脚 */
+        PB_OUT(LED_G_PIN_BIT_NUM) = PIN_HIGH;	        /* 使引脚输出高电平，关闭 LED Green：0引脚 */
         Delay(0x1FFFFF);                                /* 延时一段时间 */
 
-        PB_OUT(LED_B_PIN_BIT_NUM) = LED_ON;	            /* 使引脚输出低电平, 点亮 LED Blue：1引脚 */
+        PB_OUT(LED_B_PIN_BIT_NUM) = PIN_LOW;	        /* 使引脚输出低电平, 点亮 LED Blue：1引脚 */
         Delay(0x1FFFFF);			                    /* 延时一段时间 */
-        PB_OUT(LED_B_PIN_BIT_NUM) = LED_OFF;	        /* 使引脚输出高电平，关闭 LED Blue：1引脚 */
+        PB_OUT(LED_B_PIN_BIT_NUM) = PIN_HIGH;	        /* 使引脚输出高电平，关闭 LED Blue：1引脚 */
         Delay(0x1FFFFF);                                /* 延时一段时间 */
 
-        PB_OUT(LED_R_PIN_BIT_NUM) = LED_ON;	            /* 使引脚输出低电平, 点亮 LED Red：5引脚 */
+        PB_OUT(LED_R_PIN_BIT_NUM) = PIN_LOW;	        /* 使引脚输出低电平, 点亮 LED Red：5引脚 */
         Delay(0x1FFFFF);			                    /* 延时一段时间 */
-        PB_OUT(LED_R_PIN_BIT_NUM) = LED_OFF;	        /* 使引脚输出高电平，关闭 LED Red：5引脚 */
+        PB_OUT(LED_R_PIN_BIT_NUM) = PIN_HIGH;	        /* 使引脚输出高电平，关闭 LED Red：5引脚 */
         Delay(0x1FFFFF);                                /* 延时一段时间 */
 #elif BIT_BAND_OPERATION_INTPUT_EN
         /* 按键1 按下 */

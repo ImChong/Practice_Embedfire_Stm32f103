@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 22:15:31
+ * @LastEditTime : 2023-09-04 23:01:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -23,8 +23,10 @@
 #define LED_G_PIN_BIT_NUM       0                           /* 绿灯引脚编号 */
 #define LED_B_PIN_BIT_NUM       1                           /* 蓝灯引脚编号 */
 
-#define LED_ON  1
-#define LED_OFF 0
+#define LED_ON      1
+#define LED_OFF     0
+#define PIN_HIGH    1
+#define PIN_LOW     0
 
 /* LED的开关 */
 #define LED_SWITCH(ledPin, option)      if(option) \
