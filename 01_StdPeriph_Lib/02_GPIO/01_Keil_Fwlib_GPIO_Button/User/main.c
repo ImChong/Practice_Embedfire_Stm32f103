@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 22:46:05
+ * @LastEditTime : 2023-09-04 22:51:34
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -25,6 +25,10 @@
 #define PC_IN(bitNum)           *(unsigned int *)((GPIOC_IDR_ADDR & 0xF0000000)+0x02000000+((GPIOC_IDR_ADDR & 0x00FFFFFF)<<5)+(bitNum<<2))
 /* 把 “位带地址 + 位序号” 转换成别名地址的宏 */
 #define BITBAND(addr, bitNum)   ((addr & 0xF0000000)+0x02000000+((addr & 0x00FFFFFF)<<5)+(bitNum<<2))
+/* 把一个地址转换成一个指针 */
+#define MEM_ADDR(addr)          *((volatile unsigned long *)(addr))
+/* 把位带别名区地址转换成指针 */
+#define BIT_ADDR(addr, bitNum)  MEM_ADDR(BITBAND(addr, bitNum))
 
 /**
  * @description: 延迟函数
