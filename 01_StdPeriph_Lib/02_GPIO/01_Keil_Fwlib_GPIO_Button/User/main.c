@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 11:39:14
+ * @LastEditTime : 2023-09-04 11:39:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,9 +35,7 @@ int main(void)
     LED_GPIO_Config();		/* LED GPIO初始化：默认输出拉低，此时所有初始化的 LED 灯都会被点亮 */
     KEY_GPIO_Config(KEY1_GPIO_CLK, KEY1_GPIO, KEY1_PIN);            /* 按键1 初始化 */
     KEY_GPIO_Config(KEY2_GPIO_CLK, KEY2_GPIO, KEY2_PIN);            /* 按键2 初始化 */
-
     GPIO_SetBits(LED_GPIO, LED_R_PIN | LED_G_PIN | LED_B_PIN);      /* 使引脚输出高电平，关闭 LED */
-    Delay(0xFFFFFF);        /* 延时一段时间 */
 
     while (1) {
         /* 按键1 检测 */
