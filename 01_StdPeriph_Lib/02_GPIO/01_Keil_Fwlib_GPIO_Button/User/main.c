@@ -30,7 +30,7 @@ void Delay(__IO uint32_t nCount) {
  */
 int main(void)
 {
-	/* 来到这里的时候，系统的时钟已经被配置成72M */
+    /* 来到这里的时候，系统的时钟已经被配置成72M */
     LED_GPIO_Config();		/* LED GPIO初始化：默认输出拉低，此时所有初始化的 LED 灯都会被点亮 */
     KEY_GPIO_Config(KEY1_GPIO_CLK, KEY1_GPIO, KEY1_PIN);            /* 按键1 初始化 */
 
