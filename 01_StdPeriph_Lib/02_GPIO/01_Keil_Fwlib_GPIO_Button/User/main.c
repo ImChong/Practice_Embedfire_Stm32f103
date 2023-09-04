@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 11:39:37
+ * @LastEditTime : 2023-09-04 21:50:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -13,6 +13,8 @@
  */
 #include "bsp_led.h"	/* 此头文件将添加 stm32f10x.h */
 #include "bsp_key.h"	/* 此头文件将添加 stm32f10x.h */
+
+#define BIT_BAND_OPERATION_EN 1     /* 是否开启位带操作相关代码 */
 
 /**
  * @description:
@@ -38,6 +40,12 @@ int main(void)
     GPIO_SetBits(LED_GPIO, LED_R_PIN | LED_G_PIN | LED_B_PIN);      /* 使引脚输出高电平，关闭 LED */
 
     while (1) {
+#if BIT_BAND_OPERATION_EN
+
+
+
+
+#else
         /* 按键1 检测 */
         if (KEY_Scan(KEY1_GPIO, KEY1_PIN) == KEY_ON) {
             LED_TOGGLE(LED_G_PIN)       /* LED状态切换 */
@@ -47,5 +55,6 @@ int main(void)
         if (KEY_Scan(KEY2_GPIO, KEY2_PIN) == KEY_ON) {
             LED_TOGGLE(LED_G_PIN)       /* LED状态切换 */
         }
+#endif  /* BIT_BAND_OPERATION_EN */
     }
 }
