@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 22:22:30
+ * @LastEditTime : 2023-09-04 22:30:02
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -55,9 +55,10 @@ int main(void)
         PB_OUT(LED_G_PIN_BIT_NUM) = LED_OFF;	        /* 使引脚输出高电平，关闭 LED Green：0引脚 */
         Delay(0x1FFFFF);                                /* 延时一段时间 */
 #elif BIT_BAND_OPERATION_INTPUT_EN
-        /* 按键1 检测 */
-        if (PA_IN(0) == KEY_ON) {
-            LED_TOGGLE(LED_G_PIN_MSK)       /* LED状态切换 */
+        /* 按键1 按下 */
+        if (PA_IN(KEY1_PIN_BIT_NUM) == KEY_ON) {        /* 检测是否有按键按下*/
+            while(PA_IN(KEY1_PIN_BIT_NUM) == KEY_ON);   /* 松手检测 */
+            LED_TOGGLE(LED_G_PIN_MSK)                   /* LED状态切换 */
         }
 #else
         /* 按键1 检测 */
