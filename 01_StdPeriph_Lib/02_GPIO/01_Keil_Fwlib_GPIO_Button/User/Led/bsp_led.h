@@ -23,11 +23,13 @@
 #define ON  1
 #define OFF 0
 
+/* LED的开关 */
 #define LED_SWITCH(ledPin, option)      if(option) \
                                             GPIO_ResetBits(LED_GPIO, ledPin); \
                                         else \
                                             GPIO_SetBits(LED_GPIO, ledPin);
 
+/* LED状态切换 */
 #define LED_TOGGLE(ledPin)              (LED_GPIO->ODR ^= ledPin);
 
 void LED_GPIO_Config(void);
