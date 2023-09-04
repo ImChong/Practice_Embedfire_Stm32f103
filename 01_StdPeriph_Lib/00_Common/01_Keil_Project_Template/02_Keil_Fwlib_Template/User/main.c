@@ -1,22 +1,20 @@
 /*
- * @File: main.c
- * @Created Date: 2023-08-31 5:17:04 pm
- * @Author: Chong Liu
- * @Brief: Description of what this file does
+ * @FilePath     : \02_Keil_Fwlib_Template\User\main.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-01 20:07:07
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-04 18:54:41
  * =================================================================================
- * Copyright (c) 2023 Chong Liu
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-31 5:45:22 pm
+ * @Description  : 主函数文件
  */
 #include "stm32f10x.h"
 
-/* main()
- *  Functionality: description...
- *  Arguments: void
- *  Return: int
- *  References: document/website...
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+/**
+ * @description: 主函数
+ * =================================================================================
+ * @return {*}
  */
 int main(void)
 {

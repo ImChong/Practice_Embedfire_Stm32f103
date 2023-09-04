@@ -1,13 +1,3 @@
-/*
- * @File: stm32f10x_conf.h
- * @Created Date: 2023-08-31 5:19:24 pm
- * @Author: Chong Liu
- * @Brief: Description of what this file does
- * =================================================================================
- * Copyright (c) 2023 Chong Liu
- * =================================================================================
- * Last Modified: Chong Liu - 2023-08-31 5:19:24 pm
- */
 /**
   ******************************************************************************
   * @file    Project/STM32F10x_StdPeriph_Template/stm32f10x_conf.h
