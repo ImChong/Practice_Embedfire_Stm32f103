@@ -39,21 +39,21 @@ int main(void)
 	Delay(0xFFFFFF);												/* 延时一段时间 */
 
 	while (1) {
-        LED_TOGGLE(LED_G_PIN, ON)	/* 使引脚输出低电平, 点亮 LED Green */
+        LED_SWITCH(LED_G_PIN, ON)	/* 使引脚输出低电平, 点亮 LED Green */
         Delay(0x1FFFFF);			/* 延时一段时间 */
-        LED_TOGGLE(LED_G_PIN, OFF)	/* 使引脚输出高电平，关闭 LED Green */
-        Delay(0x1FFFFF);			/* 延时一段时间 */
-
-
-		LED_TOGGLE(LED_B_PIN, ON)	/* 使引脚输出低电平, 点亮 LED Blue */
-        Delay(0x1FFFFF);			/* 延时一段时间 */
-        LED_TOGGLE(LED_B_PIN, OFF)	/* 使引脚输出高电平，关闭 LED Blue */
+        LED_SWITCH(LED_G_PIN, OFF)	/* 使引脚输出高电平，关闭 LED Green */
         Delay(0x1FFFFF);			/* 延时一段时间 */
 
 
-		LED_TOGGLE(LED_R_PIN, ON)	/* 使引脚输出低电平, 点亮 LED Red */
+		LED_SWITCH(LED_B_PIN, ON)	/* 使引脚输出低电平, 点亮 LED Blue */
         Delay(0x1FFFFF);			/* 延时一段时间 */
-        LED_TOGGLE(LED_R_PIN, OFF)	/* 使引脚输出高电平，关闭 LED Red */
+        LED_SWITCH(LED_B_PIN, OFF)	/* 使引脚输出高电平，关闭 LED Blue */
+        Delay(0x1FFFFF);			/* 延时一段时间 */
+
+
+		LED_SWITCH(LED_R_PIN, ON)	/* 使引脚输出低电平, 点亮 LED Red */
+        Delay(0x1FFFFF);			/* 延时一段时间 */
+        LED_SWITCH(LED_R_PIN, OFF)	/* 使引脚输出高电平，关闭 LED Red */
         Delay(0x1FFFFF);			/* 延时一段时间 */
     }
 }
