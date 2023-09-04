@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 23:13:30
+ * @LastEditTime : 2023-09-04 23:15:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -143,6 +143,6 @@ int main(void)
         if (KEY_Scan(KEY2_GPIO, KEY2_PIN_MSK) == KEY_ON) {
             LED_TOGGLE(LED_G_PIN_MSK)       /* LED状态切换 */
         }
-#endif  /* BIT_BAND_OPERATION_EN */
+#endif  /* BIT_BAND_OPERATION_OUTPUT_EN */
     }
 }
