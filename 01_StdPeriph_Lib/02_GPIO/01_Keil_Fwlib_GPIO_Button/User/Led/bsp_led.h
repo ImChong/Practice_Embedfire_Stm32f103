@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 00:20:38
+ * @LastEditTime : 2023-09-04 11:20:15
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -27,6 +27,8 @@
                                             GPIO_ResetBits(LED_GPIO, ledPin); \
                                         else \
                                             GPIO_SetBits(LED_GPIO, ledPin);
+
+#define LED_TOGGLE(ledPin)              (LED_GPIO->ODR ^= ledPin);
 
 void LED_GPIO_Config(void);
 
