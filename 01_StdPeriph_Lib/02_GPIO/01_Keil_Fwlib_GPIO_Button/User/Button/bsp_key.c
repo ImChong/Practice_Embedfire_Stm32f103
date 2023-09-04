@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:39:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 10:04:33
+ * @LastEditTime : 2023-09-04 11:52:39
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -35,10 +35,12 @@ void KEY_GPIO_Config(uint32_t RCC_GPIO_Clock, GPIO_TypeDef *GPIOx, uint16_t GPIO
  * =================================================================================
  * @param {GPIO_TypeDef} *GPIOx
  * @param {uint16_t} GPIO_Pin
- * @return {uint8_t} KEY_ON / KEY_OFF
+ * @return {uint8_t} KEY_ON 按键按下 / KEY_OFF 按键没按下
  */
 uint8_t KEY_Scan(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
+    /* 检测是否有按键按下*/
     if (GPIO_ReadInputDataBit(GPIOx, GPIO_Pin) == KEY_ON) {
+        /* 等待按键释放*/
         while(GPIO_ReadInputDataBit(GPIOx, GPIO_Pin) == KEY_ON);        /* 松手检测 */
         return KEY_ON;
     }
