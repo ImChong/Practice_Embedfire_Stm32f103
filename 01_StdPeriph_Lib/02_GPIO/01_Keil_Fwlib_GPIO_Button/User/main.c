@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 21:50:15
+ * @LastEditTime : 2023-09-04 21:51:58
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -39,11 +39,14 @@ int main(void)
     KEY_GPIO_Config(KEY2_GPIO_CLK, KEY2_GPIO, KEY2_PIN);            /* 按键2 初始化 */
     GPIO_SetBits(LED_GPIO, LED_R_PIN | LED_G_PIN | LED_B_PIN);      /* 使引脚输出高电平，关闭 LED */
 
+    /* 循环主体 */
     while (1) {
 #if BIT_BAND_OPERATION_EN
+        LED_SWITCH(LED_G_PIN, ON)	/* 使引脚输出低电平, 点亮 LED Green */
+        Delay(0x1FFFFF);			/* 延时一段时间 */
 
-
-
+        LED_SWITCH(LED_G_PIN, OFF)	/* 使引脚输出高电平，关闭 LED Green */
+        Delay(0x1FFFFF);            /* 延时一段时间 */
 
 #else
         /* 按键1 检测 */
