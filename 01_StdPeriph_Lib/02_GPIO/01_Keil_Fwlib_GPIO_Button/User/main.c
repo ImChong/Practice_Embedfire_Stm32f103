@@ -23,7 +23,8 @@
 #define PA_IN(bitNum)           *(unsigned int *)((GPIOA_IDR_ADDR & 0xF0000000)+0x02000000+((GPIOA_IDR_ADDR & 0x00FFFFFF)<<5)+(bitNum<<2))
 #define GPIOC_IDR_ADDR          (GPIOC_BASE + 0x08)
 #define PC_IN(bitNum)           *(unsigned int *)((GPIOC_IDR_ADDR & 0xF0000000)+0x02000000+((GPIOC_IDR_ADDR & 0x00FFFFFF)<<5)+(bitNum<<2))
-#define BITBAND(addr, bitNum)   ((addr & 0xF0000000)+0x02000000+((addr & 0x00FFFFFF)<<5)+(bitNum<<2))     /* 把“位带地址 + 位序号”转换成别名地址的宏 */
+/* 把 “位带地址 + 位序号” 转换成别名地址的宏 */
+#define BITBAND(addr, bitNum)   ((addr & 0xF0000000)+0x02000000+((addr & 0x00FFFFFF)<<5)+(bitNum<<2))
 
 /**
  * @description:

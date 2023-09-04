@@ -22,7 +22,7 @@
 #define KEY2_GPIO_CLK       RCC_APB2Periph_GPIOC        /* 设置 KEY 的 GPIO 的时钟使能寄存器地址 */
 #define KEY2_GPIO           GPIOC                       /* 设置 KEY 的 GPIO 寄存器地址 */
 #define KEY2_PIN_MSK        GPIO_Pin_13                 /* KEY 引脚寄存器地址 */
-#define KEY2_PIN_BIT_NUM    1                           /* KEY 引脚编号 */
+#define KEY2_PIN_BIT_NUM    13                          /* KEY 引脚编号 */
 
 #define KEY_ON  1
 #define KEY_OFF 0
