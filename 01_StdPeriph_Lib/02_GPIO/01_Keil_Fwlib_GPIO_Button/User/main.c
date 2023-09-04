@@ -39,14 +39,12 @@ int main(void)
 
     while (1) {
         /* 按键1 检测 */
-        if (KEY_Scan(KEY1_GPIO, KEY1_PIN) == KEY_ON){
-            LED_SWITCH(LED_G_PIN, ON)	/* 使引脚输出低电平, 点亮 LED Green */
-        } else {
-            LED_SWITCH(LED_G_PIN, OFF)	/* 使引脚输出高电平，关闭 LED Green */
+        if (KEY_Scan(KEY1_GPIO, KEY1_PIN) == KEY_ON) {
+            LED_TOGGLE(LED_G_PIN)       /* LED状态切换 */
         }
 
         /* 按键2 检测 */
-        if (KEY_Scan(KEY2_GPIO, KEY2_PIN) == KEY_ON){
+        if (KEY_Scan(KEY2_GPIO, KEY2_PIN) == KEY_ON) {
             LED_TOGGLE(LED_G_PIN)       /* LED状态切换 */
         }
     }
