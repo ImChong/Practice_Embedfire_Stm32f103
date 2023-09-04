@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:39:04
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 07:23:09
+ * @LastEditTime : 2023-09-04 08:11:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,7 +14,7 @@
 /**
  * @description:
  * =================================================================================
- * @param {uint32_t} RCC_GPIO_Clock
+ * @param {uint32_t} RCC_GPIO_Clock RCC外设的对应GPIO时钟寄存器
  * @param {GPIO_TypeDef} *GPIOx
  * @param {uint16_t} GPIO_Pin
  * @return {*}
