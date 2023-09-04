@@ -1,5 +1,27 @@
 # 1. 寄存器相关
 
+- [1. 寄存器相关](#1-寄存器相关)
+  - [1.1. 寄存器（Register）](#11-寄存器register)
+  - [1.2. FSMC（Flexible static memory controller）](#12-fsmcflexible-static-memory-controller)
+  - [1.3. DMA（Direct Memory Access）](#13-dmadirect-memory-access)
+  - [1.4. AHB（Advanced High-performance Bus）](#14-ahbadvanced-high-performance-bus)
+  - [1.5. APB（Advanced Peripheral Bus）](#15-apbadvanced-peripheral-bus)
+  - [1.6. RCC（Reset and Clock Control）](#16-rccreset-and-clock-control)
+  - [1.7. SDIO（Secure Digital Input Output）](#17-sdiosecure-digital-input-output)
+  - [1.8. 桥接器（Bridges）](#18-桥接器bridges)
+  - [1.9. CRC（Cyclic Redundancy Check）](#19-crccyclic-redundancy-check)
+  - [1.10. GPIO（General-Purpose Input/Output）](#110-gpiogeneral-purpose-inputoutput)
+  - [1.11. GPIOx\_ODR（Output Data Register）](#111-gpiox_odroutput-data-register)
+  - [1.12. GPIOx\_IDR（Input Data Register）](#112-gpiox_idrinput-data-register)
+  - [1.13. GPIOx\_CRL（Configuration Register Low）](#113-gpiox_crlconfiguration-register-low)
+  - [1.14. GPIOx\_CRH（Configuration Register High）](#114-gpiox_crhconfiguration-register-high)
+  - [1.15. GPIOx\_BSRR（Bit Set/Reset Register）](#115-gpiox_bsrrbit-setreset-register)
+  - [1.16. GPIOx\_BRR（Bit Reset Register）](#116-gpiox_brrbit-reset-register)
+  - [1.17. GPIOx\_LCKR（Lock Register）](#117-gpiox_lckrlock-register)
+  - [1.18. HSI（High-Speed Internal）](#118-hsihigh-speed-internal)
+  - [1.19. 推挽输出（Push-Pull）](#119-推挽输出push-pull)
+  - [1.20. 开漏输出（Open-Drain）](#120-开漏输出open-drain)
+
 ## 1.1. 寄存器（Register）
 > 在计算机体系结构和嵌入式系统中，寄存器是一种小型的、高速的临时存储器组件，用于存储和处理计算机程序和数据。寄存器通常直接集成在中央处理器（CPU）内部，用于执行指令和进行运算。
 

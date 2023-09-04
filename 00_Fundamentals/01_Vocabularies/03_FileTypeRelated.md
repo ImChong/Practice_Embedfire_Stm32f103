@@ -1,5 +1,21 @@
 # 1. 文件类型相关
 
+- [1. 文件类型相关](#1-文件类型相关)
+  - [1.1. .sct 文件](#11-sct-文件)
+  - [1.2. .uvprojx 文件](#12-uvprojx-文件)
+  - [1.3. .uvoptx 文件](#13-uvoptx-文件)
+  - [1.4. .uvguix. 文件](#14-uvguix-文件)
+  - [1.5. .dbgconf 文件](#15-dbgconf-文件)
+  - [1.6. .lst 文件（Listing 文件）](#16-lst-文件listing-文件)
+  - [1.7. .map 文件（Map 文件）](#17-map-文件map-文件)
+  - [1.8. .dep 文件（Dependency File）](#18-dep-文件dependency-file)
+  - [1.9. .crf 文件（Cross-Reference File）](#19-crf-文件cross-reference-file)
+  - [1.10. .d 文件（Dependency File）](#110-d-文件dependency-file)
+  - [1.11. .o 文件（Object File）](#111-o-文件object-file)
+  - [1.12. .build\_log.htm 文件（Build Log HTML File）](#112-build_loghtm-文件build-log-html-file)
+  - [1.13. .htm 文件（HTML Report File）](#113-htm-文件html-report-file)
+  - [1.14. .lnp 文件（Linker Settings）](#114-lnp-文件linker-settings)
+
 ## 1.1. .sct 文件
 > 在 Keil 环境中，.sct 文件是一个用于描述程序如何在目标硬件的内存中布局的链接脚本文件（Scatter-Load Description File）。这个文件用于定义哪些代码和数据段应该放在哪个内存区域（例如 RAM, FLASH 等）。它的主要目的是为了在编译和链接过程中进行内存分配。
 
