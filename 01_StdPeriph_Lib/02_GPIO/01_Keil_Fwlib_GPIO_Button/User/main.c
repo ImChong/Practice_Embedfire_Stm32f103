@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 22:19:45
+ * @LastEditTime : 2023-09-04 22:22:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,7 +14,7 @@
 #include "bsp_led.h"	/* 此头文件将添加 stm32f10x.h */
 #include "bsp_key.h"	/* 此头文件将添加 stm32f10x.h */
 
-#define BIT_BAND_OPERATION_OUTPUT_EN 1     /* 是否开启位带操作相关代码 */
+#define BIT_BAND_OPERATION_OUTPUT_EN 0     /* 是否开启位带操作相关代码 */
 #define BIT_BAND_OPERATION_INTPUT_EN 1     /* 是否开启位带操作相关代码 */
 
 #define GPIOB_ODR_ADDR          (GPIOB_BASE + 0x0C)
@@ -42,8 +42,8 @@ int main(void)
 {
     /* 来到这里的时候，系统的时钟已经被配置成72M */
     LED_GPIO_Config();		/* LED GPIO初始化：默认输出拉低，此时所有初始化的 LED 灯都会被点亮 */
-    KEY_GPIO_Config(KEY1_GPIO_CLK, KEY1_GPIO, KEY1_PIN);                        /* 按键1 初始化 */
-    KEY_GPIO_Config(KEY2_GPIO_CLK, KEY2_GPIO, KEY2_PIN);                        /* 按键2 初始化 */
+    KEY_GPIO_Config(KEY1_GPIO_CLK, KEY1_GPIO, KEY1_PIN_MSK);                        /* 按键1 初始化 */
+    KEY_GPIO_Config(KEY2_GPIO_CLK, KEY2_GPIO, KEY2_PIN_MSK);                        /* 按键2 初始化 */
     GPIO_SetBits(LED_GPIO, LED_R_PIN_MSK | LED_G_PIN_MSK | LED_B_PIN_MSK);      /* 引脚均输出高电平，关闭 LED */
 
     /* 循环主体 */
@@ -55,16 +55,18 @@ int main(void)
         PB_OUT(LED_G_PIN_BIT_NUM) = LED_OFF;	        /* 使引脚输出高电平，关闭 LED Green：0引脚 */
         Delay(0x1FFFFF);                                /* 延时一段时间 */
 #elif BIT_BAND_OPERATION_INTPUT_EN
-
-
+        /* 按键1 检测 */
+        if (PA_IN(0) == KEY_ON) {
+            LED_TOGGLE(LED_G_PIN_MSK)       /* LED状态切换 */
+        }
 #else
         /* 按键1 检测 */
-        if (KEY_Scan(KEY1_GPIO, KEY1_PIN) == KEY_ON) {
+        if (KEY_Scan(KEY1_GPIO, KEY1_PIN_MSK) == KEY_ON) {
             LED_TOGGLE(LED_G_PIN_MSK)       /* LED状态切换 */
         }
 
         /* 按键2 检测 */
-        if (KEY_Scan(KEY2_GPIO, KEY2_PIN) == KEY_ON) {
+        if (KEY_Scan(KEY2_GPIO, KEY2_PIN_MSK) == KEY_ON) {
             LED_TOGGLE(LED_G_PIN_MSK)       /* LED状态切换 */
         }
 #endif  /* BIT_BAND_OPERATION_EN */
