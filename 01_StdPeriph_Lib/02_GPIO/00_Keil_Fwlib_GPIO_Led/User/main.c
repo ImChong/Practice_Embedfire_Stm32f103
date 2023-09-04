@@ -34,7 +34,6 @@ int main(void)
 {
 	// 来到这里的时候，系统的时钟已经被配置成72M。
     LED_GPIO_Config();		/* LED GPIO初始化：默认拉低，此时所有初始化的 LED 灯都会被点亮 */
-
     GPIO_SetBits(LED_GPIO, LED_R_PIN | LED_G_PIN | LED_B_PIN);		/* 使引脚输出高电平，关闭 LED */
     Delay(0xFFFFFF);												/* 延时一段时间 */
 
