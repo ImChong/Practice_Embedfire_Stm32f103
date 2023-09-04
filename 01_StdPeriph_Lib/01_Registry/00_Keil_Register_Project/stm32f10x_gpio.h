@@ -1,12 +1,13 @@
 /*
- * @File: stm32f10x_gpio.h
- * @Created Date: 2023-08-28 11:38:06 pm
- * @Author: Chong Liu
- * @Brief: GPIO相关函数头文件
+ * @FilePath     : \01_Registry\00_Keil_Register_Project\stm32f10x_gpio.h
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-01 20:07:07
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-04 19:05:23
  * =================================================================================
- * Copyright (c) 2023 Chong Liu
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 4:28:55 pm
+ * @Description  : GPIO 相关函数头文件
  */
 #ifndef __STM32F10X_GPIO_H  /* 防止重复包含头文件 */
 #define __STM32F10X_GPIO_H

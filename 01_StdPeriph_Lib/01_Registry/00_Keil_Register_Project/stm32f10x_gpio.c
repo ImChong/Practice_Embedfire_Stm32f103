@@ -1,46 +1,47 @@
 /*
- * @File: stm32f10x_gpio.c
- * @Created Date: 2023-08-28 11:38:14 pm
- * @Author: Chong Liu
- * @Brief: GPIO相关函数
+ * @FilePath     : \01_Registry\00_Keil_Register_Project\stm32f10x_gpio.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-01 20:07:07
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-04 19:03:35
  * =================================================================================
- * Copyright (c) 2023 Chong Liu
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * Last Modified: Chong Liu - 2023-08-30 10:29:14 pm
+ * @Description  : GPIO相关函数
  */
 #include "stm32f10x_gpio.h"
 
-/* GPIO_SetBits()
- *  Functionality: 为GPIO引脚设置高电平
- *  Arguments: GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin
- *  Return: void
- *  References: [野火]STM32库开发实战指南, ——基于野火指南者开发板
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+/**
+ * @description: 为GPIO引脚设置高电平
+ * [野火]STM32库开发实战指南, ——基于野火指南者开发板
+ * =================================================================================
+ * @param {GPIO_TypeDef} *GPIOx
+ * @param {uint16_t} GPIO_Pin
+ * @return {*}
  */
 void GPIO_SetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
     GPIOx->BSRR |= GPIO_Pin;
 }
 
-/* GPIO_ResetBits()
- *  Functionality: 为GPIO引脚设置低电平
- *  Arguments: GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin
- *  Return: void
- *  References: [野火]STM32库开发实战指南, ——基于野火指南者开发板
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+/**
+ * @description: 为GPIO引脚设置低电平
+ * [野火]STM32库开发实战指南, ——基于野火指南者开发板
+ * =================================================================================
+ * @param {GPIO_TypeDef} *GPIOx
+ * @param {uint16_t} GPIO_Pin
+ * @return {*}
  */
 void GPIO_ResetBits(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin) {
     GPIOx->BRR |= GPIO_Pin;
 }
 
-/* GPIO_Init()
- *  Functionality: GPIO初始化，初始化引脚模式
- *  Arguments: GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct
- *  Return: void
- *  References: [野火]STM32库开发实战指南, ——基于野火指南者开发板
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+/**
+ * @description: GPIO初始化，初始化引脚模式
+ * [野火]STM32库开发实战指南, ——基于野火指南者开发板
+ * =================================================================================
+ * @param {GPIO_TypeDef*} GPIOx
+ * @param {GPIO_InitTypeDef*} GPIO_InitStruct
+ * @return {*}
  */
 void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct) {
     uint32_t currentMode =0x00, currentPin = 0x00, pinPos = 0x00, pos = 0x00;

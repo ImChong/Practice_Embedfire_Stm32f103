@@ -1,12 +1,13 @@
 /*
- * @File: main.c
- * @Created Date: 2023-08-28 9:50:16 pm
- * @Author: Chong Liu
- * @Brief: 主程序
+ * @FilePath     : \01_Registry\00_Keil_Register_Project\main.c
+ * @Author       : Chong Liu
+ * @CreateDate   : 2023-09-01 20:07:07
+ * @LastEditors  : Chong Liu
+ * @LastEditTime : 2023-09-04 19:01:25
  * =================================================================================
- * Copyright (c) 2023 Chong Liu
+ * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * Last Modified: Chong Liu - 2023-09-01 12:03:15 am
+ * @Description  :
  */
 // #include "stm32f10x.h"          /* 实现寄存器定义 */
 #include "stm32f10x_gpio.h"     /* 自定义 gpio 函数 */
@@ -24,37 +25,32 @@
 #define LED_G_PIN           GPIO_Pin_0                          /* 绿灯引脚 */
 #define LED_B_PIN           GPIO_Pin_1                          /* 蓝灯引脚 */
 
-/* SystemInit()
- *  Functionality: 系统初始化函数
- *  Arguments: void
- *  Return: void
- *  References: [野火]STM32库开发实战指南, ——基于野火指南者开发板
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+/**
+ * @description: 系统初始化函数
+ * [野火]STM32库开发实战指南, ——基于野火指南者开发板
+ * =================================================================================
+ * @return {*}
  */
 void SystemInit(void) {
     /* 函数为空，为了让编译器不报错 */
 }
 
-/* Delay()
- *  Functionality: 延迟函数
- *  Arguments: __IO uint32_t nCount
- *  Return: void
- *  References: [野火]STM32库开发实战指南, ——基于野火指南者开发板
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER
+/**
+ * @description: 延迟函数
+ * [野火]STM32库开发实战指南, ——基于野火指南者开发板
+ * =================================================================================
+ * @param {__IO uint32_t} nCount
+ * @return {*}
  */
 void Delay(__IO uint32_t nCount) {
     for (; nCount != 0; nCount--);
 }
 
-/* main()
- *  Functionality: 主程序入口
- *  Arguments: void
- *  Return: int
- *  References: [野火]STM32库开发实战指南, ——基于野火指南者开发板
- ***********************************************************************************
- *  IMPORTANT NOTICE FOR READER：通过修改 14~18 行的宏定义可实现运行不同部分的代码
+/**
+ * @description: 主程序入口
+ * [野火]STM32库开发实战指南, ——基于野火指南者开发板
+ * =================================================================================
+ * @return {*}
  */
 int main(void) {
 #if SECTION_ADDRESS_EN
