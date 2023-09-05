@@ -26,25 +26,27 @@
 ; INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
 ;*******************************************************************************
 
+/* NOTE: 开辟栈的大小为0X00000400（1KB），名字为STACK，NOINIT 即不初始化，可读可写，8（2^3）字节对齐。*/
 ; Amount of memory (in bytes) allocated for Stack
 ; Tailor this value to your application needs
 ; <h> Stack Configuration           /* NOTE: 配置栈，变量（局部/全局），函数调用 */
 ;   <o> Stack Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ; </h>
 
-/* NOTE: 开辟栈的大小为0X00000400（1KB），名字为STACK，NOINIT 即不初始化，可读可写，8（2^3）字节对齐。*/
-/*
- * 栈的作用是用于局部变量，函数调用，函数形参等的开销，栈的大小不能超过内部SRAM 的大
- * 小。如果编写的程序比较大，定义的局部变量很多，那么就需要修改栈的大小。如果某一天，你
- * 写的程序出现了莫名奇怪的错误，并进入了硬fault 的时候，这时你就要考虑下是不是栈不够大，
- * 溢出了。
- */
+; 栈的作用是用于局部变量，函数调用，函数形参等的开销，栈的大小不能超过内部SRAM 的大
+; 小。如果编写的程序比较大，定义的局部变量很多，那么就需要修改栈的大小。如果某一天，你
+; 写的程序出现了莫名奇怪的错误，并进入了硬fault 的时候，这时你就要考虑下是不是栈不够大，
+; 溢出了。
+
 Stack_Size      EQU     0x00000400
 
                 AREA    STACK, NOINIT, READWRITE, ALIGN=3
 Stack_Mem       SPACE   Stack_Size
 __initial_sp    /* NOTE: 标号__initial_sp 紧挨着SPACE 语句放置，表示栈的结束地址，即栈顶地址，栈是由高向低生长的 */
 
+
+
+/* NOTE: 开辟堆的大小为0X00000200（512 字节），名字为HEAP，NOINIT 即不初始化，可读可写，8（2^3）字节对齐 */
 ; <h> Heap Configuration
 ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ; </h>
