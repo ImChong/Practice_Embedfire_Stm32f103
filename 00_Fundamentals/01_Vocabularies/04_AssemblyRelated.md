@@ -52,7 +52,7 @@
 对齐。
 > - `SPACE`: 用于分配一定大小的内存空间，单位为字节。这里指定大小等于Stack_Size。
 > - `PRESERVE8`: 指定当前文件的堆栈按照8 字节对齐。
-> - `THUMB`: 表示后面指令兼容THUMB 指令。THUBM 是 ARM 以前的指令集，16bit，现在 Cortex-M系列的都使用 THUMB-2 指令集，THUMB-2 是 32 位的，兼容 16 位 32 位的指令，是 THUMB的超集。
+> - `THUMB`: 表示后面指令兼容THUMB 指令。`THUBM` 是 ARM 以前的指令集，16bit，现在 Cortex-M 系列的都使用 `THUMB-2` 指令集，`THUMB-2` 是 32 位的，兼容 16 位 32 位的指令，是 `THUMB` 的超集。
 > - `EXPORT`
 > - `DCD`:
 > - `PROC`:
