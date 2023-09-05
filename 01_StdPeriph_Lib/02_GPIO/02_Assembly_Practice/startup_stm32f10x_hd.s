@@ -6,13 +6,13 @@
 ;* Description        : STM32F10x High Density Devices vector table for MDK-ARM
 ;*                      toolchain.
 ;*                      This module performs:
-;*                      - Set the initial SP                                                /* NOTE: 初始化堆栈指针 */
+;*                      - Set the initial SP                                                /* NOTE: 初始化堆栈指针 SP=_initial_sp */
 ;*                      - Set the initial PC == Reset_Handler                               /* NOTE: 初始化PC指针 = Reset_Handler */
 ;*                      - Set the vector table entries with the exceptions ISR address      /* NOTE: 初始化中断向量表 */
 ;*                      - Configure the clock system and also configure the external        /* NOTE: 配置系统时钟 */
 ;*                        SRAM mounted on STM3210E-EVAL board to be used as data
 ;*                        memory (optional, to be enabled by user)
-;*                      - Branches to __main in the C library (which eventually             /* NOTE: 调用 C 库函数__main，最终去到 C 的世界 */
+;*                      - Branches to __main in the C library (which eventually             /* NOTE: 调用C 库函数 _main 初始化用户堆栈，从而最终调用 main 函数去到C 的世界 */
 ;*                        calls main()).
 ;*                      After Reset the CortexM3 processor is in Thread mode,
 ;*                      priority is Privileged, and the Stack is set to Main.
