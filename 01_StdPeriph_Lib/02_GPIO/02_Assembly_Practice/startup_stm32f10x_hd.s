@@ -46,7 +46,7 @@ Stack_Size      EQU     0x00000400
 
                 AREA    STACK, NOINIT, READWRITE, ALIGN=3       /* NOTE: 开辟栈的大小为0X00000400（1KB），名字为STACK，NOINIT 即不初始化，可读可写，8（2^3）字节对齐。*/
 Stack_Mem       SPACE   Stack_Size
-__initial_sp                                                    /* 标号__initial_sp 紧挨着SPACE 语句放置，表示栈的结束地址，即栈顶地址，栈是由高向低生长的 */
+__initial_sp                                                    /* 标号__initial_sp 是 "Initial Stack Pointer" 的缩写，紧挨着SPACE 语句放置，表示栈的结束地址，即栈顶地址，栈是由高向低生长的 */
 
 /* ==================================================================================================== */
 /* DONE: Heap 堆 */
