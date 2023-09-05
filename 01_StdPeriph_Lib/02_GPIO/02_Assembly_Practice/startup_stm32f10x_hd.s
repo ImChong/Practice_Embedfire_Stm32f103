@@ -64,8 +64,8 @@ __heap_base                                                     /* NOTE: __heap_
 Heap_Mem        SPACE   Heap_Size
 __heap_limit                                                    /*NOTE： __heap_limit 表示堆的结束地址，堆是由低向高生长的，跟栈的生长方向相反 */
 
-                PRESERVE8
-                THUMB
+                PRESERVE8                                       /* NOTE: 指定当前文件的堆栈按照8 字节对齐 */
+                THUMB                                           /* NOTE: 表示后面指令兼容 THUMB 指令 */
 
 
 ; Vector Table Mapped to Address 0 at Reset
