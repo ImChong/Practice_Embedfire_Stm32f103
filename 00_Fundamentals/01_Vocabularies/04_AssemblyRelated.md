@@ -37,7 +37,7 @@
 > ### 1.1.9. 中断服务例程（ISR: Interrupt Service Routine）
 >
 > ### 1.1.10. WORD（32 整数）数组
-> 
+>
 
 ## 1.2. 常用的汇编指令
 > 汇编指令的种类和具体格式取决于目标处理器架构。以下是一些在各种处理器架构中常见的汇编指令类型，以及它们大致的功能描述：
@@ -56,7 +56,7 @@
 >
 > ### 1.2.2. ARM架构
 > ARM 架构的 CPU 采用精简指令集（RISC），指令集非常简单，每个指令的执行时间都很短，因此可以提高 CPU 的运行速度。ARM 指令集中的指令通常只有 32 位，而且大多数指令都是条件执行的，这意味着它们只在满足某些条件时才会被执行。ARM 指令集还包括一些专门用于处理向量数据的指令，这些指令可以同时处理多个数据元素。
-> - `EQU`: 宏定义的伪指令，相当于等于，类似与C 中的define
+> - `EQU`: 宏定义的伪指令，相当于等于，类似与C 中的define。The EQU directive gives a symbolic name to a numeric constant, a register-relative value or a PC-relative value.
 > - `AREA`: 告诉汇编器汇编一个新的代码段或者数据段。`STACK` 表示段名，这个可以任意命名；`NOINIT` 表示不初始化；`READWRITE` 表示可读可写，`ALIGN=3`，表示按照2^3 对齐，即 8 字节对齐。
 > - `SPACE`: 用于分配一定大小的内存空间，单位为字节。这里指定大小等于Stack_Size。
 > - `PRESERVE8`: 指定当前文件的堆栈按照8 字节对齐。
