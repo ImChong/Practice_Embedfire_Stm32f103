@@ -46,6 +46,21 @@
 >
 > ### 1.2.2. ARM架构
 >
+> - `EQU`: 宏定义的伪指令，相当于等于，类似与C 中的define
+> - `AREA`: 告诉汇编器汇编一个新的代码段或者数据段。`STACK` 表示段名，这个可以任意命名；
+`NOINIT` 表示不初始化；`READWRITE` 表示可读可写，`ALIGN=3`，表示按照2^3 对齐，即 8 字节
+对齐。
+> - `SPACE`:
+> - `PRESERVE8`:
+> - `EXPORT`
+> - `DCD`:
+> - `PROC`:
+> - `WEAK`:
+> - `IMPORT`:
+> - `B`:
+> - `ALIGN`:
+> - `END`:
+> - `IF` / `ELSE` / `ENDIF`:
 > - `LDR` / `STR`: 加载和存储
 > - `ADD` / `SUB`: 加法和减法
 > - `MUL` / `MLA`: 乘法和乘法-累加
