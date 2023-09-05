@@ -50,8 +50,11 @@
 > - `AREA`: 告诉汇编器汇编一个新的代码段或者数据段。`STACK` 表示段名，这个可以任意命名；
 `NOINIT` 表示不初始化；`READWRITE` 表示可读可写，`ALIGN=3`，表示按照2^3 对齐，即 8 字节
 对齐。
-> - `SPACE`:
-> - `PRESERVE8`:
+> - `SPACE`: 用于分配一定大小的内存空间，单位为字节。这里指定大小等于Stack_Size。
+> - `PRESERVE8`: 指定当前文件的堆栈按照8 字节对齐。
+> - `THUMB`: 表示后面指令兼容THUMB 指令。THUBM 是ARM 以前的指令集，16bit，现在Cortex-M
+系列的都使用THUMB-2 指令集，THUMB-2 是32 位的，兼容16 位和32 位的指令，是THUMB
+的超集。
 > - `EXPORT`
 > - `DCD`:
 > - `PROC`:
