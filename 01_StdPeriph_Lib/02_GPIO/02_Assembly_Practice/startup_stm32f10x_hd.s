@@ -77,6 +77,8 @@ __heap_limit                                                    /* __heap_limit 
                 EXPORT  __Vectors_End                           /* 声明 __Vectors_End 标号，具有全局属性，可供外部的文件调用 */
                 EXPORT  __Vectors_Size                          /* 声明 __Vectors_Size 标号，具有全局属性，可供外部的文件调用 */
 
+/* TODO */
+
 __Vectors       DCD     __initial_sp               ; Top of Stack
                 DCD     Reset_Handler              ; Reset Handler
                 DCD     NMI_Handler                ; NMI Handler
