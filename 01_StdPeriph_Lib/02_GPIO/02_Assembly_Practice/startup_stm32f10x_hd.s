@@ -8,11 +8,11 @@
 ;*                      This module performs:
 ;*                      - Set the initial SP                                                /* 初始化堆栈指针 */
 ;*                      - Set the initial PC == Reset_Handler                               /* 初始化PC指针 = Reset_Handler */
-;*                      - Set the vector table entries with the exceptions ISR address
-;*                      - Configure the clock system and also configure the external
+;*                      - Set the vector table entries with the exceptions ISR address      /* 初始化中断向量表 */
+;*                      - Configure the clock system and also configure the external        /* 配置系统时钟 */
 ;*                        SRAM mounted on STM3210E-EVAL board to be used as data
 ;*                        memory (optional, to be enabled by user)
-;*                      - Branches to __main in the C library (which eventually
+;*                      - Branches to __main in the C library (which eventually             /* 调用 C 库函数__main，最终去到 C 的世界 */
 ;*                        calls main()).
 ;*                      After Reset the CortexM3 processor is in Thread mode,
 ;*                      priority is Privileged, and the Stack is set to Main.
