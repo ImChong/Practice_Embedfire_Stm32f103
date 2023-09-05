@@ -43,7 +43,7 @@ Stack_Size      EQU     0x00000400
 
                 AREA    STACK, NOINIT, READWRITE, ALIGN=3
 Stack_Mem       SPACE   Stack_Size
-__initial_sp    /* 标号__initial_sp 紧挨着SPACE 语句放置，表示栈的结束地址，即栈顶地址，栈是由高向低生长的 */
+__initial_sp    /* NOTE: 标号__initial_sp 紧挨着SPACE 语句放置，表示栈的结束地址，即栈顶地址，栈是由高向低生长的 */
 
 ; <h> Heap Configuration
 ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
