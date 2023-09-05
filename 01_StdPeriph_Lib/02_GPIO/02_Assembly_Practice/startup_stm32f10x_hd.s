@@ -27,9 +27,9 @@
 ;*******************************************************************************
 
 /* ==================================================================================================== */
+/* DONE: Stack 栈 */
 /* NOTE: 配置栈，变量（局部/全局），函数调用 */
 /* NOTE：栈是由高向低生长的 */
-/* NOTE: 开辟栈的大小为0X00000400（1KB），名字为STACK，NOINIT 即不初始化，可读可写，8（2^3）字节对齐。*/
 /* ==================================================================================================== */
 ; Amount of memory (in bytes) allocated for Stack
 ; Tailor this value to your application needs
@@ -44,14 +44,14 @@
 
 Stack_Size      EQU     0x00000400
 
-                AREA    STACK, NOINIT, READWRITE, ALIGN=3
+                AREA    STACK, NOINIT, READWRITE, ALIGN=3       /* NOTE: 开辟栈的大小为0X00000400（1KB），名字为STACK，NOINIT 即不初始化，可读可写，8（2^3）字节对齐。*/
 Stack_Mem       SPACE   Stack_Size
-__initial_sp                                                    /* NOTE: 标号__initial_sp 紧挨着SPACE 语句放置，表示栈的结束地址，即栈顶地址，栈是由高向低生长的 */
+__initial_sp                                                    /* 标号__initial_sp 紧挨着SPACE 语句放置，表示栈的结束地址，即栈顶地址，栈是由高向低生长的 */
 
 /* ==================================================================================================== */
+/* DONE: Heap 堆 */
 /* NOTE: 堆主要用来动态内存的分配，像 malloc() 函数申请的内存就在堆上面。这个在STM32 里面用的比较少 */
 /* NOTE：堆是由低向高生长的，跟栈的生长方向相反 */
-/* NOTE: 开辟堆的大小为0X00000200（512 字节），名字为HEAP，NOINIT 即不初始化，可读可写，8（2^3）字节对齐 */
 /* ==================================================================================================== */
 ; <h> Heap Configuration
 ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
@@ -59,20 +59,22 @@ __initial_sp                                                    /* NOTE: 标号_
 
 Heap_Size       EQU     0x00000200
 
-                AREA    HEAP, NOINIT, READWRITE, ALIGN=3
-__heap_base                                                     /* NOTE: __heap_base 表示堆的起始地址 */
+                AREA    HEAP, NOINIT, READWRITE, ALIGN=3        /* NOTE: 开辟堆的大小为0X00000200（512 字节），名字为HEAP，NOINIT 即不初始化，可读可写，8（2^3）字节对齐 */
+__heap_base                                                     /* __heap_base 表示堆的起始地址 */
 Heap_Mem        SPACE   Heap_Size
-__heap_limit                                                    /*NOTE： __heap_limit 表示堆的结束地址，堆是由低向高生长的，跟栈的生长方向相反 */
+__heap_limit                                                    /* __heap_limit 表示堆的结束地址，堆是由低向高生长的，跟栈的生长方向相反 */
 
-                PRESERVE8                                       /* NOTE: 指定当前文件的堆栈按照8 字节对齐 */
-                THUMB                                           /* NOTE: 表示后面指令兼容 THUMB 指令 */
+                PRESERVE8                                       /* 指定当前文件的堆栈按照 8 字节对齐 */
+                THUMB                                           /* 表示后面指令兼容 THUMB 指令 */
 
-
+/* ==================================================================================================== */
+/* DONE: Vector Table 向量表*/
+/* ==================================================================================================== */
 ; Vector Table Mapped to Address 0 at Reset
-                AREA    RESET, DATA, READONLY
-                EXPORT  __Vectors
-                EXPORT  __Vectors_End
-                EXPORT  __Vectors_Size
+                AREA    RESET, DATA, READONLY                   /* NOTE: 定义一个数据段，名字为RESET，可读 */
+                EXPORT  __Vectors                               /* 声明 __Vectors 标号，具有全局属性，可供外部的文件调用 */
+                EXPORT  __Vectors_End                           /* 声明 __Vectors_End 标号，具有全局属性，可供外部的文件调用 */
+                EXPORT  __Vectors_Size                          /* 声明 __Vectors_Size 标号，具有全局属性，可供外部的文件调用 */
 
 __Vectors       DCD     __initial_sp               ; Top of Stack
                 DCD     Reset_Handler              ; Reset Handler
