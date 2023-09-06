@@ -354,7 +354,7 @@ DMA2_Channel1_IRQHandler
 DMA2_Channel2_IRQHandler
 DMA2_Channel3_IRQHandler
 DMA2_Channel4_5_IRQHandler
-                B       .
+                B       .       /* B: 跳转到一个标号。这里跳转到一个‘.’，即表示无线循环 */
 
                 ENDP            /* ENDP: 子程序结束 */
 
@@ -386,10 +386,10 @@ __user_initial_stackheap
                  LDR     R3, = Stack_Mem
                  BX      LR
 
-                 ALIGN
+                 ALIGN                              /* ALIGN: 编译器对指令或者数据的存放地址进行对齐，一般需要跟一个立即数，缺省表示4字节对齐 */
 
-                 ENDIF
+                 ENDIF                              /* :DEF:__MICROLIB */
 
-                 END
+                 END                                /* 文件结束 */
 
 ;******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE*****
