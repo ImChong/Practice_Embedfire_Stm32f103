@@ -157,7 +157,7 @@ __Vectors       DCD     __initial_sp               ; Top of Stack           /* N
                 DCD     DMA2_Channel2_IRQHandler   ; DMA2 Channel2
                 DCD     DMA2_Channel3_IRQHandler   ; DMA2 Channel3
                 DCD     DMA2_Channel4_5_IRQHandler ; DMA2 Channel4 & Channel5
-__Vectors_End
+__Vectors_End                                                               /* NOTE: 向量表的结束地址 */
 
 __Vectors_Size  EQU  __Vectors_End - __Vectors
 
