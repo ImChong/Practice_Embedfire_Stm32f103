@@ -79,7 +79,7 @@ __heap_limit                                                    /* __heap_limit 
                 EXPORT  __Vectors_Size                          /* 声明 __Vectors_Size 标号，具有全局属性，可供外部的文件调用 */
 
                 /* NOTE: 内核中断 */
-__Vectors       DCD     __initial_sp               ; Top of Stack
+__Vectors       DCD     __initial_sp               ; Top of Stack           /* NOTE: 向量表起始地址 */
                 DCD     Reset_Handler              ; Reset Handler
                 DCD     NMI_Handler                ; NMI Handler
                 DCD     HardFault_Handler          ; Hard Fault Handler
