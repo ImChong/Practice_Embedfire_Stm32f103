@@ -2,4 +2,4 @@
 
 [01_Keil_Empty_Template：用寄存器直接操作的项目模板](01_Keil_Empty_Template/)
 
-[02_Keil_Fwlib_Template：使用固件库操作的项目模板](02_Keil_Fwlib_Template/)
+[02_Keil_Fwlib_Template：使用标准固件库操作的项目模板](02_Keil_Fwlib_Template/)
