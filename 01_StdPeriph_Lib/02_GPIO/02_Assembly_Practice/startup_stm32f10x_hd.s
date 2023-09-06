@@ -367,7 +367,7 @@ DMA2_Channel4_5_IRQHandler
 ;*******************************************************************************
 ; User Stack and Heap initialization
 ;*******************************************************************************
-                 IF      :DEF:__MICROLIB
+                 IF      :DEF:__MICROLIB            /* 这个宏在 KEIL 里面开启 */
 
                  EXPORT  __initial_sp
                  EXPORT  __heap_base
@@ -375,7 +375,7 @@ DMA2_Channel4_5_IRQHandler
 
                  ELSE
 
-                 IMPORT  __use_two_region_memory
+                 IMPORT  __use_two_region_memory    /* 这个函数由用户自己实现 */
                  EXPORT  __user_initial_stackheap
 
 __user_initial_stackheap
