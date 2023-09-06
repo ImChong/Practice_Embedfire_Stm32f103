@@ -83,7 +83,7 @@ __Vectors       DCD     __initial_sp               ; Top of Stack
                 DCD     Reset_Handler              ; Reset Handler
                 DCD     NMI_Handler                ; NMI Handler
                 DCD     HardFault_Handler          ; Hard Fault Handler
-                DCD     MemManage_Handler          ; MPU Fault Handler      /* NOTE: 优先级不为负数表示可设置 */
+                DCD     MemManage_Handler          ; MPU Fault Handler      /* NOTE: MemManage 存储器管理优先级为0：优先级不为负数表示可设置 */
                 DCD     BusFault_Handler           ; Bus Fault Handler
                 DCD     UsageFault_Handler         ; Usage Fault Handler
                 DCD     0                          ; Reserved
