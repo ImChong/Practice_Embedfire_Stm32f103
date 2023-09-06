@@ -162,13 +162,13 @@ __Vectors_End                                                               /* N
 __Vectors_Size  EQU  __Vectors_End - __Vectors                              /* NOTE: 计算向量表的大小 */
 
 /* ==================================================================================================== */
-/* DONE: Reset handler 复位程序 */
+/* TODO: Reset handler 复位程序 */
 /* ==================================================================================================== */
 
-                AREA    |.text|, CODE, READONLY
+                AREA    |.text|, CODE, READONLY                             /* 定义一个名称为.text 的代码段，可读 */
 
 ; Reset handler
-Reset_Handler   PROC
+Reset_Handler   PROC    /* 定义子程序，与 ENDP 成对使用，表示子程序结束 */
                 EXPORT  Reset_Handler             [WEAK]
                 IMPORT  __main
                 IMPORT  SystemInit
