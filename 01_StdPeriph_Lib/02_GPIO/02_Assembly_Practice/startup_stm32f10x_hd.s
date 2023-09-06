@@ -70,6 +70,7 @@ __heap_limit                                                    /* __heap_limit 
 /* ==================================================================================================== */
 /* DONE: Vector Table 向量表*/
 /* NOTE: 初始化中断向量表 */
+/* NOTE: 在向量表中，DCD 分配了一堆内存，并且以 ESR 的入口地址初始化它们。 */
 /* ==================================================================================================== */
 ; Vector Table Mapped to Address 0 at Reset
                 AREA    RESET, DATA, READONLY                   /* NOTE: 定义一个数据段，名字为RESET，可读 */
@@ -79,7 +80,7 @@ __heap_limit                                                    /* __heap_limit 
 
                 /* NOTE: 内核中断 */
 __Vectors       DCD     __initial_sp               ; Top of Stack           /* NOTE: __Vectors 向量表起始地址 */
-                DCD     Reset_Handler              ; Reset Handler          /* NOTE: 在向量表中，DCD 分配了一堆内存，并且以 ESR 的入口地址初始化它们。 */
+                DCD     Reset_Handler              ; Reset Handler          /* NOTE: 复位程序地址 */
                 DCD     NMI_Handler                ; NMI Handler
                 DCD     HardFault_Handler          ; Hard Fault Handler
                 DCD     MemManage_Handler          ; MPU Fault Handler      /* NOTE: MemManage 存储器管理优先级为0：优先级不为负数表示可设置 */
