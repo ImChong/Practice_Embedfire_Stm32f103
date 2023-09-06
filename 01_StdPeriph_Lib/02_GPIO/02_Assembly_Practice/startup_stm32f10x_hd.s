@@ -71,7 +71,7 @@ __heap_limit                                                    /* __heap_limit 
 /* DONE: Vector Table 向量表*/
 /* NOTE: 初始化中断向量表 */
 /* NOTE: 在向量表中，DCD 分配了一堆内存，并且以 ESR 的入口地址初始化它们 */
-/* NOTE: ！！函数名一定要和中断向量表内的名称一致！！ */
+/* BUG: ！！函数名一定要和中断向量表内的名称一致！！ */
 /* ==================================================================================================== */
 ; Vector Table Mapped to Address 0 at Reset
                 AREA    RESET, DATA, READONLY                   /* NOTE: 定义一个数据段，名字为RESET，可读 */
