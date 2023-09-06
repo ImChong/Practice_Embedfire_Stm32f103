@@ -78,13 +78,12 @@ __heap_limit                                                    /* __heap_limit 
                 EXPORT  __Vectors_End                           /* 声明 __Vectors_End 标号，具有全局属性，可供外部的文件调用 */
                 EXPORT  __Vectors_Size                          /* 声明 __Vectors_Size 标号，具有全局属性，可供外部的文件调用 */
 
-/* TODO */
-
+                /* NOTE: 内核中断 */
 __Vectors       DCD     __initial_sp               ; Top of Stack
                 DCD     Reset_Handler              ; Reset Handler
                 DCD     NMI_Handler                ; NMI Handler
                 DCD     HardFault_Handler          ; Hard Fault Handler
-                DCD     MemManage_Handler          ; MPU Fault Handler
+                DCD     MemManage_Handler          ; MPU Fault Handler      /* NOTE: 优先级不为负数表示可设置 */
                 DCD     BusFault_Handler           ; Bus Fault Handler
                 DCD     UsageFault_Handler         ; Usage Fault Handler
                 DCD     0                          ; Reserved
@@ -97,7 +96,7 @@ __Vectors       DCD     __initial_sp               ; Top of Stack
                 DCD     PendSV_Handler             ; PendSV Handler
                 DCD     SysTick_Handler            ; SysTick Handler
 
-                ; External Interrupts
+                ; External Interrupts   /* NOTE: 外设中断 */
                 DCD     WWDG_IRQHandler            ; Window Watchdog
                 DCD     PVD_IRQHandler             ; PVD through EXTI Line detect
                 DCD     TAMPER_IRQHandler          ; Tamper
