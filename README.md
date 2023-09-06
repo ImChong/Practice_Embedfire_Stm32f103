@@ -5,12 +5,14 @@ GitHub Repository: https://github.com/Embedfire-stm32f103-zhinanzhe
 - Embedfire stm32f103 must read: https://github.com/Embedfire-stm32f103-zhinanzhe/ebf_stm32f103_zhinanzhe_must_read/tree/master
 
 ## Fundamentals
+- VScode Settings
 - Vocabularies
 - Required Files
     - Keil Theme
     - Books
     - Hardware Documentations
     - Software
+- Fundamental Topics
 
 ## StdPeriph_Lib
 - [Code](01_StdPeriph_Lib/README.md)
