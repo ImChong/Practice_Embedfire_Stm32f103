@@ -369,9 +369,9 @@ DMA2_Channel4_5_IRQHandler
 ;*******************************************************************************
                  IF      :DEF:__MICROLIB            /* 这个宏在 KEIL 里面开启 */
 
-                 EXPORT  __initial_sp
-                 EXPORT  __heap_base
-                 EXPORT  __heap_limit
+                 EXPORT  __initial_sp               /* 标号__initial_sp 是 "Initial Stack Pointer" 的缩写，紧挨着SPACE 语句放置，表示栈的结束地址，即栈顶地址，栈是由高向低生长的 */
+                 EXPORT  __heap_base                /* __heap_base 表示堆的起始地址 */
+                 EXPORT  __heap_limit               /* __heap_limit 表示堆的结束地址，堆是由低向高生长的，跟栈的生长方向相反 */
 
                  ELSE
 
