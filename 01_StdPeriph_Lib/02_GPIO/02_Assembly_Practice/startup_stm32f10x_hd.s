@@ -96,7 +96,7 @@ __Vectors       DCD     __initial_sp               ; Top of Stack           /* N
                 DCD     PendSV_Handler             ; PendSV Handler
                 DCD     SysTick_Handler            ; SysTick Handler
 
-                ; External Interrupts   /* NOTE: 外设中断 */
+                /* NOTE: 外设中断 */    ; External Interrupts
                 DCD     WWDG_IRQHandler            ; Window Watchdog
                 DCD     PVD_IRQHandler             ; PVD through EXTI Line detect
                 DCD     TAMPER_IRQHandler          ; Tamper
