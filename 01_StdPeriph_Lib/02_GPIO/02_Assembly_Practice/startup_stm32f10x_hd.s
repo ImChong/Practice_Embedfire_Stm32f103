@@ -80,10 +80,10 @@ __heap_limit                                                    /* __heap_limit 
 
                 /* NOTE: 内核中断 */
 __Vectors       DCD     __initial_sp               ; Top of Stack           /* NOTE: __Vectors 向量表起始地址 */
-                DCD     Reset_Handler              ; Reset Handler          /* NOTE: 复位程序地址 */
-                DCD     NMI_Handler                ; NMI Handler
+                DCD     Reset_Handler              ; Reset Handler          /* 复位程序地址 */
+                DCD     NMI_Handler                ; NMI Handler            /* 不可屏蔽中断 */
                 DCD     HardFault_Handler          ; Hard Fault Handler
-                DCD     MemManage_Handler          ; MPU Fault Handler      /* NOTE: MemManage 存储器管理优先级为0：优先级不为负数表示可设置 */
+                DCD     MemManage_Handler          ; MPU Fault Handler      /* MemManage 存储器管理优先级为0：优先级不为负数表示可设置 */
                 DCD     BusFault_Handler           ; Bus Fault Handler
                 DCD     UsageFault_Handler         ; Usage Fault Handler
                 DCD     0                          ; Reserved
