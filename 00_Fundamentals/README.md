@@ -5,6 +5,6 @@
 
 [01_Vocabularies: 嵌入式开发词汇表](01_Vocabularies/)
 
-[02_Required_Files: 开发必备文档及软件](02_Required_Files/README.md)
+[02_Required_Files: 开发必备文档及软件](02_Required_Files/)
 
 [03_Fundamental_Topics: MDK 编译过程及文件类型全解](03_Fundamental_Topics/README.md)
