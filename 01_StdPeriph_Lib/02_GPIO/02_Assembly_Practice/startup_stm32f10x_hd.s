@@ -375,8 +375,8 @@ DMA2_Channel4_5_IRQHandler
 
                  ELSE
 
-                 IMPORT  __use_two_region_memory    /* 这个函数由用户自己实现 */
-                 EXPORT  __user_initial_stackheap
+                 IMPORT  __use_two_region_memory    /* 双段存储器模式: 这个函数由用户自己实现 */
+                 EXPORT  __user_initial_stackheap   /* 标号 __user_initial_stackheap 具有全局属性，让用户自己来初始化堆栈 */
 
 __user_initial_stackheap
 
