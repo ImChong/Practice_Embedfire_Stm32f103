@@ -169,14 +169,14 @@ __Vectors_Size  EQU  __Vectors_End - __Vectors                              /* N
 
 ; Reset handler
 Reset_Handler   PROC    /* 定义子程序，与 ENDP 成对使用，表示子程序结束 */
-                EXPORT  Reset_Handler             [WEAK]
+                EXPORT  Reset_Handler             [WEAK]                    /* WEAK: 弱定义，如果外部文件声明了一个标号，则优先使用外部文件定义的标号，如果外部文件没有定义也不出错 */
                 IMPORT  __main
                 IMPORT  SystemInit
                 LDR     R0, =SystemInit
                 BLX     R0
                 LDR     R0, =__main
                 BX      R0
-                ENDP
+                ENDP    /* 子程序结束 */
 
 ; Dummy Exception Handlers (infinite loops which can be modified)
 
