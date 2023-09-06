@@ -3,7 +3,7 @@
 
 [00_VScode_Settings: VSCode 设置](00_VScode_Settings/)
 
-[01_Vocabularies: 嵌入式开发词汇表](01_Vocabularies/README.md)
+[01_Vocabularies: 嵌入式开发词汇表](01_Vocabularies/)
 
 [02_Required_Files: 开发必备文档及软件](02_Required_Files/README.md)
 
