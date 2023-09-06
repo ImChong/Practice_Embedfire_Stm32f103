@@ -189,10 +189,10 @@ Reset_Handler   PROC    /* 定义子程序，与 ENDP 成对使用，表示子�
 /* ==================================================================================================== */
 ; Dummy Exception Handlers (infinite loops which can be modified)
 
-NMI_Handler     PROC
+NMI_Handler     PROC                                                        /* PROC: 定义子程序 */
                 EXPORT  NMI_Handler                [WEAK]
                 B       .                                                   /* B: 跳转到标号 | .: 无限循环 */
-                ENDP
+                ENDP                                                        /* 子程序结束 */
 HardFault_Handler\
                 PROC
                 EXPORT  HardFault_Handler          [WEAK]
