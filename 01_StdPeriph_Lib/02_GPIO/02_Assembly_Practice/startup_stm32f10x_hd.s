@@ -192,7 +192,7 @@ Reset_Handler   PROC    /* 定义子程序，与 ENDP 成对使用，表示子�
 NMI_Handler     PROC                                                        /* PROC: 定义子程序 */
                 EXPORT  NMI_Handler                [WEAK]
                 B       .                                                   /* B: 跳转到标号 | .: 无限循环 */
-                ENDP                                                        /* 子程序结束 */
+                ENDP                                                        /* ENDP: 子程序结束 */
 HardFault_Handler\
                 PROC
                 EXPORT  HardFault_Handler          [WEAK]
@@ -231,7 +231,7 @@ SysTick_Handler PROC
                 B       .
                 ENDP
 
-Default_Handler PROC
+Default_Handler PROC            /* PROC: 定义子程序 */
 
                 EXPORT  WWDG_IRQHandler            [WEAK]
                 EXPORT  PVD_IRQHandler             [WEAK]
@@ -356,9 +356,9 @@ DMA2_Channel3_IRQHandler
 DMA2_Channel4_5_IRQHandler
                 B       .
 
-                ENDP
+                ENDP            /* ENDP: 子程序结束 */
 
-                ALIGN
+                ALIGN           /* ALIGN: 编译器对指令或者数据的存放地址进行对齐，一般需要跟一个立即数，缺省表示4字节对齐 */
 
 ;*******************************************************************************
 ; User Stack and Heap initialization
