@@ -190,7 +190,7 @@ Reset_Handler   PROC    /* 定义子程序，与 ENDP 成对使用，表示子�
 
 NMI_Handler     PROC
                 EXPORT  NMI_Handler                [WEAK]
-                B       .
+                B       .                                                   /* B: 跳转到标号 | .: 无限循环 */
                 ENDP
 HardFault_Handler\
                 PROC
