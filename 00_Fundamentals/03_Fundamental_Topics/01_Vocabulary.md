@@ -9,7 +9,7 @@
   - [1.6. Source Code 源代码](#16-source-code-源代码)
   - [1.7. Object Code 对象代码](#17-object-code-对象代码)
   - [1.8. Image 映像文件](#18-image-映像文件)
-  - [1.9. Program Size：Code=xx RO-data=xx RW-data=xx ZIdata=xx](#19-program-sizecodexx-ro-dataxx-rw-dataxx-zidataxx)
+  - [1.9. Program Size：Code=xx RO-data=xx RW-data=xx ZI-data=xx](#19-program-sizecodexx-ro-dataxx-rw-dataxx-zi-dataxx)
   - [1.10. 只读存储器（Read-Only Memory，ROM）](#110-只读存储器read-only-memoryrom)
 
 ## 1.1. armcc 编译器
@@ -36,7 +36,18 @@
 ## 1.8. Image 映像文件
 
 
-## 1.9. Program Size：Code=xx RO-data=xx RW-data=xx ZIdata=xx
-
+## 1.9. Program Size：Code=xx RO-data=xx RW-data=xx ZI-data=xx
+> ## 1.9.1. Code
+>
+> ## 1.9.2. RO-data
+>
+> ## 1.9.3. RW-data
+> 
+> ## 1.9.4. ZI-data
+>
+> ## 1.9.5. ZI-data 栈空间
+>
+> ## 1.9.6. ZI-data 堆空间
+>
 
 ## 1.10. 只读存储器（Read-Only Memory，ROM）
