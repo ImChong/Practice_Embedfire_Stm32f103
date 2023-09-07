@@ -3,6 +3,6 @@
 
 [01_词汇表](01_Vocabulary.md)
 
-[02_构建工程](02_BuildProcess.md)
+[02_构建过程](02_BuildProcessExplained.md)
 
 [03_文件类型相关](03_FileTypeRelated.md)
