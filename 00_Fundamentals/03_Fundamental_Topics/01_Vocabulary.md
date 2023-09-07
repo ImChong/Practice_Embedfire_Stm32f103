@@ -1,5 +1,17 @@
 # 1. Vocabulary 词汇表
 
+- [1. Vocabulary 词汇表](#1-vocabulary-词汇表)
+  - [1.1. armcc 编译器](#11-armcc-编译器)
+  - [1.2. armlink 链接器](#12-armlink-链接器)
+  - [1.3. fromelf 格式转换器](#13-fromelf-格式转换器)
+  - [1.4. plain binary 二进制文件](#14-plain-binary-二进制文件)
+  - [1.5. Interl Hex 十六进制文件](#15-interl-hex-十六进制文件)
+  - [1.6. Source Code 源代码](#16-source-code-源代码)
+  - [1.7. Object Code 对象代码](#17-object-code-对象代码)
+  - [1.8. Image 映像文件](#18-image-映像文件)
+  - [1.9. Program Size：Code=xx RO-data=xx RW-data=xx ZIdata=xx](#19-program-sizecodexx-ro-dataxx-rw-dataxx-zidataxx)
+  - [1.10. 只读存储器（Read-Only Memory，ROM）](#110-只读存储器read-only-memoryrom)
+
 ## 1.1. armcc 编译器
 > MDK 软件使用的编译器是 armcc 和 armasm。它们根据每个 c/c++ 和汇编源文件编译成对应的以 “.o” 为后缀名的对象文件(Object Code，也称目标文件)，其内容主要是从源文件编译得到的机器码，包含了代码、数据以及调试使用的信息；
 
@@ -25,3 +37,6 @@
 
 
 ## 1.9. Program Size：Code=xx RO-data=xx RW-data=xx ZIdata=xx
+
+
+## 1.10. 只读存储器（Read-Only Memory，ROM）
