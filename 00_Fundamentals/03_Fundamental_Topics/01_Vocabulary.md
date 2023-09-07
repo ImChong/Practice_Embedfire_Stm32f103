@@ -39,15 +39,21 @@
 ## 1.9. Program Size：Code=xx RO-data=xx RW-data=xx ZI-data=xx
 > ## 1.9.1. Code
 > 机器代码指令
+>
 > ## 1.9.2. RO-data
 > 常量
+>
 > ## 1.9.3. RW-data
 > 初值非 0 的全局变量
+>
 > ## 1.9.4. ZI-data
 > 初值为 0 的全局变量
+>
 > ## 1.9.5. ZI-data 栈空间
 > 局部变量
+> 
 > ## 1.9.6. ZI-data 堆空间
 > 使用 malloc 动态分配的空间
+>
 
 ## 1.10. 只读存储器（Read-Only Memory，ROM）
