@@ -1,6 +1,6 @@
-# 1. 嵌入式基础知识相关
+# 1. 嵌入式术语
 
-- [1. 嵌入式基础知识相关](#1-嵌入式基础知识相关)
+- [1. 嵌入式术语](#1-嵌入式术语)
   - [1.1. 数据手册（Data Sheet）](#11-数据手册data-sheet)
   - [1.2. 参考手册（Reference Manual）](#12-参考手册reference-manual)
   - [1.3. ISP（In-System Programming）](#13-ispin-system-programming)
