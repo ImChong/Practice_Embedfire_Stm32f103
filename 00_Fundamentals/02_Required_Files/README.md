@@ -7,4 +7,4 @@
 
 [02_Hardware_Documentations: 开发所需硬件资料](02_Hardware_Documentations/)
 
-[03_Software: 开发所需软件文件](03_Software/)
+[03_Firmware_Library: 开发所需固件库软件文件](03_Software/)
