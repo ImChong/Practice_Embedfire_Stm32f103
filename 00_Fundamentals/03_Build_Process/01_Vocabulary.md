@@ -39,10 +39,10 @@
 
 ## 1.9. Program Size：Code=xx RO-data=xx RW-data=xx ZI-data=xx
 > ### 1.9.1. Code
-> 机器代码指令
+> 即代码域，它指的是编译器生成的机器指令，这些内容被存储到 ROM 区。
 >
 > ### 1.9.2. RO-data
-> 常量
+> Read Only data，即只读数据域，它指程序中用到的只读数据，这些数据被存储在 ROM 区，因而程序不能修改其内容。例如 C 语言中 const 关键字定义的变量就是典型的 RO-data。
 >
 > ### 1.9.3. RW-data
 > 初值非 0 的全局变量
