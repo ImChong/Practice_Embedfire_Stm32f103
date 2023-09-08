@@ -7,4 +7,6 @@
 
 [02_Required_Files: 开发必备文档及软件](02_Required_Files/)
 
-[03_Build_Process: MDK 编译过程及文件类型全解](03_Build_Process/)
+[03_Startup_File_Explained: 启动文件详解](03_Startup_File_Explained/)
+
+[04_Build_Process：MDK 编译过程及文件类型全解](04_Build_Process/)
