@@ -2,17 +2,21 @@
 
 - [1. 文件类型](#1-文件类型)
   - [1.1. Project 目录下的工程文件](#11-project-目录下的工程文件)
-    - [1.1.1. .sct 文件](#111-sct-文件)
-    - [1.1.2. .dbgconf 文件](#112-dbgconf-文件)
-    - [1.1.3. .lst 文件（Listing 文件）](#113-lst-文件listing-文件)
-    - [1.1.4. .map 文件（Map 文件）](#114-map-文件map-文件)
-    - [1.1.5. .dep 文件（Dependency File）](#115-dep-文件dependency-file)
-    - [1.1.6. .crf 文件（Cross-Reference File）](#116-crf-文件cross-reference-file)
-    - [1.1.7. .d 文件（Dependency File）](#117-d-文件dependency-file)
-    - [1.1.8. .o 文件（Object File）](#118-o-文件object-file)
-    - [1.1.9. .build\_log.htm 文件（Build Log HTML File）](#119-build_loghtm-文件build-log-html-file)
-    - [1.1.10. .htm 文件（HTML Report File）](#1110-htm-文件html-report-file)
-    - [1.1.11. .lnp 文件（Linker Settings）](#1111-lnp-文件linker-settings)
+  - [1.2. 源文件](#12-源文件)
+  - [1.3. Output 目录下的文件](#13-output-目录下的文件)
+  - [1.4. Listing 目录下的文件](#14-listing-目录下的文件)
+  - [1.5. 其他](#15-其他)
+    - [1.5.1. .sct 文件](#151-sct-文件)
+    - [1.5.2. .dbgconf 文件](#152-dbgconf-文件)
+    - [1.5.3. .lst 文件（Listing 文件）](#153-lst-文件listing-文件)
+    - [1.5.4. .map 文件（Map 文件）](#154-map-文件map-文件)
+    - [1.5.5. .dep 文件（Dependency File）](#155-dep-文件dependency-file)
+    - [1.5.6. .crf 文件（Cross-Reference File）](#156-crf-文件cross-reference-file)
+    - [1.5.7. .d 文件（Dependency File）](#157-d-文件dependency-file)
+    - [1.5.8. .o 文件（Object File）](#158-o-文件object-file)
+    - [1.5.9. .build\_log.htm 文件（Build Log HTML File）](#159-build_loghtm-文件build-log-html-file)
+    - [1.5.10. .htm 文件（HTML Report File）](#1510-htm-文件html-report-file)
+    - [1.5.11. .lnp 文件（Linker Settings）](#1511-lnp-文件linker-settings)
 
 
 ## 1.1. Project 目录下的工程文件
@@ -28,36 +32,54 @@
 > ### *.ini 文件
 >
 
-### 1.1.1. .sct 文件
+## 1.2. 源文件
+> ### *.c
+>
+> ### *.cpp
+>
+> ### *.h
+>
+> ### *.s
+>
+> ### *.inc
+>
+
+## 1.3. Output 目录下的文件
+
+## 1.4. Listing 目录下的文件
+
+## 1.5. 其他
+
+### 1.5.1. .sct 文件
 在 Keil 环境中，.sct 文件是一个用于描述程序如何在目标硬件的内存中布局的链接脚本文件（Scatter-Load Description File）。这个文件用于定义哪些代码和数据段应该放在哪个内存区域（例如 RAM, FLASH 等）。它的主要目的是为了在编译和链接过程中进行内存分配。
 
-### 1.1.2. .dbgconf 文件
+### 1.5.2. .dbgconf 文件
 这个文件通常用于存储调试配置信息。这可能包括断点、内存监视器设置、CPU 寄存器视图等。.dbgconf 文件通常用于在不同的调试会话之间保持这些设置的一致性。这个文件一般是由 IDE（如 Keil）生成的，并可以在之后的调试会话中重新加载。
 
-### 1.1.3. .lst 文件（Listing 文件）
+### 1.5.3. .lst 文件（Listing 文件）
 这是一个由编译器生成的汇编级别的列表文件。它通常包含源代码与生成的汇编或机器代码之间的映射，以及其他关于编译过程的信息。这对于低级调试和性能分析非常有用。.lst 文件通常会显示源代码行和相应的汇编指令，以及地址和其他信息。
 
-### 1.1.4. .map 文件（Map 文件）
+### 1.5.4. .map 文件（Map 文件）
 这是一个由链接器生成的文件，用于描述程序的内存布局。它列出了所有符号（函数、变量等）的地址分配情况，以及如何映射到目标硬件的内存中。.map 文件在调试、分析和优化应用程序时非常有用，特别是在资源受限的嵌入式系统中
 
-### 1.1.5. .dep 文件（Dependency File）
+### 1.5.5. .dep 文件（Dependency File）
 这个文件列出了源代码文件（如 .c、.cpp 等）的依赖关系，通常用于增量编译。当修改了某个头文件时，编译器可以通过查看 .dep 文件来决定哪些源文件需要重新编译。
 
-### 1.1.6. .crf 文件（Cross-Reference File）
+### 1.5.6. .crf 文件（Cross-Reference File）
 这个文件包含了源代码与其生成的目标代码之间的交叉引用信息。这通常用于更高级的代码分析或文档生成。
 
-### 1.1.7. .d 文件（Dependency File）
+### 1.5.7. .d 文件（Dependency File）
 与 .dep 文件类似，这个文件也包含了源文件的依赖信息。它通常用于 GNU Make 或其他构建系统，在进行增量编译时确定哪些文件需要重新编译。
 
-### 1.1.8. .o 文件（Object File）
+### 1.5.8. .o 文件（Object File）
 这是编译后生成的目标文件。这些 .o 文件会被链接器合并成一个可执行文件或库。
 
-### 1.1.9. .build_log.htm 文件（Build Log HTML File）
+### 1.5.9. .build_log.htm 文件（Build Log HTML File）
 这是一个 HTML 格式的构建日志文件，记录了编译过程中的各种信息，如编译日期、时间、使用的编译器版本、警告、错误等。
 
-### 1.1.10. .htm 文件（HTML Report File）
+### 1.5.10. .htm 文件（HTML Report File）
 通常这是一个编译报告，提供了关于构建过程的各种统计信息，比如代码大小、数据段大小等。
 
-### 1.1.11. .lnp 文件（Linker Settings）
+### 1.5.11. .lnp 文件（Linker Settings）
 这个文件存储了链接器的设置信息，如内存布局、入口点等。它通常用于配置更复杂的链接行为。
 
