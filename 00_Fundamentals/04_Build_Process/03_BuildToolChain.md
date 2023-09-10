@@ -25,7 +25,6 @@
 > 在 MDK 中可在“Option for Target->Linker”页面配置 armlink 选项。
 
 ## 1.3. armar、fromelf 及用户指令
->
 > armar 工具用于把工程打包成库文件，fromelf 可根据 axf 文件生成 hex、bin 文件，hex 和 bin 文件是大多数下载器支持的下载文件格式。
 >
 > 在 MDK 中，针对 armar 和 fromelf 工具的选项几乎没有，仅集成了生成 HEX 或 Lib 的选项，在 MDK 中可在“Option for Target->Output”页面配置 armar 选项。
