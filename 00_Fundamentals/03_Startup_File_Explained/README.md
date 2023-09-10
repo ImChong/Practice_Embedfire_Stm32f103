@@ -34,4 +34,4 @@
 > 首先判断是否定义了 __MICROLIB ，如果定义了这个宏则赋予标号 __initial_sp（栈顶地址）、__heap_base（堆起始地址）、__heap_limit（堆结束地址）全局属性，可供外部文件调用。有关这个宏我们在 KEIL 里面配置，然后堆栈的初始化就由 C 库函数 _main 来完成。
 
 ## 1.7. 案例
-[startup_stm32f10x_hd.s](startup_stm32f10x_hd.s)
+> [startup_stm32f10x_hd.s](startup_stm32f10x_hd.s)
