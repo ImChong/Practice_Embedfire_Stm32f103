@@ -42,7 +42,7 @@
 ; 写的程序出现了莫名奇怪的错误，并进入了硬fault 的时候，这时你就要考虑下是不是栈不够大，
 ; 溢出了。
 
-Stack_Size      EQU     0x00000400
+Stack_Size      EQU     0x00000400      /* 1024个字节 */
 
                 AREA    STACK, NOINIT, READWRITE, ALIGN=3       /* NOTE: 开辟栈的大小为0X00000400（1KB），名字为STACK，NOINIT 即不初始化，可读可写，8（2^3）字节对齐。*/
 Stack_Mem       SPACE   Stack_Size
@@ -57,7 +57,7 @@ __initial_sp                                                    /* 标号__initi
 ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ; </h>
 
-Heap_Size       EQU     0x00000200
+Heap_Size       EQU     0x00000200      /* 512个字节 */
 
                 AREA    HEAP, NOINIT, READWRITE, ALIGN=3        /* NOTE: 开辟堆的大小为0X00000200（512 字节），名字为HEAP，NOINIT 即不初始化，可读可写，8（2^3）字节对齐 */
 __heap_base                                                     /* __heap_base 表示堆的起始地址 */
