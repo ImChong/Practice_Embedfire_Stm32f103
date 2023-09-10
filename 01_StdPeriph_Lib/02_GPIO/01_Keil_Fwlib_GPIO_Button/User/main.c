@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \01_Keil_Fwlib_GPIO_Button\User\main.c
+ * @FilePath     : \Practice_Embedfire_Stm32f103\01_StdPeriph_Lib\02_GPIO\01_Keil_Fwlib_GPIO_Button\User\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 23:15:40
+ * @LastEditTime : 2023-09-10 09:40:44
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -108,19 +108,19 @@ int main(void)
     /* 循环主体 */
     while (1) {
 #if BIT_BAND_OPERATION_OUTPUT_EN
-        PB_OUT(LED_G_PIN_BIT_NUM) = PIN_LOW;	        /* 使引脚输出低电平, 点亮 LED Green：0引脚 */
-        Delay(0x1FFFFF);			                    /* 延时一段时间 */
-        PB_OUT(LED_G_PIN_BIT_NUM) = PIN_HIGH;	        /* 使引脚输出高电平，关闭 LED Green：0引脚 */
+        PB_OUT(LED_G_PIN_BIT_NUM) = PIN_LOW;						/* 使引脚输出低电平, 点亮 LED Green：0引脚 */
+        Delay(0x1FFFFF);                                /* 延时一段时间 */
+        PB_OUT(LED_G_PIN_BIT_NUM) = PIN_HIGH;						/* 使引脚输出高电平，关闭 LED Green：0引脚 */
         Delay(0x1FFFFF);                                /* 延时一段时间 */
 
-        PB_OUT(LED_B_PIN_BIT_NUM) = PIN_LOW;	        /* 使引脚输出低电平, 点亮 LED Blue：1引脚 */
-        Delay(0x1FFFFF);			                    /* 延时一段时间 */
-        PB_OUT(LED_B_PIN_BIT_NUM) = PIN_HIGH;	        /* 使引脚输出高电平，关闭 LED Blue：1引脚 */
+        PB_OUT(LED_B_PIN_BIT_NUM) = PIN_LOW;						/* 使引脚输出低电平, 点亮 LED Blue：1引脚 */
+        Delay(0x1FFFFF);                                /* 延时一段时间 */
+        PB_OUT(LED_B_PIN_BIT_NUM) = PIN_HIGH;						/* 使引脚输出高电平，关闭 LED Blue：1引脚 */
         Delay(0x1FFFFF);                                /* 延时一段时间 */
 
-        PB_OUT(LED_R_PIN_BIT_NUM) = PIN_LOW;	        /* 使引脚输出低电平, 点亮 LED Red：5引脚 */
-        Delay(0x1FFFFF);			                    /* 延时一段时间 */
-        PB_OUT(LED_R_PIN_BIT_NUM) = PIN_HIGH;	        /* 使引脚输出高电平，关闭 LED Red：5引脚 */
+        PB_OUT(LED_R_PIN_BIT_NUM) = PIN_LOW;						/* 使引脚输出低电平, 点亮 LED Red：5引脚 */
+        Delay(0x1FFFFF);                                /* 延时一段时间 */
+        PB_OUT(LED_R_PIN_BIT_NUM) = PIN_HIGH;						/* 使引脚输出高电平，关闭 LED Red：5引脚 */
         Delay(0x1FFFFF);                                /* 延时一段时间 */
 #elif BIT_BAND_OPERATION_INTPUT_EN
         /* 按键1 按下 */
