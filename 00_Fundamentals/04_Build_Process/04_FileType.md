@@ -104,7 +104,7 @@
 >   - 例如MDK 的armlink 生成的*.elf 及*.axf 文件，(使用gcc 编译工具可生成*.elf 文件，用armlink生成的是*.axf 文件，.axf 文件在.elf 之外，增加了调试使用的信息，其余区别不大，后面我们仅讲解*.axf 文件)，另外还有Linux 的/bin/bash 文件，Windows 的*.exe 文件。
 >
 > - 共享目标文件(Shared Object File)
->   - 它的定义比较难理解，我们直接举例，MDK 生成的*.lib
+>   - 它的定义比较难理解，我们直接举例，MDK 生成的*.lib文件就属于共享目标文件，它可以继续参与链接，加入到可执行文件之中。另外，Linux 的.so，如/lib/ glibc-2.5.so，Windows 的 DLL 都属于这一类。
 >
 > ### 1.3.9. *.axf 文件
 >
