@@ -37,8 +37,10 @@ ROS
 ROS Snippets
 
 Keil Assistant
+Embedded IDE
 
 Hex Editor
+Intel HEX format
 vscode-pdf
 Excel Viewer
 Code Runner
