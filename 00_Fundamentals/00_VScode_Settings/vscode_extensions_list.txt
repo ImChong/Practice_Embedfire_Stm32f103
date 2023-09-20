@@ -32,12 +32,13 @@ gitignore
 
 Markdown All in One
 Markdown Preview Enhanced
+markdownlint
 
 ROS
 ROS Snippets
 
 Keil Assistant
-Embedded IDE
+PlatformIO IDE
 
 Hex Editor
 Intel HEX format
