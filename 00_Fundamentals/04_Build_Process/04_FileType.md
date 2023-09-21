@@ -185,8 +185,11 @@
 >
 > ##### 存储器映像索引（Memory Map of the image）
 >
-> ##### 映像组件大小
+> - 相对于符号映像表，这个索引表描述的单位是节区，而且它描述的主要信息中包含了节区的类型及属性，由此可以区分Code、RO-data、RW-data 及ZI-data。
 >
+> ##### 映像组件大小（Image component sizes）
+>
+> -
 
 ## 1.5. 其他
 
