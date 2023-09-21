@@ -46,49 +46,49 @@
 ## 1.3. 重要寄存器地址/大小相对关系
 
 > ```text
-> name                hex          decimal       % of space     Functionality
-> Block 0 Start       0000 0000    0             0              Code                    512 MB
-> Flash Start         0800 0000    134217728     3.125000000    Flash                     512 KB
-> Flash End           0807 FFFF    134742015     3.137207008
-> Sys Mem Start       1FFF F000    536866816     12.49990463
-> Sys Mem End         1FFF F7FF    536868863     12.49995229
+> name                hex             decimal       % of space      Functionality
+> Block 0 Start       0x0000 0000     0             0               Code                    512 MB
+> Flash Start         0x0800 0000     134217728     3.125000000     Flash                     512 KB
+> Flash End           0x0807 FFFF     134742015     3.137207008
+> Sys Mem Start       0x1FFF F000     536866816     12.49990463
+> Sys Mem End         0x1FFF F7FF     536868863     12.49995229
 >
-> Block 1 Start       2000 0000    536870912     12.50000000    SRAM                    512 MB
-> Bit-Banding Start   2000 0000    536870912     12.50000000    Bit-Banding               1 MB
-> SRAM Start          2000 0000    536870912     12.50000000    SRAM                      64 KB
-> SRAM End            2000 FFFF    536936447     12.50152585
-> Bit-Banding End     2010 0000    537919488     12.52441406
-> Aliased Start       2200 0000    570425344     13.28125000    Bit-Banding Aliased       32 MB
-> Aliased End         23FF FFFF    603979775     14.06249997
+> Block 1 Start       0x2000 0000     536870912     12.50000000     SRAM                    512 MB
+> Bit-Banding Start   0x2000 0000     536870912     12.50000000     Bit-Banding               1 MB
+> SRAM Start          0x2000 0000     536870912     12.50000000     SRAM                      64 KB
+> SRAM End            0x2000 FFFF     536936447     12.50152585
+> Bit-Banding End     0x2010 0000     537919488     12.52441406
+> Aliased Start       0x2200 0000     570425344     13.28125000     Bit-Banding Aliased       32 MB
+> Aliased End         0x23FF FFFF     603979775     14.06249997
 >
-> Block 2 Start       4000 0000    1073741824    25.00000000    Peripherals             512 MB
-> Bit-Banding Start   4000 0000    1073741824    25.00000000    Bit-Banding               1 MB
-> Peripherals Start   4000 0000    1073741824    25.00000000
-> APB1 Start          4000 0000    1073741824    25.00000000    APB1                      64 KB
-> APB1 End            4000 FFFF    1073807359    25.00152586
-> APB2 Start          4001 0000    1073807360    25.00152588    APB2                      32 KB
-> GPIO Port Start     4001 0800    1073809408    25.00157356
-> GPIO Port End       4001 23FF    1073816575    25.00174043
-> APB2 End            4001 7FFF    1073840127    25.00228880
-> AHB Start           4001 8000    1073840128    25.00228882    AHB                       256 MB
-> RCC Start           4002 1000    1073876992    25.00314713
-> RCC End             4002 13FF    1073878015    25.00317094
-> Peripherals End     4002 33FF    1073886207    25.00336168
-> Bit-Banding End     4010 0000    1074790400    25.02441406
-> Aliased Start       4200 0000    1107296256    25.78125000    Bit-Banding Aliased       32 MB
-> Aliased End         43FF FFFF    1140850687    26.56249998
-> AHB End             5003 FFFF    1342439423    31.25610349
+> Block 2 Start       0x4000 0000     1073741824    25.00000000     Peripherals             512 MB
+> Bit-Banding Start   0x4000 0000     1073741824    25.00000000     Bit-Banding               1 MB
+> Peripherals Start   0x4000 0000     1073741824    25.00000000
+> APB1 Start          0x4000 0000     1073741824    25.00000000     APB1                      64 KB
+> APB1 End            0x4000 FFFF     1073807359    25.00152586
+> APB2 Start          0x4001 0000     1073807360    25.00152588     APB2                      32 KB
+> GPIO Port Start     0x4001 0800     1073809408    25.00157356
+> GPIO Port End       0x4001 23FF     1073816575    25.00174043
+> APB2 End            0x4001 7FFF     1073840127    25.00228880
+> AHB Start           0x4001 8000     1073840128    25.00228882     AHB                       256 MB
+> RCC Start           0x4002 1000     1073876992    25.00314713
+> RCC End             0x4002 13FF     1073878015    25.00317094
+> Peripherals End     0x4002 33FF     1073886207    25.00336168
+> Bit-Banding End     0x4010 0000     1074790400    25.02441406
+> Aliased Start       0x4200 0000     1107296256    25.78125000     Bit-Banding Aliased       32 MB
+> Aliased End         0x43FF FFFF     1140850687    26.56249998
+> AHB End             0x5003 FFFF     1342439423    31.25610349
 >
-> Block 3 Start       6000 0000    1610612736    37.50000000    FMSC bank 1 & 2         512 MB
+> Block 3 Start       0x6000 0000     1610612736    37.50000000     FMSC bank 1 & 2         512 MB
 >
-> Block 4 Start       8000 0000    2147483648    50.00000001    FMSC bank 3             512 MB
+> Block 4 Start       0x8000 0000     2147483648    50.00000001     FMSC bank 3             512 MB
 >
-> Block 5 Start       A000 0000    2684354560    62.50000001    FMSC register           512 MB
+> Block 5 Start       0xA000 0000     2684354560    62.50000001     FMSC register           512 MB
 >
-> Block 6 Start       C000 0000    3221225472    75.00000001    Empty                   512 MB
+> Block 6 Start       0xC000 0000     3221225472    75.00000001     Empty                   512 MB
 >
-> Block 7 Start       E000 0000    3758096384    87.50000002    Cortex-M3's internal peripherals 512 MB
+> Block 7 Start       0xE000 0000     3758096384    87.50000002     Cortex-M3's internal peripherals 512 MB
 >
-> End                 FFFF FFFF    4294967295    100
+> End                 0xFFFF FFFF     4294967295    100
 > ```
 >
