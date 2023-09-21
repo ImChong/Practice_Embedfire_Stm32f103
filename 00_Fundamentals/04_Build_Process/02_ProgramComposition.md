@@ -44,7 +44,7 @@
 > 在 MDK 中，我们建立的工程一般会选择芯片型号，选择后就有确定的 FLASH 及 SRAM 大小，若代码超出了芯片的存储器的极限，编译器会提示错误，这时就需要裁剪程序了，裁剪时可针对超出的区域来优化。
 
 ## 1.3. 重要寄存器地址/大小相对关系
->
+
 > ```text
 > name                hex           dec           % of address space                    Functionality
 > Block 0 Start       0000 0000     0             0                                     Code
