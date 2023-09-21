@@ -59,17 +59,17 @@
 >
 > Block 2 Start       4000 0000     1073741824    25.000000005820766092701993438579     Peripherals
 > Peripherals Start   4000 0000     1073741824    25.000000005820766092701993438579
-> APB1 Start          4000 0000                                                         APB1
-> APB1 End            4000 FFFF
-> APB2 Start          4001 0000                                                         APB2
-> GPIO Port Start     4001 0800
-> GPIO Port End       4001 23FF
-> APB2 End            4001 7FFF
-> AHB Start           4001 8000                                                         AHB
+> APB1 Start          4000 0000     1073741824    25.000000005820766092701993438579     APB1
+> APB1 End            4000 FFFF     1073807359
+> APB2 Start          4001 0000     1073807360               APB2
+> GPIO Port Start     4001 0800     1073809408
+> GPIO Port End       4001 23FF     1073816575
+> APB2 End            4001 7FFF     1073840127
+> AHB Start           4001 8000     1073840128               AHB
 > RCC Start           4002 1000     1073876992    25.003147131065639464898416647897
 > RCC End             4002 13FF     1073878015    25.003170949640490801455567311834
 > Peripherals End     4002 33FF     1073886207    25.003361684503816460376562657854
-> AHB End             5003 FFFF
+> AHB End             5003 FFFF     1342439423
 >
 > Block 3 Start       6000 0000     1610612736    37.500000008731149139052990157868     FMSC bank 1 & 2
 >
