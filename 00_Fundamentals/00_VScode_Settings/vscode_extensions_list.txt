@@ -51,6 +51,8 @@ Crabviz
 Code Spell Checker
 Prettier - Code formatter
 Draw.io Integration
+Draw.io Integration: Mermaid plugin
+Excalidraw
 
 Todo Tree
 Bookmarks
