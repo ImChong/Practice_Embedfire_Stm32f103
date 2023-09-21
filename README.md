@@ -2,8 +2,8 @@
 
 Practice for Embedfire STM32F103 chip development.
 
-- [GitHub Repository](https://github.com/Embedfire-stm32f103-zhinanzhe)
-- [Embedfire stm32f103 must read](https://github.com/Embedfire-stm32f103-zhinanzhe/ebf_stm32f103_zhinanzhe_must_read/tree/master)
+- [GitHub Repository（野火官方库）](https://github.com/Embedfire-stm32f103-zhinanzhe)
+- [Embedfire stm32f103 must read（野火指南者必读）](https://github.com/Embedfire-stm32f103-zhinanzhe/ebf_stm32f103_zhinanzhe_must_read/tree/master)
 
 ## Fundamentals（基础）
 
