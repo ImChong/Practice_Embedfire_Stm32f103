@@ -47,13 +47,13 @@
 
 > ```text
 > name                hex             decimal       % of space      Functionality
-> Block 0 Start       0x0000 0000     0             0               Code                    512 MB
+> [Block 0 Start]     0x0000 0000     0             0               [Code]                  512 MB
 > Flash Start         0x0800 0000     134217728     3.125000000     Flash                     512 KB
 > Flash End           0x0807 FFFF     134742015     3.137207008
 > Sys Mem Start       0x1FFF F000     536866816     12.49990463
 > Sys Mem End         0x1FFF F7FF     536868863     12.49995229
 >
-> Block 1 Start       0x2000 0000     536870912     12.50000000     SRAM                    512 MB
+> [Block 1 Start]     0x2000 0000     536870912     12.50000000     [SRAM]                  512 MB
 > Bit-Banding Start   0x2000 0000     536870912     12.50000000     Bit-Banding               1 MB
 > SRAM Start          0x2000 0000     536870912     12.50000000     SRAM                      64 KB
 > SRAM End            0x2000 FFFF     536936447     12.50152585
@@ -61,7 +61,7 @@
 > Aliased Start       0x2200 0000     570425344     13.28125000     Bit-Banding Aliased       32 MB
 > Aliased End         0x23FF FFFF     603979775     14.06249997
 >
-> Block 2 Start       0x4000 0000     1073741824    25.00000000     Peripherals             512 MB
+> [Block 2 Start]     0x4000 0000     1073741824    25.00000000     [Peripherals]           512 MB
 > Bit-Banding Start   0x4000 0000     1073741824    25.00000000     Bit-Banding               1 MB
 > Peripherals Start   0x4000 0000     1073741824    25.00000000
 > APB1 Start          0x4000 0000     1073741824    25.00000000     APB1                      64 KB
@@ -79,15 +79,15 @@
 > Aliased End         0x43FF FFFF     1140850687    26.56249998
 > AHB End             0x5003 FFFF     1342439423    31.25610349
 >
-> Block 3 Start       0x6000 0000     1610612736    37.50000000     FMSC bank 1 & 2         512 MB
+> [Block 3 Start]     0x6000 0000     1610612736    37.50000000     [FMSC bank 1 & 2]       512 MB
 >
-> Block 4 Start       0x8000 0000     2147483648    50.00000001     FMSC bank 3             512 MB
+> [Block 4 Start]     0x8000 0000     2147483648    50.00000001     [FMSC bank 3]           512 MB
 >
-> Block 5 Start       0xA000 0000     2684354560    62.50000001     FMSC register           512 MB
+> [Block 5 Start]     0xA000 0000     2684354560    62.50000001     [FMSC register]         512 MB
 >
-> Block 6 Start       0xC000 0000     3221225472    75.00000001     Empty                   512 MB
+> [Block 6 Start]     0xC000 0000     3221225472    75.00000001     [Empty]                 512 MB
 >
-> Block 7 Start       0xE000 0000     3758096384    87.50000002     Cortex-M3's internal peripherals 512 MB
+> [Block 7 Start]     0xE000 0000     3758096384    87.50000002     [Cortex-M3's internal peripherals] 512 MB
 >
 > End                 0xFFFF FFFF     4294967295    100
 > ```
