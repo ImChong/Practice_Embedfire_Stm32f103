@@ -14,6 +14,8 @@
   - [1.11. 内部 SRAM（Static Random Access Memory）](#111-内部-sramstatic-random-access-memory)
   - [1.12. CMSIS-DAP（Cortex Microcontroller Software Interface Standard - Debug Access Port）](#112-cmsis-dapcortex-microcontroller-software-interface-standard---debug-access-port)
   - [1.13. 最低有效位（LSB）](#113-最低有效位lsb)
+  - [1.14. 小端模式（Little Endian）](#114-小端模式little-endian)
+  - [1.15. 大端模式（Big Endian）](#115-大端模式big-endian)
 
 ## 1.1. 数据手册（Data Sheet）
 
@@ -112,4 +114,31 @@
 > - **硬件接口和通信协议**：在一些硬件通信协议（如 SPI、I2C 等）中，数据传输的 LSB/MSB 顺序可能会被明确规定。
 >
 > 了解 LSB 和 MSB 的概念是进行低级编程（包括嵌入式系统编程）和硬件设计的基础。这些概念对于正确地解释数据和实现数据通信有至关重要的作用。
+
+## 1.14. 小端模式（Little Endian）
+
+> 小端模式（Little Endian）是指数据的低字节保存在内存的低地址中，而数据的高字节保存在内存的高地址中。
+> 假设有一个 32 位整数，值为 0x12345678，在小端模式下，该整数在内存中的存储方式如下：
 >
+> ```c
+> 地址 | 数据
+> ---- | -----
+> 0x00 | 0x78
+> 0x01 | 0x56
+> 0x02 | 0x34
+> 0x03 | 0x12
+> ```
+
+## 1.15. 大端模式（Big Endian）
+
+> 大端模式（Big Endian）是指数据的高字节保存在内存的低地址中，而数据的低字节保存在内存的高地址中。
+> 假设有一个 32 位整数，值为 0x12345678，在大端模式下，该整数在内存中的存储方式如下：
+>
+> ```c
+> 地址 | 数据
+> ---- | -----
+> 0x00 | 0x12
+> 0x01 | 0x34
+> 0x02 | 0x56
+> 0x03 | 0x78
+> ```
