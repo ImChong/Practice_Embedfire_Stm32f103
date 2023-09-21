@@ -46,7 +46,7 @@
 ## 1.3. 重要寄存器地址/大小相对关系
 
 > ```text
-> name                Hexadecimal     decimal       % of space      Functionality
+> name                hex             decimal       % of space      Functionality
 > [Block 0 Start]     0x0000 0000     0             0               [Code]                  512 MB
 > Flash Start         0x0800 0000     134217728     3.125000000     Flash                     512 KB
 > Flash End           0x0807 FFFF     134742015     3.137207008
