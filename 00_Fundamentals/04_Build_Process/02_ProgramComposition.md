@@ -57,9 +57,9 @@
 > Bit-Banding Start   2000 0000                                                         Bit-Banding           1 MB
 > SRAM Start          2000 0000     536870912     12.500000002910383046350996719289     SRAM                  64 KB
 > SRAM End            2000 FFFF     536870912     12.500000002910383046350996719289
-> Bit-Banding End     2010 0000
-> Aliased Start       2200 0000                                                         Bit-Banding Aliased   32 MB
-> Aliased End         23FF FFFF
+> Bit-Banding End     2010 0000     537919488     12.524414065416067388238401009757
+> Aliased Start       2200 0000     570425344     13.281250003092281986747934014245     Bit-Banding Aliased   32 MB
+> Aliased End         23FF FFFF     603979775     14.062499979991116556336897554886
 >
 > Block 2 Start       4000 0000     1073741824    25.000000005820766092701993438579     Peripherals         512 MB
 > Bit-Banding Start   4000 0000     1073741824    25.000000005820766092701993438579     Bit-Banding           1 MB
@@ -74,9 +74,9 @@
 > RCC Start           4002 1000     1073876992    25.003147131065639464898416647897
 > RCC End             4002 13FF     1073878015    25.003170949640490801455567311834
 > Peripherals End     4002 33FF     1073886207    25.003361684503816460376562657854
-> Bit-Banding End     4010 0000
-> Aliased Start       4200 0000                                                         Bit-Banding Aliased   32 MB
-> Aliased End         43FF FFFF
+> Bit-Banding End     4010 0000     1074790400    25.024414068326450434589397729046
+> Aliased Start       4200 0000     1107296256    25.781250006002665033098930733534     Bit-Banding Aliased   32 MB
+> Aliased End         43FF FFFF     1140850687    26.562499982901499602687894274175
 > AHB End             5003 FFFF     1342439423    31.256103499619314330541369116525
 >
 > Block 3 Start       6000 0000     1610612736    37.500000008731149139052990157868     FMSC bank 1 & 2     512 MB
