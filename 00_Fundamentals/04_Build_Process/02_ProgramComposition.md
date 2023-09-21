@@ -81,6 +81,6 @@
 >
 > Block 7 Start       E000 0000     3758096384    87.500000020372681324456977035025     Cortex-M3's internal peripherals
 >
-> End                 FFFF FFFF     42949672.95    100
+> End                 FFFF FFFF     4294967295    100
 > ```
 >
