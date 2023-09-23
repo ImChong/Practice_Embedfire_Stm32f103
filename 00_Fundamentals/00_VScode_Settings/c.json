@@ -1,10 +1,22 @@
 {
+	// Place your snippets for c here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
 	"main_function": {
 		"prefix": "main",
 		"body": [
 			"#include <stdio.h>",
 			"",
-			"int main(int argc, const char* argv[]) {",
+			"/**",
+			" * @description: 主函数",
+			" * =================================================================================",
+			" * @param {int} argc        程序入参个数",
+			" * @param {char} *argv[]    程序入参字符串数组",
+			" * @return {int}            程序运行状态",
+			" */",
+			"int main(int argc, const char *argv[]) {",
 			"$1",
 			"    return 0;",
 			"}"
@@ -31,9 +43,19 @@
 			"/* ==================================================================================================== */",
 			"/* ==================================================================================================== */",
 			"",
-			"/* NOTE：主函数 */",
-			"int main(int argc, const char* argv[]) {",
-			"    ",
+			"",
+			"/* ==================================================================================================== */",
+			"/* ==================================================================================================== */",
+			"",
+			"/**",
+			" * @description: 主函数",
+			" * =================================================================================",
+			" * @param {int} argc        程序入参个数",
+			" * @param {char} *argv[]    程序入参字符串数组",
+			" * @return {int}            程序运行状态",
+			" */",
+			"int main(int argc, const char *argv[]) {",
+			"$1",
 			"    return 0;",
 			"}"
 		],
@@ -42,8 +64,20 @@
 	"case_head": {
 		"prefix": "case",
 		"body": [
-			"/* NOTE: Test case ${1:label} */",
+			"/* Test case ${1:label} */",
 			"printf(\"======== Case ${1:label} ======== \\n\");"
+		],
+		"description": "case head."
+	},
+	"tree_node": {
+		"prefix": "TreeNode",
+		"body": [
+			"/* 树节点 */",
+			"struct TreeNode {",
+			"    int val;                    /* 节点的值 */",
+			"    struct TreeNode *left;      /* 左节点 */",
+			"    struct TreeNode *right;     /* 右节点 */",
+			"};"
 		],
 		"description": "case head."
 	}
