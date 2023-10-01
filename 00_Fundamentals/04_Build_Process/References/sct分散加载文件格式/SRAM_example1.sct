@@ -4,9 +4,9 @@
 
 LR_IROM1 0x08000000 0x00100000 {        ; 注释: 加载域，基地址 空间大小
     ER_IROM1 0x08000000 0x00100000 {        ; 注释: 加载地址 = 执行地址
-        *.o (RESET, +First)
+        *.o (RESET, +First)                     ; 使用语句“.o”可以选择所有 o 文件
         *(InRoot$$Sections)
-        .ANY (+RO)
+        .ANY (+RO)                              ; 使用 “*” 或 “.ANY” 可以选择所有的 o 文件及 lib 文件
     }
 
     RW_IRAM1 0x20000000 0x00010000 {    ; 注释: 可读写数据
