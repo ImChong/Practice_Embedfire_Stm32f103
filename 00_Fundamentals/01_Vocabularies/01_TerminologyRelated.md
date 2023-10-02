@@ -16,8 +16,9 @@
   - [1.13. 最低有效位（LSB）](#113-最低有效位lsb)
   - [1.14. 小端模式（Little Endian）](#114-小端模式little-endian)
   - [1.15. 大端模式（Big Endian）](#115-大端模式big-endian)
-  - [1.16. SRAM (Static Random-Access Memory)](#116-sram-static-random-access-memory)
-  - [1.17. SDRAM (Synchronous Dynamic Random-Access Memory)](#117-sdram-synchronous-dynamic-random-access-memory)
+  - [1.16. IROM 和 IRAM](#116-irom-和-iram)
+  - [1.17. SRAM (Static Random-Access Memory)](#117-sram-static-random-access-memory)
+  - [1.18. SDRAM (Synchronous Dynamic Random-Access Memory)](#118-sdram-synchronous-dynamic-random-access-memory)
 
 ## 1.1. 数据手册（Data Sheet）
 
@@ -151,7 +152,43 @@
 > 高地址 | 低字节
 > ```
 
-## 1.16. SRAM (Static Random-Access Memory)
+## 1.16. IROM 和 IRAM
+
+> IROM 和 IRAM 的全称通常为：
+>
+> - **IROM**: Instruction Read-Only Memory。这通常指的是存储程序代码的只读存储器区域，如固件或其他不经常更改的程序数据。
+>
+> - **IRAM**: Instruction Random Access Memory。这通常指的是为程序的运行时数据提供空间的内存，如堆栈、局部变量和全局变量。
+>
+> 在许多嵌入式系统和微控制器的上下文中，IROM（通常表示指令ROM或内部ROM）和IRAM（通常表示指令RAM或内部RAM）是区分不同类型存储器的常见术语。以下是它们之间的基本区别：
+>
+> 1. **存储介质**:
+>    - **IROM**: IROM通常是非易失性的，它保留其内容，即使在断电后。这是存储固定程序代码的地方，该代码在上电或复位时被执行。
+>    - **IRAM**: IRAM是易失性的，这意味着它会在断电后丢失其内容。这是为程序运行时数据（如堆栈、局部变量和全局变量）提供空间的地方。
+>
+> 2. **访问速度**:
+>    - **IROM**: 通常访问速度较慢，因为它是基于闪存或其他非易失性技术。
+>    - **IRAM**: 由于基于SRAM技术，访问速度通常较快。
+>
+> 3. **用途**:
+>    - **IROM**: 主要用于存储程序代码，特别是那些不需要频繁修改的代码。
+>    - **IRAM**: 用于存储运行时数据，如堆、栈和其他动态数据。
+>
+> 4. **写入周期**:
+>    - **IROM**: 由于通常基于闪存，写入周期可能有限，而且比RAM慢得多。
+>    - **IRAM**: 可以被快速写入，并且写入周期是无限的。
+>
+> 5. **大小**:
+>    - **IROM**: 在很多微控制器上，IROM的大小比IRAM大，因为代码通常需要更多的空间。
+>    - **IRAM**: 通常比IROM小，因为RAM技术在单位面积上更昂贵。
+>
+> 6. **电源消耗**:
+>    - **IROM**: 在读取时消耗较少的电力。
+>    - **IRAM**: 由于基于动态RAM技术，可能需要持续的刷新来保持其内容，从而消耗更多的电力。
+
+值得注意的是，不同的架构和微控制器可能有其自己的定义和约定。因此，当在特定平台或文档上看到这些术语时，最好是查阅相关文档来确定其确切意义。
+
+## 1.17. SRAM (Static Random-Access Memory)
 
 > - **全称**: 静态随机访问存储器（Static Random-Access Memory）。
 > - **工作原理**: SRAM 使用晶体管来存储每一位的数据，并且不需要定期刷新来保持其内容。
@@ -163,7 +200,7 @@
 >   - 相对于其它类型的 RAM，它的密度较低。
 > - **应用**: 由于其速度，SRAM 通常用作 CPU 的高速缓存。
 
-## 1.17. SDRAM (Synchronous Dynamic Random-Access Memory)
+## 1.18. SDRAM (Synchronous Dynamic Random-Access Memory)
 
 > - **全称**: 同步动态随机访问存储器（Synchronous Dynamic Random-Access Memory）。
 > - **工作原理**: SDRAM 存储数据在容量电荷的微小电容上，并需要定期刷新来保持其内容。
