@@ -16,8 +16,8 @@
   - [1.13. 最低有效位（LSB）](#113-最低有效位lsb)
   - [1.14. 小端模式（Little Endian）](#114-小端模式little-endian)
   - [1.15. 大端模式（Big Endian）](#115-大端模式big-endian)
-  - [SRAM (Static Random-Access Memory)](#sram-static-random-access-memory)
-  - [SDRAM (Synchronous Dynamic Random-Access Memory)](#sdram-synchronous-dynamic-random-access-memory)
+  - [1.16. SRAM (Static Random-Access Memory)](#116-sram-static-random-access-memory)
+  - [1.17. SDRAM (Synchronous Dynamic Random-Access Memory)](#117-sdram-synchronous-dynamic-random-access-memory)
 
 ## 1.1. 数据手册（Data Sheet）
 
@@ -151,7 +151,7 @@
 > 高地址 | 低字节
 > ```
 
-## SRAM (Static Random-Access Memory)
+## 1.16. SRAM (Static Random-Access Memory)
 
 - **全称**: 静态随机访问存储器（Static Random-Access Memory）。
 - **工作原理**: SRAM 使用晶体管来存储每一位的数据，并且不需要定期刷新来保持其内容。
@@ -163,7 +163,7 @@
   - 相对于其它类型的 RAM，它的密度较低。
 - **应用**: 由于其速度，SRAM 通常用作 CPU 的高速缓存。
 
-## SDRAM (Synchronous Dynamic Random-Access Memory)
+## 1.17. SDRAM (Synchronous Dynamic Random-Access Memory)
 
 - **全称**: 同步动态随机访问存储器（Synchronous Dynamic Random-Access Memory）。
 - **工作原理**: SDRAM 存储数据在容量电荷的微小电容上，并需要定期刷新来保持其内容。
