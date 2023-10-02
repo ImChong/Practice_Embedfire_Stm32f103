@@ -24,7 +24,6 @@ Practice for Embedfire STM32F103 chip development.
 - [Example Code](https://github.com/Embedfire-stm32f103-zhinanzhe/ebf_stm32f103_zhinanzhe_std_code)
 - [Videos](https://space.bilibili.com/356820657/search/video?keyword=150)
 - Mindmap: TODO
-- [Progress](https://www.bilibili.com/video/BV1Ss411M75x?p=9&vd_source=75275452d1d334b4d80721d4823e4631)
 
 ## HAL_Lib（HAL 库）
 
@@ -33,4 +32,3 @@ Practice for Embedfire STM32F103 chip development.
 - [Example Code](https://github.com/Embedfire-stm32f103-zhinanzhe/ebf_stm32f103_zhinanzhe_hal_code)
 - [Videos](https://www.bilibili.com/video/BV18X4y1M763/?vd_source=75275452d1d334b4d80721d4823e4631)
 - Mindmap: TODO
-- Progress: TODO
