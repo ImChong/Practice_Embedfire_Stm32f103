@@ -73,7 +73,7 @@ static void SetSysClockTo72(void)
     {
     }
   }
-  else
+  else                            /* 如果 HSE 启动失败，程序则进入用户定义程序 */
   { /* If HSE fails to start-up, the application will have wrong clock
          configuration. User can add here some code to deal with this error */
   }
