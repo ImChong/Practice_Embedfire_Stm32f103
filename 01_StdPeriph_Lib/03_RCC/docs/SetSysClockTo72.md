@@ -51,7 +51,7 @@ static void SetSysClockTo72(void)
     /* PCLK1 = HCLK */
     RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;
 
-#ifdef STM32F10X_CL
+#ifdef STM32F10X_CL     /* 互联型 */
     /* Configure PLLs ------------------------------------------------------*/
     /* PLL2 configuration: PLL2CLK = (HSE / 5) * 8 = 40 MHz */
     /* PREDIV1 configuration: PREDIV1CLK = PLL2 / 5 = 8 MHz */
