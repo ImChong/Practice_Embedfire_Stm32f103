@@ -14,7 +14,7 @@ static void SetSysClockTo72(void)
 
   /* SYSCLK, HCLK, PCLK2 and PCLK1 configuration ---------------------------*/
   /* Enable | 使能 HSE */
-  RCC->CR |= ((uint32_t)RCC_CR_HSEON);    /* 外部高速时钟使能 (External high-speed clock enable) */
+  RCC->CR |= ((uint32_t)RCC_CR_HSEON);      /* 外部高速时钟使能 (External high-speed clock enable) */
 
   /* Wait till HSE is ready and if Time out is reached exit | 等待 HSE 就绪并做超时处理 */
   do
@@ -25,14 +25,14 @@ static void SetSysClockTo72(void)
 
   if ((RCC->CR & RCC_CR_HSERDY) != RESET)   /* RESET = 0 */
   {
-    HSEStatus = (uint32_t)0x01;   /* HSE 启动正常 */
+    HSEStatus = (uint32_t)0x01;             /* HSE 启动正常 */
   }
   else
   {
-    HSEStatus = (uint32_t)0x00;   /* HSE 启动异常 */
+    HSEStatus = (uint32_t)0x00;             /* HSE 启动异常 */
   }
 
-  if (HSEStatus == (uint32_t)0x01)    /* 如果 HSE 启动成功，程序则继续往下执行 */
+  if (HSEStatus == (uint32_t)0x01)          /* 如果 HSE 启动成功，程序则继续往下执行 */
   {
     /* Enable Prefetch Buffer */
     FLASH->ACR |= FLASH_ACR_PRFTBE;
@@ -73,7 +73,7 @@ static void SetSysClockTo72(void)
     {
     }
   }
-  else                            /* 如果 HSE 启动失败，程序则进入用户定义程序 */
+  else                                      /* 如果 HSE 启动失败，用户可以在这里添加处理错误的代码 */
   { /* If HSE fails to start-up, the application will have wrong clock
          configuration. User can add here some code to deal with this error */
   }
