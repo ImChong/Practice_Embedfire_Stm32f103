@@ -23,13 +23,13 @@ static void SetSysClockTo72(void)
     StartUpCounter++;
   } while((HSEStatus == 0) && (StartUpCounter != HSE_STARTUP_TIMEOUT));
 
-  if ((RCC->CR & RCC_CR_HSERDY) != RESET)
+  if ((RCC->CR & RCC_CR_HSERDY) != RESET)   /* RESET = 0 */
   {
-    HSEStatus = (uint32_t)0x01;
+    HSEStatus = (uint32_t)0x01;   /* HSE 启动正常 */
   }
   else
   {
-    HSEStatus = (uint32_t)0x00;
+    HSEStatus = (uint32_t)0x00;   /* HSE 启动异常 */
   }
 
   if (HSEStatus == (uint32_t)0x01)
