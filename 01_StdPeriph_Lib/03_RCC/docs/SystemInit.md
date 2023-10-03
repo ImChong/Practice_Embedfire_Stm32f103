@@ -48,7 +48,7 @@ static void SetSysClockTo72(void)
     RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;     /* APB2 */
 
     /* PCLK1 = HCLK */
-    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;     /* APB1
+    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;     /* APB1 */
 
     /*  PLL configuration: PLLCLK = HSE * 9 = 72 MHz */
     RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLXTPRE |
