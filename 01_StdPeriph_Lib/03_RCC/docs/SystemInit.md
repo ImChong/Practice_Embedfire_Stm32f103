@@ -35,7 +35,7 @@ static void SetSysClockTo72(void)
   if (HSEStatus == (uint32_t)0x01)          /* 如果 HSE 启动成功，程序则继续往下执行 */
   {
     /* Enable Prefetch Buffer */
-    FLASH->ACR |= FLASH_ACR_PRFTBE;
+    FLASH->ACR |= FLASH_ACR_PRFTBE;         /* 0x4002 2000 闪存存储器接口 */
 
     /* Flash 2 wait state */
     FLASH->ACR &= (uint32_t)((uint32_t)~FLASH_ACR_LATENCY);
