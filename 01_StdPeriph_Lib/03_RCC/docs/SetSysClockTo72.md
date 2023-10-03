@@ -14,7 +14,7 @@ static void SetSysClockTo72(void)
 
   /* SYSCLK, HCLK, PCLK2 and PCLK1 configuration ---------------------------*/
   /* Enable HSE */
-  RCC->CR |= ((uint32_t)RCC_CR_HSEON);
+  RCC->CR |= ((uint32_t)RCC_CR_HSEON);    /* 外部高速时钟使能 (External high-speed clock enable) */
 
   /* Wait till HSE is ready and if Time out is reached exit */
   do
