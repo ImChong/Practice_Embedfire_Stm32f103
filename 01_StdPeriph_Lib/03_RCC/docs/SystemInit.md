@@ -14,7 +14,7 @@ static void SetSysClockTo72(void)
 
   /* SYSCLK, HCLK, PCLK2 and PCLK1 configuration ---------------------------*/
   /* Enable | 使能 HSE */
-  RCC->CR |= ((uint32_t)RCC_CR_HSEON);      /* 外部高速时钟使能 (External high-speed clock enable) */
+  RCC->CR |= ((uint32_t)RCC_CR_HSEON);             /* 外部高速时钟使能 (External high-speed clock enable) */
 
   /* Wait till HSE is ready and if Time out is reached exit | 等待 HSE 就绪并做超时处理 */
   do
@@ -23,32 +23,32 @@ static void SetSysClockTo72(void)
     StartUpCounter++;
   } while((HSEStatus == 0) && (StartUpCounter != HSE_STARTUP_TIMEOUT));
 
-  if ((RCC->CR & RCC_CR_HSERDY) != RESET)   /* RESET = 0 */
+  if ((RCC->CR & RCC_CR_HSERDY) != RESET)           /* RESET = 0 */
   {
-    HSEStatus = (uint32_t)0x01;             /* HSE 启动正常 */
+    HSEStatus = (uint32_t)0x01;                     /* HSE 启动正常 */
   }
   else
   {
-    HSEStatus = (uint32_t)0x00;             /* HSE 启动异常 */
+    HSEStatus = (uint32_t)0x00;                     /* HSE 启动异常 */
   }
 
-  if (HSEStatus == (uint32_t)0x01)          /* 如果 HSE 启动成功，程序则继续往下执行 */
+  if (HSEStatus == (uint32_t)0x01)                  /* 如果 HSE 启动成功，程序则继续往下执行 */
   {
     /* Enable Prefetch Buffer | 使能预取址缓冲区 */
-    FLASH->ACR |= FLASH_ACR_PRFTBE;         /* 0x4002 2000 闪存存储器接口 */
+    FLASH->ACR |= FLASH_ACR_PRFTBE;                /* 0x4002 2000 闪存存储器接口 */
 
-    /* Flash 2 wait state */                /* 两个等待状态，当 48MHz < SYSCLK ≤ 72MHz | 国产GD32声称无需等待时间 */
+    /* Flash 2 wait state */                        /* 两个等待状态，当 48MHz < SYSCLK ≤ 72MHz | 国产GD32声称无需等待时间 */
     FLASH->ACR &= (uint32_t)((uint32_t)~FLASH_ACR_LATENCY);
     FLASH->ACR |= (uint32_t)FLASH_ACR_LATENCY_2;
 
     /* HCLK = SYSCLK */
-    RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1;
+    RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1;      /* AHB 最大时钟等于系统时钟 72 MHz */
 
     /* PCLK2 = HCLK */
-    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;
+    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;     /* APB2 */
 
     /* PCLK1 = HCLK */
-    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;
+    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;     /* APB1
 
     /*  PLL configuration: PLLCLK = HSE * 9 = 72 MHz */
     RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLXTPRE |
