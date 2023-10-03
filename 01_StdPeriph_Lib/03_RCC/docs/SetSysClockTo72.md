@@ -13,10 +13,10 @@ static void SetSysClockTo72(void)
   __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
 
   /* SYSCLK, HCLK, PCLK2 and PCLK1 configuration ---------------------------*/
-  /* Enable 使能 HSE */
+  /* Enable | 使能 HSE */
   RCC->CR |= ((uint32_t)RCC_CR_HSEON);    /* 外部高速时钟使能 (External high-speed clock enable) */
 
-  /* Wait till HSE is ready and if Time out is reached exit */
+  /* Wait till HSE is ready and if Time out is reached exit | 等待 HSE 就绪并做超时处理 */
   do
   {
     HSEStatus = RCC->CR & RCC_CR_HSERDY;
