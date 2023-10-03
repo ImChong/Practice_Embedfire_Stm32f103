@@ -37,7 +37,7 @@ static void SetSysClockTo72(void)
     /* Enable Prefetch Buffer | 使能预取缓冲区 */
     FLASH->ACR |= FLASH_ACR_PRFTBE;         /* 0x4002 2000 闪存存储器接口 */
 
-    /* Flash 2 wait state */
+    /* Flash 2 wait state */                /* 两个等待状态，当 48MHz < SYSCLK ≤ 72MHz */
     FLASH->ACR &= (uint32_t)((uint32_t)~FLASH_ACR_LATENCY);
     FLASH->ACR |= (uint32_t)FLASH_ACR_LATENCY_2;
 
