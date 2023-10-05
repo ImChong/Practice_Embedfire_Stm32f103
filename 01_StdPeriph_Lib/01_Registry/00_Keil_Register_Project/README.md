@@ -1,6 +1,6 @@
 # Folder Structure
 
-```
+```shell
 .
 │  Embedfire_F103.uvguix.29142          /* 包含了 GUI 的个性化设置，这是最不重要的，也是最容易更改的 */
 │  Embedfire_F103.uvoptx                /* 包含了更多个性化和可选的项目设置，主要用于调试 */
