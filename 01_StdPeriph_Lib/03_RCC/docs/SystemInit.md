@@ -42,13 +42,13 @@ static void SetSysClockTo72(void)
     FLASH->ACR |= (uint32_t)FLASH_ACR_LATENCY_2;
 
     /* HCLK = SYSCLK */
-    RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1;      /* AHB 最大时钟等于系统时钟 72 MHz */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1;      /*  AHB prescaler: AHB 最大时钟等于系统时钟 72 MHz */
 
     /* PCLK2 = HCLK */
-    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;     /* APB2 */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;     /* APB high-speed prescaler (APB2) */
 
     /* PCLK1 = HCLK */
-    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;     /* APB1 */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;     /* APB low-speed prescaler (APB1) */
 
     /*  PLL configuration: PLLCLK = HSE * 9 = 72 MHz */
     RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLXTPRE |
