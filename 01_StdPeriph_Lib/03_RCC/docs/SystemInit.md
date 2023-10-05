@@ -60,16 +60,16 @@ static void SetSysClockTo72(void)
     RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_HSE | RCC_CFGR_PLLMULL9);
 
     /* Enable PLL */
-    RCC->CR |= RCC_CR_PLLON;                        /* PLL 使能 */
+    RCC->CR |= RCC_CR_PLLON;                                  /* PLL 使能 */
 
     /* Wait till PLL is ready */
-    while((RCC->CR & RCC_CR_PLLRDY) == 0)           /* 等待 PLL 时钟就绪标志 (PLL clock ready flag) */
+    while((RCC->CR & RCC_CR_PLLRDY) == 0)                     /* 等待 PLL 时钟就绪标志 (PLL clock ready flag) */
     {
     }
 
     /* Select PLL as system clock source */
     RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));        /* 清空 RCC_CFGR 的 SW 位 */
-    RCC->CFGR |= (uint32_t)RCC_CFGR_SW_PLL;         /* PLL 作为系统时钟源 */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_SW_PLL;                   /* PLL 作为系统时钟源 */
 
     /* Wait till PLL is used as system clock source */
     while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS) != (uint32_t)0x08)      /* 等待 PLL 作为系统时钟源标志。系统时钟切换状态 (System clock switch status) */
