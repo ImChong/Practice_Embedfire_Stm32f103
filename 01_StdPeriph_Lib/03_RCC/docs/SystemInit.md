@@ -45,7 +45,7 @@ static void SetSysClockTo72(void)
     RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1;      /* AHB prescaler: AHB 最大时钟等于系统时钟 72 MHz */
 
     /* PCLK2 = HCLK */
-    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;     /* APB high-speed prescaler (APB2) */
+    RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;     /* APB high-speed prescaler (APB2): APB2 最大时钟等于系统时钟 72 MHz */
 
     /* PCLK1 = HCLK */
     RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;     /* APB low-speed prescaler (APB1) */
