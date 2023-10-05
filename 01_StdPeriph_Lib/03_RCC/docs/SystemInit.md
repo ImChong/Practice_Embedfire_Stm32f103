@@ -59,7 +59,7 @@ static void SetSysClockTo72(void)
     RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_HSE | RCC_CFGR_PLLMULL9);
 
     /* Enable PLL */
-    RCC->CR |= RCC_CR_PLLON;
+    RCC->CR |= RCC_CR_PLLON;                        /* PLL 使能 */
 
     /* Wait till PLL is ready */
     while((RCC->CR & RCC_CR_PLLRDY) == 0)
