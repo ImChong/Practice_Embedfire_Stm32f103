@@ -53,7 +53,8 @@ static void SetSysClockTo72(void)
     /* PCLK1 = HCLK / 2 */
     RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;     /* APB low-speed prescaler (APB1): APB1 最大时钟等于系统时钟的1/2 36 MHz */
 
-    /*  PLL configuration: PLLCLK = HSE * 9 = 72 MHz */
+    /* PLL (Phase-Locked Loop) */
+    /* PLL configuration: PLLCLK = HSE * 9 = 72 MHz */
     RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLXTPRE |
                                         RCC_CFGR_PLLMULL));   /* 清空 RCC_CFGR 的 PLLSRC，PLLXTPRE 和 PLLMULL 位 */
     RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_HSE | RCC_CFGR_PLLMULL9);
