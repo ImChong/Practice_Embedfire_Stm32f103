@@ -125,37 +125,37 @@ void SystemInit (void)
 {
   /* Reset the RCC clock configuration to the default reset state(for debug purpose) */
   /* Set HSION bit */
-  RCC->CR |= (uint32_t)0x00000001;
+  RCC->CR |= (uint32_t)0x00000001;          /* 使能内部高速时钟 (Internal high-speed clock enable) */
 
   /* Reset SW, HPRE, PPRE1, PPRE2, ADCPRE and MCO bits */
-  RCC->CFGR &= (uint32_t)0xF0FF0000;
+  RCC->CFGR &= (uint32_t)0xF0FF0000;        /* 清空 RCC_CFGR 的 SW，HPRE，PPRE1，PPRE2，ADCPRE 和 MCO 位 */
 
   /* Reset HSEON, CSSON and PLLON bits */
-  RCC->CR &= (uint32_t)0xFEF6FFFF;
+  RCC->CR &= (uint32_t)0xFEF6FFFF;          /* 清空 RCC_CR 的 HSEON，CSSON 和 PLLON 位 */
 
   /* Reset HSEBYP bit */
-  RCC->CR &= (uint32_t)0xFFFBFFFF;
+  RCC->CR &= (uint32_t)0xFFFBFFFF;          /* 清空 RCC_CR 的 HSEBYP 位 */
 
   /* Reset PLLSRC, PLLXTPRE, PLLMUL and USBPRE/OTGFSPRE bits */
-  RCC->CFGR &= (uint32_t)0xFF80FFFF;
+  RCC->CFGR &= (uint32_t)0xFF80FFFF;        /* 清空 RCC_CFGR 的 PLLSRC，PLLXTPRE，PLLMUL 和 USBPRE/OTGFSPRE 位 */
 
   /* Disable all interrupts and clear pending bits  */
-  RCC->CIR = 0x009F0000;
+  RCC->CIR = 0x009F0000;                    /* 禁止所有中断并清空挂起位 (Disable all interrupts and clear pending bits) */
 
 #if defined (STM32F10X_HD) || (defined STM32F10X_XL) || (defined STM32F10X_HD_VL)
   #ifdef DATA_IN_ExtSRAM
-    SystemInit_ExtMemCtl();
+    SystemInit_ExtMemCtl();                 /* 外部存储器控制器初始化 (External Memory Controller) */
   #endif /* DATA_IN_ExtSRAM */
 #endif
 
   /* Configure the System clock frequency, HCLK, PCLK2 and PCLK1 prescalers */
   /* Configure the Flash Latency cycles and enable prefetch buffer */
-  SetSysClock();
+  SetSysClock();                            /* 设置系统时钟频率，HCLK，PCLK2 和 PCLK1 预分频器。设置闪存延迟周期并使能预取缓冲区 */
 
 #ifdef VECT_TAB_SRAM
-  SCB->VTOR = SRAM_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal SRAM. */
+  SCB->VTOR = SRAM_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal SRAM. */  /* 向量表重定位到内部 SRAM */
 #else
-  SCB->VTOR = FLASH_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal FLASH. */
+  SCB->VTOR = FLASH_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal FLASH. */  /* 向量表重定位到内部 FLASH */
 #endif
 }
 ```
