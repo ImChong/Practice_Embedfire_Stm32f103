@@ -41,13 +41,16 @@ static void SetSysClockTo72(void)
     FLASH->ACR &= (uint32_t)((uint32_t)~FLASH_ACR_LATENCY);
     FLASH->ACR |= (uint32_t)FLASH_ACR_LATENCY_2;
 
+    /* AHB (Advanced High performance Bus) */
     /* HCLK = SYSCLK */
     RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1;      /* AHB prescaler: AHB 最大时钟等于系统时钟 72 MHz */
 
+    /* APB2 (Advanced Peripheral Bus 2) */
     /* PCLK2 = HCLK */
     RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;     /* APB high-speed prescaler (APB2): APB2 最大时钟等于系统时钟 72 MHz */
 
-    /* PCLK1 = HCLK */
+    /* APB1 (Advanced Peripheral Bus 1) */
+    /* PCLK1 = HCLK / 2 */
     RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;     /* APB low-speed prescaler (APB1): APB1 最大时钟等于系统时钟的1/2 36 MHz */
 
     /*  PLL configuration: PLLCLK = HSE * 9 = 72 MHz */
