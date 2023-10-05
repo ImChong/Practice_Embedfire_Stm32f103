@@ -1,3 +1,3 @@
-# STM32F103 RCC开发练习
+# STM32F103 EXTI开发练习
 
-此文件夹内为 STM32F103 RCC开发练习
+此文件夹内为 STM32F103 EXTI开发练习
