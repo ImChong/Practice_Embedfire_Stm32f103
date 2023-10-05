@@ -5,7 +5,7 @@
   - [1.2. HSE振荡器时钟](#12-hse振荡器时钟)
   - [1.3. 时钟倍频](#13-时钟倍频)
   - [1.4. PLL时钟 (Phase-Locked Loop)](#14-pll时钟-phase-locked-loop)
-  - [SCB (System Control Block)](#scb-system-control-block)
+  - [1.5. SCB (System Control Block)](#15-scb-system-control-block)
 
 ## 1.1. HSI振荡器时钟
 
@@ -44,7 +44,7 @@
 >
 > 在微控制器和其他数字系统中，PLL 经常被用来产生高于其基础时钟源的时钟速度。例如，如果您有一个8 MHz的晶体振荡器，使用PLL，您可能能够产生32 MHz、48 MHz、72 MHz甚至更高的时钟频率，这取决于特定微控制器的能力和配置。
 
-## SCB (System Control Block)
+## 1.5. SCB (System Control Block)
 
 > 在嵌入式领域，特别是针对ARM Cortex-M系列微控制器，**SCB** 代表 **System Control Block**。
 >
