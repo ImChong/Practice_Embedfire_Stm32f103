@@ -54,7 +54,7 @@
 │      │      stm32f10x_pwr.h                       # 电源
 │      │      stm32f10x_rcc.h                       # RCC (Reset and Clock Control)：时钟树 - 控制系统时钟和复位
 │      │      stm32f10x_rtc.h                       # RTC (Real-Time Clock)：实时时钟
-│      │      stm32f10x_sdio.h                      # SDIO：SD 卡
+│      │      stm32f10x_sdio.h                      # SDIO (Secure Digital Input/Output)：一种基于SD卡的扩展接口
 │      │      stm32f10x_spi.h                       # SPI
 │      │      stm32f10x_tim.h                       # TIM
 │      │      stm32f10x_usart.h                     # USART
