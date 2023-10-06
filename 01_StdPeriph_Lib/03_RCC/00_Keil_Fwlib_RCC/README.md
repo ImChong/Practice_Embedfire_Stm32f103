@@ -48,7 +48,7 @@
 │      │      stm32f10x_exti.h                      # 外部中断
 │      │      stm32f10x_flash.h                     # FLASH：内部 FLASH
 │      │      stm32f10x_fsmc.h                      # FSMC (Flexible Static Memory Controller)：外部 SRAM/NOR FLASH
-│      │      stm32f10x_gpio.h                      # GPIO：通用输入输出
+│      │      stm32f10x_gpio.h                      # GPIO (General Purpose Input/Output)：通用输入输出
 │      │      stm32f10x_i2c.h                       # I2C
 │      │      stm32f10x_iwdg.h                      # 独立看门狗
 │      │      stm32f10x_pwr.h                       # 电源
