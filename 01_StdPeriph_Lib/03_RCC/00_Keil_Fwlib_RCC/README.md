@@ -3,30 +3,30 @@
 使用固件库操作的项目模板
 
 ```shell
-.
-│  keilkill.bat
-│  README.md
+.                                           # 项目根目录
+│  keilkill.bat                                 # 清除 keil 生成的中间文件
+│  README.md                                    # 本说明文件
 │
-├─.vscode
-│      c_cpp_properties.json
-│      keil-assistant.log
-│      uv4.log
-│      uv4.log.lock
+├─.vscode                                   # VSCode 配置文件夹
+│      c_cpp_properties.json                    # VSCode C/C++ 配置文件
+│      keil-assistant.log                       # Keil Assistant 日志文件
+│      uv4.log                                  # Keil 编译日志文件
+│      uv4.log.lock                             # Keil 编译日志文件锁
 │
-├─Doc
-│      README.md
+├─Doc                                       # 文档
+│      README.md                                # 项目文档
 │
 ├─Libraries
-│  ├─CMSIS
-│  │  │  core_cm3.c
-│  │  │  core_cm3.h
-│  │  │  stm32f10x.h
-│  │  │  system_stm32f10x.c
-│  │  │  system_stm32f10x.h
+│  ├─CMSIS                                  # CMSIS 标准库
+│  │  │  core_cm3.c                             # CMSIS 核心库
+│  │  │  core_cm3.h                             # CMSIS 核心库头文件
+│  │  │  stm32f10x.h                            # stm32f103 的头文件：包含各寄存器的地址
+│  │  │  system_stm32f10x.c                     # 系统初始化文件
+│  │  │  system_stm32f10x.h                     # 系统初始化文件头文件
 │  │  │
-│  │  └─startup
+│  │  └─startup                             # 启动文件
 │  │          startup_stm32f10x_cl.s
-│  │          startup_stm32f10x_hd.s
+│  │          startup_stm32f10x_hd.s            # 本项目使用
 │  │          startup_stm32f10x_hd_vl.s
 │  │          startup_stm32f10x_ld.s
 │  │          startup_stm32f10x_ld_vl.s
