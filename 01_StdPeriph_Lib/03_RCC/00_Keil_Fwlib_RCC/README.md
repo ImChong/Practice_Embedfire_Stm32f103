@@ -49,16 +49,16 @@
 │      │      stm32f10x_flash.h                     # FLASH：内部 FLASH
 │      │      stm32f10x_fsmc.h                      # FSMC (Flexible Static Memory Controller)：外部 SRAM/NOR FLASH
 │      │      stm32f10x_gpio.h                      # GPIO (General Purpose Input/Output)：通用输入输出
-│      │      stm32f10x_i2c.h                       # I2C
-│      │      stm32f10x_iwdg.h                      # 独立看门狗
+│      │      stm32f10x_i2c.h                       # I2C (Inter-Integrated Circuit)：串行总线
+│      │      stm32f10x_iwdg.h                      # 独立看门狗 (Independent Watchdog)：定时计数器
 │      │      stm32f10x_pwr.h                       # 电源
-│      │      stm32f10x_rcc.h                       # RCC：时钟树
+│      │      stm32f10x_rcc.h                       # RCC (Reset and Clock Control)：时钟树
 │      │      stm32f10x_rtc.h                       # RTC：实时时钟
 │      │      stm32f10x_sdio.h                      # SDIO：SD 卡
 │      │      stm32f10x_spi.h                       # SPI
 │      │      stm32f10x_tim.h                       # TIM
-│      │      stm32f10x_usart.h
-│      │      stm32f10x_wwdg.h
+│      │      stm32f10x_usart.h                     # USART
+│      │      stm32f10x_wwdg.h                      # 窗口看门狗 (Window Watchdog)：时间窗口
 │      │
 │      └─src                                    # 源文件
 │              misc.c
