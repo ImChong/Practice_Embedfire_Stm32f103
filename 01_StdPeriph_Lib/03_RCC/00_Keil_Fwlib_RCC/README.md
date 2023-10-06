@@ -37,7 +37,7 @@
 │  └─STM32F10x_StdPeriph_Driver             # STM32F10x 标准外设库
 │      ├─inc                                    # 头文件
 │      │      misc.h                                # 杂项
-│      │      stm32f10x_adc.h                       # ADC
+│      │      stm32f10x_adc.h                       # ADC (Analog-to-Digital Converter)：将模拟信号转换为数字信号
 │      │      stm32f10x_bkp.h                       # 备份寄存器
 │      │      stm32f10x_can.h                       # CAN (Controller Area Network)：CAN 控制器
 │      │      stm32f10x_cec.h                       # CEC (Consumer Electronics Control)：消费电子控制
@@ -53,7 +53,7 @@
 │      │      stm32f10x_iwdg.h                      # 独立看门狗 (Independent Watchdog)：定时计数器
 │      │      stm32f10x_pwr.h                       # 电源
 │      │      stm32f10x_rcc.h                       # RCC (Reset and Clock Control)：时钟树 - 控制系统时钟和复位
-│      │      stm32f10x_rtc.h                       # RTC：实时时钟
+│      │      stm32f10x_rtc.h                       # RTC (Real-Time Clock)：实时时钟
 │      │      stm32f10x_sdio.h                      # SDIO：SD 卡
 │      │      stm32f10x_spi.h                       # SPI
 │      │      stm32f10x_tim.h                       # TIM
