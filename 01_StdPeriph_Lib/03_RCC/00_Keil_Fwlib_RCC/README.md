@@ -34,33 +34,33 @@
 │  │          startup_stm32f10x_md_vl.s
 │  │          startup_stm32f10x_xl.s
 │  │
-│  └─STM32F10x_StdPeriph_Driver
-│      ├─inc
-│      │      misc.h
-│      │      stm32f10x_adc.h
-│      │      stm32f10x_bkp.h
-│      │      stm32f10x_can.h
-│      │      stm32f10x_cec.h
-│      │      stm32f10x_crc.h
-│      │      stm32f10x_dac.h
-│      │      stm32f10x_dbgmcu.h
-│      │      stm32f10x_dma.h
-│      │      stm32f10x_exti.h
-│      │      stm32f10x_flash.h
-│      │      stm32f10x_fsmc.h
-│      │      stm32f10x_gpio.h
-│      │      stm32f10x_i2c.h
-│      │      stm32f10x_iwdg.h
-│      │      stm32f10x_pwr.h
-│      │      stm32f10x_rcc.h
-│      │      stm32f10x_rtc.h
-│      │      stm32f10x_sdio.h
-│      │      stm32f10x_spi.h
-│      │      stm32f10x_tim.h
+│  └─STM32F10x_StdPeriph_Driver             # STM32F10x 标准外设库
+│      ├─inc                                    # 头文件
+│      │      misc.h                                # 杂项
+│      │      stm32f10x_adc.h                       # ADC
+│      │      stm32f10x_bkp.h                       # 备份寄存器
+│      │      stm32f10x_can.h                       # CAN (Controller Area Network)：CAN 控制器
+│      │      stm32f10x_cec.h                       # CEC (Consumer Electronics Control)：消费电子控制
+│      │      stm32f10x_crc.h                       # CRC (Cyclic Redundancy Check)：循环冗余校验
+│      │      stm32f10x_dac.h                       # DAC (Digital-to-Analog Converter)：数模转换器
+│      │      stm32f10x_dbgmcu.h                    # 调试
+│      │      stm32f10x_dma.h                       # DMA (Direct Memory Access)：直接存储器访问控制器
+│      │      stm32f10x_exti.h                      # 外部中断
+│      │      stm32f10x_flash.h                     # FLASH：内部 FLASH
+│      │      stm32f10x_fsmc.h                      # FSMC (Flexible Static Memory Controller)：外部 SRAM/NOR FLASH
+│      │      stm32f10x_gpio.h                      # GPIO：通用输入输出
+│      │      stm32f10x_i2c.h                       # I2C
+│      │      stm32f10x_iwdg.h                      # 独立看门狗
+│      │      stm32f10x_pwr.h                       # 电源
+│      │      stm32f10x_rcc.h                       # RCC：时钟树
+│      │      stm32f10x_rtc.h                       # RTC：实时时钟
+│      │      stm32f10x_sdio.h                      # SDIO：SD 卡
+│      │      stm32f10x_spi.h                       # SPI
+│      │      stm32f10x_tim.h                       # TIM
 │      │      stm32f10x_usart.h
 │      │      stm32f10x_wwdg.h
 │      │
-│      └─src
+│      └─src                                    # 源文件
 │              misc.c
 │              stm32f10x_adc.c
 │              stm32f10x_bkp.c
