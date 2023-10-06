@@ -22,7 +22,7 @@
   </DaveTm>
 
   <Target>
-    <TargetName>Fwlib_Template</TargetName>
+    <TargetName>Fwlib_Template_Rcc_Overclock</TargetName>
     <ToolsetNumber>0x4</ToolsetNumber>
     <ToolsetName>ARM-ADS</ToolsetName>
     <TargetOption>
