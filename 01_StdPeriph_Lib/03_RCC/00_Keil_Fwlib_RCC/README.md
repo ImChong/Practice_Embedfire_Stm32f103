@@ -38,7 +38,7 @@
 │      ├─inc                                    # 头文件
 │      │      misc.h                                # 杂项
 │      │      stm32f10x_adc.h                       # ADC (Analog-to-Digital Converter)：将模拟信号转换为数字信号
-│      │      stm32f10x_bkp.h                       # BKP (Backup Registers)：备份寄存器
+│      │      stm32f10x_bkp.h                       # BKP (Backup Registers)：备份寄存器 - 提供备份寄存器和备份电源
 │      │      stm32f10x_can.h                       # CAN (Controller Area Network)：CAN 控制器
 │      │      stm32f10x_cec.h                       # CEC (Consumer Electronics Control)：消费电子控制
 │      │      stm32f10x_crc.h                       # CRC (Cyclic Redundancy Check)：循环冗余校验
@@ -103,11 +103,11 @@
     │  stm32f10x_it.c                               # 中断服务函数
     │  stm32f10x_it.h                               # 中断服务函数头文件
     │
-    ├─Led
-    │      bsp_led.c
-    │      bsp_led.h
+    ├─Led                                           # LED 应用
+    │      bsp_led.c                                    # Board Support Package - LED 应用
+    │      bsp_led.h                                    # Board Support Package - LED 应用头文件
     │
-    └─RCC
-            bsp_rccClkCfg.c
-            bsp_rccClkCfg.h
+    └─RCC                                           # RCC 应用
+            bsp_rccClkCfg.c                             # Board Support Package - RCC 应用
+            bsp_rccClkCfg.h                             # Board Support Package - RCC 应用头文件
 ```
