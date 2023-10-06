@@ -38,7 +38,7 @@
 │      ├─inc                                    # 头文件
 │      │      misc.h                                # 杂项
 │      │      stm32f10x_adc.h                       # ADC (Analog-to-Digital Converter)：将模拟信号转换为数字信号
-│      │      stm32f10x_bkp.h                       # 备份寄存器
+│      │      stm32f10x_bkp.h                       # BKP (Backup Registers)：备份寄存器
 │      │      stm32f10x_can.h                       # CAN (Controller Area Network)：CAN 控制器
 │      │      stm32f10x_cec.h                       # CEC (Consumer Electronics Control)：消费电子控制
 │      │      stm32f10x_crc.h                       # CRC (Cyclic Redundancy Check)：循环冗余校验
@@ -49,15 +49,15 @@
 │      │      stm32f10x_flash.h                     # FLASH：内部 FLASH
 │      │      stm32f10x_fsmc.h                      # FSMC (Flexible Static Memory Controller)：外部 SRAM/NOR FLASH
 │      │      stm32f10x_gpio.h                      # GPIO (General Purpose Input/Output)：通用输入输出
-│      │      stm32f10x_i2c.h                       # I2C (Inter-Integrated Circuit)：串行总线
+│      │      stm32f10x_i2c.h                       # I2C (Inter-Integrated Circuit)：一种串行通信协议 - I2C协议使用两根信号线（时钟线SCL和数据线SDA）进行通信
 │      │      stm32f10x_iwdg.h                      # 独立看门狗 (Independent Watchdog)：定时计数器
 │      │      stm32f10x_pwr.h                       # 电源
 │      │      stm32f10x_rcc.h                       # RCC (Reset and Clock Control)：时钟树 - 控制系统时钟和复位
 │      │      stm32f10x_rtc.h                       # RTC (Real-Time Clock)：实时时钟
 │      │      stm32f10x_sdio.h                      # SDIO (Secure Digital Input/Output)：一种基于SD卡的扩展接口
-│      │      stm32f10x_spi.h                       # SPI
-│      │      stm32f10x_tim.h                       # TIM
-│      │      stm32f10x_usart.h                     # USART
+│      │      stm32f10x_spi.h                       # SPI (Serial Peripheral Interface)：一种串行通信协议 - SPI协议使用四根信号线（时钟线SCK、数据线MOSI、数据线MISO和片选线CS）进行通信
+│      │      stm32f10x_tim.h                       # TIM (Timer)：定时器
+│      │      stm32f10x_usart.h                     # USART (Universal Synchronous/Asynchronous Receiver/Transmitter)：一种串行通信协议 - 通用同步/异步串行接收/发送器 - USART协议使用两根或四根信号线进行通信
 │      │      stm32f10x_wwdg.h                      # 窗口看门狗 (Window Watchdog)：时间窗口
 │      │
 │      └─src                                    # 源文件
@@ -85,24 +85,23 @@
 │              stm32f10x_usart.c
 │              stm32f10x_wwdg.c
 │
-├─Project
-│  │  Embedfire_F103_Fwlib_Template.uvguix.29142
-│  │  Embedfire_F103_Fwlib_Template.uvoptx
-│  │  Embedfire_F103_Fwlib_Template.uvprojx
+├─Project                                       # Keil 工程文件夹
+│  │  Embedfire_F103_Fwlib_Template.uvoptx          # Keil 工程文件选项
+│  │  Embedfire_F103_Fwlib_Template.uvprojx         # Keil 工程文件
 │  │
 │  ├─DebugConfig
 │  │      Fwlib_Template_Rcc_Overclock_STM32F103VE_1.0.0.dbgconf
 │  │      Fwlib_Template_STM32F103VE_1.0.0.dbgconf
 │  │
-│  ├─Listings
-│  └─Objects
-│          Embedfire_F103_Fwlib_Template.hex
+│  ├─Listings                                       # Keil 编译生成的中间文件
+│  └─Objects                                        # Keil 编译生成的中间文件
+│          Embedfire_F103_Fwlib_Template.hex            # Keil 编译生成的烧录文件
 │
-└─User
-    │  main.c
-    │  stm32f10x_conf.h
-    │  stm32f10x_it.c
-    │  stm32f10x_it.h
+└─User                                          # 用户代码
+    │  main.c                                       # 主函数
+    │  stm32f10x_conf.h                             # 用户配置文件
+    │  stm32f10x_it.c                               # 中断服务函数
+    │  stm32f10x_it.h                               # 中断服务函数头文件
     │
     ├─Led
     │      bsp_led.c
