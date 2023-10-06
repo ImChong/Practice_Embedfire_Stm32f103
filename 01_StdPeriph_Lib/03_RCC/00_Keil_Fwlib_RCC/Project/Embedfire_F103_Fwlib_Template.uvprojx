@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_HD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User</IncludePath>
+              <IncludePath>..\Libraries\CMSIS;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\User;..\User\RCC;..\User\Led</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -419,15 +419,25 @@
               <FileType>1</FileType>
               <FilePath>..\User\stm32f10x_it.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_rccClkCfg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\RCC\bsp_rccClkCfg.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Led\bsp_led.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>DOC</GroupName>
           <Files>
             <File>
-              <FileName>readme.txt</FileName>
+              <FileName>README.md</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Doc\readme.txt</FilePath>
+              <FilePath>..\Doc\README.md</FilePath>
             </File>
           </Files>
         </Group>

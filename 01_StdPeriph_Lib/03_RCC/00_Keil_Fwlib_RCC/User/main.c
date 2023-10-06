@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \02_Keil_Fwlib_Template\User\main.c
+ * @FilePath     : \03_RCC\00_Keil_Fwlib_RCC\User\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 18:54:41
+ * @LastEditTime : 2023-10-06 23:19:36
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
