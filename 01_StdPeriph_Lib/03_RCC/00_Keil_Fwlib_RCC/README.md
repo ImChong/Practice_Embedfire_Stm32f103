@@ -52,7 +52,7 @@
 │      │      stm32f10x_i2c.h                       # I2C (Inter-Integrated Circuit)：串行总线
 │      │      stm32f10x_iwdg.h                      # 独立看门狗 (Independent Watchdog)：定时计数器
 │      │      stm32f10x_pwr.h                       # 电源
-│      │      stm32f10x_rcc.h                       # RCC (Reset and Clock Control)：时钟树
+│      │      stm32f10x_rcc.h                       # RCC (Reset and Clock Control)：时钟树 - 控制系统时钟和复位
 │      │      stm32f10x_rtc.h                       # RTC：实时时钟
 │      │      stm32f10x_sdio.h                      # SDIO：SD 卡
 │      │      stm32f10x_spi.h                       # SPI
