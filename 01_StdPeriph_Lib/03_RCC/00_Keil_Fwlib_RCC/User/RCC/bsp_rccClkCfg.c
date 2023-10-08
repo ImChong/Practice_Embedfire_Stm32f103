@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:11:00
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-08 12:04:56
+ * @LastEditTime : 2023-10-08 12:08:46
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -37,7 +37,8 @@ void HSE_SetSysClk(void) {
         RCC_PCLK2Config(RCC_HCLK_Div1);                         /* APB2 clock = HCLK = 72 MHz */
 
         /* RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_HSE | RCC_CFGR_PLLMULL9); */
-        RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9);
+        RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9);    /* PLLCLK = HSE (8 MHz) * 9 = 72 MHz */
+        RCC_PLLCmd(ENABLE);                                     /* PLL 使能 */
     } else {
         /* 如果 HSE 启动失败，用户可以在这里添加处理错误的代码 */
     }
