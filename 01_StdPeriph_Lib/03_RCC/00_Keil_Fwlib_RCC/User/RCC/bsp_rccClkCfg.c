@@ -14,7 +14,7 @@
 /**
  * @description: 配置系统时钟为 HSE - 外部高速时钟
  * =================================================================================
- * @param {uint32_t} RCC_PLLMul_x   specifies the PLL multiplication factor.
+ * @param {uint32_t} RCC_PLLMul_x   设置 PLL 倍频因子 - specifies the PLL multiplication factor.
  * @return {void}
  */
 void HSE_SetSysClk(uint32_t RCC_PLLMul_x) {
