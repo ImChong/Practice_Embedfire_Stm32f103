@@ -7,7 +7,7 @@
   - [1.4. 时钟倍频](#14-时钟倍频)
   - [1.5. PLL时钟 (Phase-Locked Loop)](#15-pll时钟-phase-locked-loop)
   - [1.6. SCB (System Control Block)](#16-scb-system-control-block)
-  - [预取指（Instruction Prefetch）](#预取指instruction-prefetch)
+  - [1.7. 预取指（Instruction Prefetch）](#17-预取指instruction-prefetch)
 
 ## 1.1. 时钟
 
@@ -83,7 +83,7 @@
 >
 > 总之，SCB 是 ARM Cortex-M 核的关键组件，它提供了处理中断、异常和系统配置的功能。
 
-## 预取指（Instruction Prefetch）
+## 1.7. 预取指（Instruction Prefetch）
 
 > 预取指（Instruction Prefetch）是一种用于提高处理器性能的技术。在该技术中，处理器预先从内存中获取下一条或多条指令，以便在执行当前指令时，下一条指令已经在处理器近处（例如：指令缓存或预取指队列）等待执行。这减少了由于等待从主内存获取指令而造成的延迟。
 >
