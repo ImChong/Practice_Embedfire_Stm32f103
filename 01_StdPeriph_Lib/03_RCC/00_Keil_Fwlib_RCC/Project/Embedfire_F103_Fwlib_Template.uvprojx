@@ -439,6 +439,16 @@
               <FileType>5</FileType>
               <FilePath>..\Doc\README.md</FilePath>
             </File>
+            <File>
+              <FileName>SystemInit.md</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Doc\SystemInit.md</FilePath>
+            </File>
+            <File>
+              <FileName>Vocabularies.md</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Doc\Vocabularies.md</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
