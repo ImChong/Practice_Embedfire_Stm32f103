@@ -16,7 +16,7 @@
 	// 	"description": "Log output to console"
 	// }
 	"ifndef": {
-		"prefix": "ifndef",
+		"prefix": "#ifndef",
 		"body": [
 			"#ifndef ${1:label}",
 			"#define ${1:label}",
