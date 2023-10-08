@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:11:00
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-08 11:28:46
+ * @LastEditTime : 2023-10-08 11:31:05
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -16,6 +16,6 @@
  * =================================================================================
  * @return {void}
  */
-void HSE_SetSysClk() {
+void HSE_SetSysClk(void) {
     RCC_HSEConfig(RCC_HSE_ON);      /* 使能 HSE - 外部高速时钟 */
 }
