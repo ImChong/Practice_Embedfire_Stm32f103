@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:11:00
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-08 11:53:45
+ * @LastEditTime : 2023-10-08 11:55:21
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -30,11 +30,11 @@ void HSE_SetSysClk(void) {
         FLASH_SetLatency(FLASH_Latency_2);
 
         /* RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1; */
-        RCC_HCLKConfig(RCC_SYSCLK_Div1);
+        RCC_HCLKConfig(RCC_SYSCLK_Div1);                        /* AHB clock = SYSCLK = 72 MHz */
         /* RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2; */
-        RCC_PCLK1Config(RCC_HCLK_Div2);
+        RCC_PCLK1Config(RCC_HCLK_Div2);                         /* APB1 clock = HCLK/2 = 36 MHz */
         /* RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1; */
-        RCC_PCLK2Config(RCC_HCLK_Div1);
+        RCC_PCLK2Config(RCC_HCLK_Div1);                         /* APB2 clock = HCLK = 72 MHz */
     } else {
         /* 如果 HSE 启动失败，用户可以在这里添加处理错误的代码 */
     }
