@@ -3,11 +3,11 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:11:00
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-08 12:27:51
+ * @LastEditTime : 2023-10-08 22:15:13
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
- * @Description  :
+ * @Description  : BSP - Board Support Package: RCC 相关函数源文件
  */
 #include "bsp_rccClkCfg.h"
 
