@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:12:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-08 11:30:34
+ * @LastEditTime : 2023-10-08 12:12:19
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,6 +14,6 @@
 
 #include "stm32f10x.h"
 
-void HSE_SetSysClk(void);
+void HSE_SetSysClk(uint32_t RCC_PLLMul_x);
 
 #endif  /* __BSP_RCCCLKCFG_H */
