@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:11:00
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-08 12:14:53
+ * @LastEditTime : 2023-10-08 12:27:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -40,6 +40,11 @@ void HSE_SetSysClk(uint32_t RCC_PLLMul_x) {
         /* RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_HSE | RCC_CFGR_PLLMULL9); */
         RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_x);    /* PLLCLK = HSE (8 MHz) * 9 (修改为参数 RCC_PLLMul_x 实现自定义倍频) = 72 MHz */
         RCC_PLLCmd(ENABLE);                                     /* PLL 使能 */
+
+        /* while((RCC->CR & RCC_CR_PLLRDY) == 0) */
+        while (RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET) {}  /* 等待 PLL 时钟就绪标志 (PLL clock ready flag) */
+            /* RCC->CFGR |= (uint32_t)RCC_CFGR_SW_PLL; */
+            RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);          /* PLL 作为系统时钟源 */
     } else {
         /* 如果 HSE 启动失败，用户可以在这里添加处理错误的代码 */
     }
