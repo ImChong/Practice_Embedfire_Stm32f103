@@ -7,6 +7,7 @@
   - [1.4. 时钟倍频](#14-时钟倍频)
   - [1.5. PLL时钟 (Phase-Locked Loop)](#15-pll时钟-phase-locked-loop)
   - [1.6. SCB (System Control Block)](#16-scb-system-control-block)
+  - [预取指（Instruction Prefetch）](#预取指instruction-prefetch)
 
 ## 1.1. 时钟
 
@@ -81,3 +82,5 @@
 > SCB 通过特定的内存映射寄存器来进行访问和配置。在许多嵌入式软件开发环境中，已经提供了库和相关的数据结构来简化访问这些寄存器的过程。
 >
 > 总之，SCB 是 ARM Cortex-M 核的关键组件，它提供了处理中断、异常和系统配置的功能。
+
+## 预取指（Instruction Prefetch）
