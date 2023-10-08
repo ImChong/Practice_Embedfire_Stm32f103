@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:11:00
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-08 12:14:05
+ * @LastEditTime : 2023-10-08 12:14:53
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,6 +14,7 @@
 /**
  * @description: 配置系统时钟为 HSE - 外部高速时钟
  * =================================================================================
+ * @param {uint32_t} RCC_PLLMul_x   specifies the PLL multiplication factor.
  * @return {void}
  */
 void HSE_SetSysClk(uint32_t RCC_PLLMul_x) {
