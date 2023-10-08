@@ -10,3 +10,7 @@
  * @Description  :
  */
 #include "bsp_rccClkCfg.h"
+
+void HSE_SetSysClk() {
+
+}

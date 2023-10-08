@@ -14,5 +14,6 @@
 
 #include "stm32f10x.h"
 
+void HSE_SetSysClk();
 
 #endif  /* __BSP_RCCCLKCFG_H */
