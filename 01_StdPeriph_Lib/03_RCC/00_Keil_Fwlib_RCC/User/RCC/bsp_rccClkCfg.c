@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:11:00
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-08 11:45:20
+ * @LastEditTime : 2023-10-08 11:49:59
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -19,10 +19,13 @@
 void HSE_SetSysClk(void) {
     ErrorStatus HSEStatus;
 
+    /* RCC->CR |= ((uint32_t)RCC_CR_HSEON); */
     RCC_HSEConfig(RCC_HSE_ON);                                  /* 使能 HSE - 外部高速时钟 */
 
+    /* HSEStatus = RCC->CR & RCC_CR_HSERDY; */
     HSEStatus = RCC_WaitForHSEStartUp();
     if (HSEStatus == SUCCESS) {
+        /* FLASH->ACR */
         FLASH_PrefetchBufferCmd(FLASH_PrefetchBuffer_Enable);
         FLASH_SetLatency(FLASH_Latency_2);
     } else {
