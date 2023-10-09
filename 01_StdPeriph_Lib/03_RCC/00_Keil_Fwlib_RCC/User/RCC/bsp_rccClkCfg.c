@@ -18,6 +18,7 @@
  * @return {void}
  */
 void HSE_SetSysClk(uint32_t RCC_PLLMul_x) {
+    RCC_DeInit();                                               /* 把 RCC 寄存器复位成复位值 */
     ErrorStatus HSEStatus;
 
     /* 使能 HSE */

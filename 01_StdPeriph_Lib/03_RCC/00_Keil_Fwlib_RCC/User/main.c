@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-09 17:53:10
+ * @LastEditTime : 2023-10-09 18:53:03
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -31,7 +31,7 @@ void Delay(__IO uint32_t nCount) {
 int main(void)
 {
 	/* 来到这里的时候，系统的时钟已经被配置成72M。*/
-	RCC_DeInit();
+
 	HSE_SetSysClk(RCC_PLLMul_16);			/* 16 * 8 MHz = 128 MHz */
 	LED_GPIO_Config();
 
