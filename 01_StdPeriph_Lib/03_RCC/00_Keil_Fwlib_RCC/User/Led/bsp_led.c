@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-08 10:08:21
+ * @LastEditTime : 2023-10-09 17:55:26
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -24,4 +24,6 @@ void LED_GPIO_Config(void) {
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;                                /* 设置引脚的输出类型为推挽输出*/
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;                               /* 设置输出速率为 50MHZ */
     GPIO_Init(LED_GPIO, &GPIO_InitStructure);
+
+    GPIO_SetBits(LED_GPIO, LED_R_PIN_MSK | LED_G_PIN_MSK | LED_B_PIN_MSK);		    /* 使引脚输出高电平，关闭 LED */
 }
