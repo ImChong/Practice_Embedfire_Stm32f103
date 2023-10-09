@@ -19,6 +19,7 @@
   - [1.16. IROM 和 IRAM](#116-irom-和-iram)
   - [1.17. SRAM (Static Random-Access Memory)](#117-sram-static-random-access-memory)
   - [1.18. SDRAM (Synchronous Dynamic Random-Access Memory)](#118-sdram-synchronous-dynamic-random-access-memory)
+  - [1.19. CCMRAM (Core Coupled Memory RAM)](#119-ccmram-core-coupled-memory-ram)
 
 ## 1.1. 数据手册（Data Sheet）
 
@@ -211,3 +212,28 @@
 >   - 需要定期刷新，这会导致额外的延迟。
 >   - 访问速度较 SRAM 慢。
 > - **应用**: 由于其成本和密度的优势，SDRAM 通常用作主存储器（例如，在计算机和许多嵌入式系统中的主 RAM）。
+
+## 1.19. CCMRAM (Core Coupled Memory RAM)
+
+> CCMRAM(Core Coupled Memory RAM)是Arm Cortex-M系列MCU中的一种特殊的高速内存。
+>
+> 其主要特征是:
+>
+> - 与核心(Core)通过总线紧密相连(Coupled),速度很快
+> - 容量较小,通常几十KB到几百KB
+> - 用于存放关键程序和数据,提高访问速度
+>
+> CCMRAM的优点包括:
+>
+> - 零等待状态访问,速度快,通常与CPU同频运行
+> - 提高实时性和确定性,用于存放实时任务
+> - 降低功耗,内核可以直接访问CCMRAM,无需通过总线
+>
+> CCMRAM常见的使用场景:
+>
+> - 存放实时操作系统的核心代码和关键数据结构
+> - 频繁访问的程序代码,如中断服务例程
+> - 需要低延迟存取的变量,如PID控制的中间变量
+> - 缓存CPU与其他内存之间的高速数据交换
+>
+> 总而言之,CCMRAM是MCU中一块关键的高速内存,通过与内核紧密集成提升实时性和性能。正确利用CCMRAM可以优化系统的性能指标。
