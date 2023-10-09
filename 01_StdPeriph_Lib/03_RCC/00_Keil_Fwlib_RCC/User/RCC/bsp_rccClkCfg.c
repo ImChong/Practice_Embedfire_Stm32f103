@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:11:00
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-09 16:32:28
+ * @LastEditTime : 2023-10-09 18:59:07
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -46,4 +46,13 @@ void HSE_SetSysClk(uint32_t RCC_PLLMul_x) {
     } else {
         /* 如果 HSE 启动失败，用户可以在这里添加处理错误的代码 */
     }
+}
+
+/**
+ * @description:
+ * =================================================================================
+ * @return {void}
+ */
+void MCO_GPIO_Config(void) {
+
 }
