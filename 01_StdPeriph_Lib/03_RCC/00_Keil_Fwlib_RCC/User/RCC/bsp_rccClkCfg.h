@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:12:51
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-09 19:03:11
+ * @LastEditTime : 2023-10-09 22:21:37
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -19,8 +19,8 @@
 /*                                MACRO CONSTANTS                                 */
 /*                                                                                */
 /**********************************************************************************/
-#define LED_GPIO_CLK            RCC_APB2Periph_GPIOB        /* 设置LED的GPIO的时钟使能寄存器地址 */
-#define LED_GPIO                GPIOB                       /* 设置LED的GPIO寄存器地址 */
+#define RCC_GPIO_CLK            RCC_APB2Periph_GPIOA        /* 设置LED的GPIO的时钟使能寄存器地址 */
+#define RCC_GPIO                GPIOA                       /* 设置LED的GPIO寄存器地址 */
 
 /**********************************************************************************/
 /*                                                                                */
