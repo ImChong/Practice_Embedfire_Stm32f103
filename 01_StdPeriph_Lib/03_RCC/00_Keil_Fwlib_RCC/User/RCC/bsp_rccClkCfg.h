@@ -14,6 +14,9 @@
 
 #include "stm32f10x.h"
 
+#define LED_GPIO_CLK            RCC_APB2Periph_GPIOB        /* 设置LED的GPIO的时钟使能寄存器地址 */
+#define LED_GPIO                GPIOB                       /* 设置LED的GPIO寄存器地址 */
+
 void HSE_SetSysClk(uint32_t RCC_PLLMul_x);
 
 #endif  /* __BSP_RCCCLKCFG_H */

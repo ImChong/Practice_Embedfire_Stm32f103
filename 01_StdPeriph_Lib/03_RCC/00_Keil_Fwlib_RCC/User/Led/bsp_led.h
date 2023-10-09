@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \01_Keil_Fwlib_GPIO_Button\User\Led\bsp_led.h
+ * @FilePath     : \00_Keil_Fwlib_RCC\User\Led\bsp_led.h
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-02 17:29:59
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 23:05:22
+ * @LastEditTime : 2023-10-09 19:02:40
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -14,6 +14,11 @@
 
 #include "stm32f10x.h"      /* 此头文件将添加 stm32f10x_conf.h - 管理所有外设的头文件 */
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                MACRO CONSTANTS                                 */
+/*                                                                                */
+/**********************************************************************************/
 #define LED_GPIO_CLK            RCC_APB2Periph_GPIOB        /* 设置LED的GPIO的时钟使能寄存器地址 */
 #define LED_GPIO                GPIOB                       /* 设置LED的GPIO寄存器地址 */
 #define LED_R_PIN_MSK           GPIO_Pin_5                  /* 红灯引脚寄存器地址 */
@@ -28,6 +33,11 @@
 #define PIN_HIGH    1
 #define PIN_LOW     0
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                MACRO FUNCTIONS                                 */
+/*                                                                                */
+/**********************************************************************************/
 /* LED的开关 */
 #define LED_SWITCH(ledPin, option)      if(option) \
                                             GPIO_ResetBits(LED_GPIO, ledPin); \
@@ -37,6 +47,11 @@
 /* LED状态切换：^ 异或 */
 #define LED_TOGGLE(ledPin)              (LED_GPIO->ODR ^= ledPin);
 
+/**********************************************************************************/
+/*                                                                                */
+/*                                 UTILITY FUNCTIONS                              */
+/*                                                                                */
+/**********************************************************************************/
 void LED_GPIO_Config(void);
 
 #endif  /* __BSP_LED_H */
