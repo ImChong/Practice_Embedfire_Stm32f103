@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-09 18:53:03
+ * @LastEditTime : 2023-10-09 18:55:29
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -31,14 +31,13 @@ void Delay(__IO uint32_t nCount) {
 int main(void)
 {
 	/* 来到这里的时候，系统的时钟已经被配置成72M。*/
-
-	HSE_SetSysClk(RCC_PLLMul_16);			/* 16 * 8 MHz = 128 MHz */
+	HSE_SetSysClk(RCC_PLLMul_16);					/* 16 * 8 MHz = 128 MHz */
 	LED_GPIO_Config();
 
 	while(1) {
-		LED_SWITCH(LED_G_PIN_MSK, LED_ON)		/* 使引脚输出低电平, 点亮 LED Green */
-        Delay(0x1FFFFF);						/* 延时一段时间 */
-        LED_SWITCH(LED_G_PIN_MSK, LED_OFF)		/* 使引脚输出高电平，关闭 LED Green */
-        Delay(0x1FFFFF);						/* 延时一段时间 */
+		LED_SWITCH(LED_G_PIN_MSK, LED_ON)				/* 使引脚输出低电平, 点亮 LED Green */
+        Delay(0x1FFFFF);								/* 延时一段时间 */
+        LED_SWITCH(LED_G_PIN_MSK, LED_OFF)				/* 使引脚输出高电平，关闭 LED Green */
+        Delay(0x1FFFFF);								/* 延时一段时间 */
 	}
 }
