@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:11:00
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-09 16:26:38
+ * @LastEditTime : 2023-10-09 16:29:20
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -22,8 +22,8 @@ void HSE_SetSysClk(uint32_t RCC_PLLMul_x) {
 
     /* 使能 HSE */
     RCC_HSEConfig(RCC_HSE_ON);                                  /* 使能 HSE - 外部高速时钟 */
-
     HSEStatus = RCC_WaitForHSEStartUp();
+
     if (HSEStatus == SUCCESS) {
         /* 使能预取指 */
         FLASH_PrefetchBufferCmd(FLASH_PrefetchBuffer_Enable);   /* Enable Prefetch Buffer | 使能预取指缓冲区 */
@@ -39,8 +39,9 @@ void HSE_SetSysClk(uint32_t RCC_PLLMul_x) {
 
         /* 等待 PLL 稳定 */
         while (RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET) {}  /* 等待 PLL 时钟就绪标志 (PLL clock ready flag) */
+            /* 选择系统时钟 */
             RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);          /* PLL 作为系统时钟源 */
-            uint8_t clkSource = RCC_GetSYSCLKSource();
+            while (RCC_GetSYSCLKSource() != 0x08) {}
     } else {
         /* 如果 HSE 启动失败，用户可以在这里添加处理错误的代码 */
     }
