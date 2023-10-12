@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:11:00
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 09:18:51
+ * @LastEditTime : 2023-10-12 09:25:12
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -63,7 +63,7 @@ void MCO_GPIO_Config(void) {
     RCC_APB2PeriphClockCmd(MCO_GPIO_CLK, ENABLE);               /* APB2 GPIOB 时钟使能 */
 
     GPIO_InitStructure.GPIO_Pin = MCO_PIN_MSK;                  /* 选择要控制的GPIO 引脚*/
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;            /* 设置引脚的输出类型为推挽输出*/
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;             /* 设置引脚的输出类型为复用功能推挽输出*/
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;           /* 设置输出速率为 50MHZ */
     GPIO_Init(MCO_GPIO, &GPIO_InitStructure);
 

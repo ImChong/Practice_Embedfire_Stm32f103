@@ -1,9 +1,9 @@
 /*
- * @FilePath     : \01_Registry\00_Keil_Register_Project\main.c
+ * @FilePath     : \Practice_Embedfire_Stm32f103\01_StdPeriph_Lib\01_Registry\00_Keil_Register_Project\main.c
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-09-04 19:01:25
+ * @LastEditTime : 2023-10-12 09:20:52
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
