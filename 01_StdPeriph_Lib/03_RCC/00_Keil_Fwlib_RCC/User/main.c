@@ -3,13 +3,15 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 09:31:10
+ * @LastEditTime : 2023-10-12 09:33:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
  * @Description  : 主函数文件
  */
+/* STM32官方库文件 */
 #include "stm32f10x.h"
+/* BSP - Board Support Package 自定义函数头文件 */
 #include "bsp_led.h"
 #include "bsp_rccClkCfg.h"
 
@@ -44,7 +46,7 @@ int main(void)
 	HSE_SetSysClk(RCC_PLLMul_16);					/* 16 * 8 MHz = 128 MHz */
 
 	MCO_GPIO_Config();								/* 初始化 MCO (Microcontroller Clock Output) GPIO */
-	RCC_MCOConfig(RCC_MCO_SYSCLK);
+	RCC_MCOConfig(RCC_MCO_SYSCLK);					/* 配置系统时钟为 MCO 输出时钟 */
 	LED_GPIO_Config();								/* 初始化 LED GPIO */
 
 	while(1) {										/* 主任务循环 */
