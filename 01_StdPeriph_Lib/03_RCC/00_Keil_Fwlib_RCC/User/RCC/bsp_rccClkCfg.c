@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:11:00
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 09:25:12
+ * @LastEditTime : 2023-10-12 09:27:09
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -66,6 +66,4 @@ void MCO_GPIO_Config(void) {
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;             /* 设置引脚的输出类型为复用功能推挽输出*/
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;           /* 设置输出速率为 50MHZ */
     GPIO_Init(MCO_GPIO, &GPIO_InitStructure);
-
-    GPIO_SetBits(MCO_GPIO, MCO_PIN_MSK);		                /* 使引脚输出高电平，关闭 LED */
 }
