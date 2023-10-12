@@ -42,7 +42,9 @@ int main(void)
 {
 	/* 来到这里的时候，系统的时钟已经被配置成72M。*/
 	HSE_SetSysClk(RCC_PLLMul_16);					/* 16 * 8 MHz = 128 MHz */
-	LED_GPIO_Config();
+
+	MCO_GPIO_Config();								/* 初始化 MCO GPIO */
+	LED_GPIO_Config();								/* 初始化 LED GPIO */
 
 	while(1) {										/* 主任务循环 */
 		LED_SWITCH(LED_G_PIN_MSK, LED_ON)				/* 使引脚输出低电平, 点亮 LED Green */
