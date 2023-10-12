@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:11:00
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 09:09:08
+ * @LastEditTime : 2023-10-12 09:10:30
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -49,7 +49,7 @@ void HSE_SetSysClk(uint32_t RCC_PLLMul_x) {
 }
 
 /**
- * @description:
+ * @description: 主时钟输出初始化
  * =================================================================================
  * @return {void}
  */
