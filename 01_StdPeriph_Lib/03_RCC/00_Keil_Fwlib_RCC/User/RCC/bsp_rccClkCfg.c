@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:11:00
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 09:14:25
+ * @LastEditTime : 2023-10-12 09:18:51
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -60,12 +60,12 @@ void HSE_SetSysClk(uint32_t RCC_PLLMul_x) {
  */
 void MCO_GPIO_Config(void) {
     GPIO_InitTypeDef GPIO_InitStructure;                        /* GPIO 端口初始化结构体 */
-    RCC_APB2PeriphClockCmd(RCC_GPIO_CLK, ENABLE);               /* APB2 GPIOB 时钟使能 */
+    RCC_APB2PeriphClockCmd(MCO_GPIO_CLK, ENABLE);               /* APB2 GPIOB 时钟使能 */
 
-    GPIO_InitStructure.GPIO_Pin = RCC_PIN_MSK;                  /* 选择要控制的GPIO 引脚*/
+    GPIO_InitStructure.GPIO_Pin = MCO_PIN_MSK;                  /* 选择要控制的GPIO 引脚*/
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;            /* 设置引脚的输出类型为推挽输出*/
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;           /* 设置输出速率为 50MHZ */
-    GPIO_Init(RCC_GPIO, &GPIO_InitStructure);
+    GPIO_Init(MCO_GPIO, &GPIO_InitStructure);
 
-    GPIO_SetBits(RCC_GPIO, RCC_PIN_MSK);		                /* 使引脚输出高电平，关闭 LED */
+    GPIO_SetBits(MCO_GPIO, MCO_PIN_MSK);		                /* 使引脚输出高电平，关闭 LED */
 }
