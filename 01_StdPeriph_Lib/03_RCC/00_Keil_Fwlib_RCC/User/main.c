@@ -39,7 +39,7 @@ int main(void)
 	HSE_SetSysClk(RCC_PLLMul_16);					/* 16 * 8 MHz = 128 MHz */
 	LED_GPIO_Config();
 
-	while(1) {
+	while(1) {										/* 主任务循环 */
 		LED_SWITCH(LED_G_PIN_MSK, LED_ON)				/* 使引脚输出低电平, 点亮 LED Green */
         Delay(0x1FFFFF);								/* 延时一段时间 */
         LED_SWITCH(LED_G_PIN_MSK, LED_OFF)				/* 使引脚输出高电平，关闭 LED Green */
