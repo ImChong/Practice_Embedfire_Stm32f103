@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-09-01 20:07:07
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 09:16:33
+ * @LastEditTime : 2023-10-12 09:28:35
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -43,7 +43,7 @@ int main(void)
 	/* 来到这里的时候，系统的时钟已经被配置成72M。*/
 	HSE_SetSysClk(RCC_PLLMul_16);					/* 16 * 8 MHz = 128 MHz */
 
-	MCO_GPIO_Config();								/* 初始化 MCO GPIO */
+	MCO_GPIO_Config();								/* 初始化 MCO (Microcontroller Clock Output) GPIO */
 	LED_GPIO_Config();								/* 初始化 LED GPIO */
 
 	while(1) {										/* 主任务循环 */
