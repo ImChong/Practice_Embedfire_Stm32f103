@@ -3,7 +3,7 @@
  * @Author       : Chong Liu
  * @CreateDate   : 2023-10-06 23:11:00
  * @LastEditors  : Chong Liu
- * @LastEditTime : 2023-10-12 09:10:30
+ * @LastEditTime : 2023-10-12 09:14:25
  * =================================================================================
  * Copyright (c) 2023 by Chong Liu, All Rights Reserved.
  * =================================================================================
@@ -18,8 +18,8 @@
  * @return {void}
  */
 void HSE_SetSysClk(uint32_t RCC_PLLMul_x) {
+    ErrorStatus HSEStatus;                                      /* 外部高速时钟使能状态 */
     RCC_DeInit();                                               /* 把 RCC 寄存器复位成复位值 */
-    ErrorStatus HSEStatus;
 
     /* 使能 HSE */
     RCC_HSEConfig(RCC_HSE_ON);                                  /* 使能 HSE - 外部高速时钟 */
