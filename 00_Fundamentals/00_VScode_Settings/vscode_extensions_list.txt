@@ -39,6 +39,7 @@ ROS Snippets
 
 Keil Assistant
 PlatformIO IDE
+STM32 VS Code Extension
 
 Hex Editor
 Intel HEX format
@@ -52,6 +53,7 @@ Code Spell Checker
 Prettier - Code formatter
 Draw.io Integration
 Draw.io Integration: Mermaid plugin
+Draw.io Integration: RTL plugin
 Excalidraw
 
 Todo Tree
