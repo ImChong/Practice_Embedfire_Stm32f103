@@ -1,5 +1,7 @@
 # Practice_Embedfire_Stm32f103
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Practice for Embedfire STM32F103 chip development.
 
 - [GitHub Repository（野火官方库）](https://github.com/Embedfire-stm32f103-zhinanzhe)
